@@ -9,6 +9,10 @@ import SubscriptionsSection from './components/SubscriptionsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import BlogPage from './components/BlogPage';
+import ComprehensiveGuide from './components/blogPosts/ComprehensiveGuide';
+import DOTCompliance from './components/blogPosts/DOTCompliance';
+import ClaimsManagement from './components/blogPosts/ClaimsManagement';
+import SafetyCulture from './components/blogPosts/SafetyCulture';
 
 // Homepage component to hold your current layout
 const HomePage = () => (
@@ -36,6 +40,34 @@ function App() {
             <TopBar />
             <Header />
             <BlogPage />
+          </>
+        } />
+        <Route path="/blog/comprehensive-guide" element={
+          <>
+            <TopBar />
+            <Header />
+            <ComprehensiveGuide />
+          </>
+        } />
+        <Route path="/blog/dot-compliance" element={
+          <>
+            <TopBar />
+            <Header />
+            <DOTCompliance />
+          </>
+        } />
+        <Route path="/blog/claims-management" element={
+          <>
+            <TopBar />
+            <Header />
+            <ClaimsManagement />
+          </>
+        } />
+        <Route path="/blog/safety-culture" element={
+          <>
+            <TopBar />
+            <Header />
+            <SafetyCulture />
           </>
         } />
       </Routes>
