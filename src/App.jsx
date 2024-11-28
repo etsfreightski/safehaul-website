@@ -9,16 +9,22 @@ import SubscriptionsSection from './components/SubscriptionsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import BlogPage from './components/BlogPage';
-import ComprehensiveGuide from './components/blogPosts/ComprehensiveGuide';
-import DOTCompliance from './components/blogPosts/DOTCompliance';
-import ClaimsManagement from './components/blogPosts/ClaimsManagement';
-import SafetyCulture from './components/blogPosts/SafetyCulture';
+// Import blog posts with correct path
+import ComprehensiveGuide from './components/blogposts/ComprehensiveGuide';
+import DOTCompliance from './components/blogposts/DOTCompliance';
+import ClaimsManagement from './components/blogposts/ClaimsManagement';
+import SafetyCulture from './components/blogposts/SafetyCulture';
 
-// Homepage component to hold your current layout
-const HomePage = () => (
+const SharedLayout = ({ children }) => (
   <>
     <TopBar />
     <Header />
+    {children}
+  </>
+);
+
+const HomePage = () => (
+  <SharedLayout>
     <main>
       <HeroSection />
       <ServicesSection />
@@ -27,7 +33,7 @@ const HomePage = () => (
       <AboutSection />
       <ContactSection />
     </main>
-  </>
+  </SharedLayout>
 );
 
 function App() {
@@ -35,41 +41,23 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={
-          <>
-            <TopBar />
-            <Header />
-            <BlogPage />
-          </>
-        } />
-        <Route path="/blog/comprehensive-guide" element={
-          <>
-            <TopBar />
-            <Header />
-            <ComprehensiveGuide />
-          </>
-        } />
-        <Route path="/blog/dot-compliance" element={
-          <>
-            <TopBar />
-            <Header />
-            <DOTCompliance />
-          </>
-        } />
-        <Route path="/blog/claims-management" element={
-          <>
-            <TopBar />
-            <Header />
-            <ClaimsManagement />
-          </>
-        } />
-        <Route path="/blog/safety-culture" element={
-          <>
-            <TopBar />
-            <Header />
-            <SafetyCulture />
-          </>
-        } />
+        <Route path="/blog" element={<SharedLayout><BlogPage /></SharedLayout>} />
+        <Route 
+          path="/blog/comprehensive-guide" 
+          element={<SharedLayout><ComprehensiveGuide /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/dot-compliance" 
+          element={<SharedLayout><DOTCompliance /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/claims-management" 
+          element={<SharedLayout><ClaimsManagement /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/safety-culture" 
+          element={<SharedLayout><SafetyCulture /></SharedLayout>} 
+        />
       </Routes>
     </Router>
   );
