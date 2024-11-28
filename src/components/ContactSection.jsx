@@ -46,17 +46,17 @@ const ContactSection = () => {
                 <div>
                   <input
                     type="text"
-                    name="firstName"
-                    placeholder="First Name"
+                    name="user_name"
+                    placeholder="Name"
                     required
                     className="w-full p-4 border-b-3 border-gray-300 focus:border-[#40CBB5] outline-none text-lg font-bold text-gray-900 shadow-sm"
                   />
                 </div>
                 <div>
                   <input
-                    type="text"
-                    name="lastName"
-                    placeholder="Last Name"
+                    type="email"
+                    name="user_email"
+                    placeholder="Email"
                     required
                     className="w-full p-4 border-b-3 border-gray-300 focus:border-[#40CBB5] outline-none text-lg font-bold text-gray-900 shadow-sm"
                   />
@@ -64,7 +64,7 @@ const ContactSection = () => {
                 <div>
                   <input
                     type="tel"
-                    name="phone"
+                    name="phone_number"
                     placeholder="Phone"
                     required
                     className="w-full p-4 border-b-3 border-gray-300 focus:border-[#40CBB5] outline-none text-lg font-bold text-gray-900 shadow-sm"
@@ -73,7 +73,7 @@ const ContactSection = () => {
                 <div>
                   <input
                     type="text"
-                    name="company"
+                    name="company_name"
                     placeholder="Company"
                     required
                     className="w-full p-4 border-b-3 border-gray-300 focus:border-[#40CBB5] outline-none text-lg font-bold text-gray-900 shadow-sm"
