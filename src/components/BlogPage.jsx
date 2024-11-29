@@ -29,6 +29,13 @@ const blogPosts = [
     excerpt: 'Transform your fleet operations with a comprehensive safety program.',
     date: 'November 26, 2024',
     readTime: '5 min read'
+  },
+  {
+    id: 'comprehensive-transportation-study',
+    title: 'Transportation Claims Management: A Comprehensive Analysis',
+    excerpt: 'An in-depth research study on modern challenges and solutions in transportation claims.',
+    date: 'November 27, 2024',
+    readTime: '15 min read'
   }
 ];
 
