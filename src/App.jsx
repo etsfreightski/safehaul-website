@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import TopBar from './components/TopBar';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import PermitsSection from './components/PermitsSection';
-import SubscriptionsSection from './components/SubscriptionsSection';
-import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
-import BlogPage from './components/BlogPage';
+import TopBar from '@/components/TopBar';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
+import PermitsSection from '@/components/PermitsSection';
+import SubscriptionsSection from '@/components/SubscriptionsSection';
+import AboutSection from '@/components/AboutSection';
+import ContactSection from '@/components/ContactSection';
+import BlogPage from '@/components/BlogPage';
 import ComprehensiveGuide from '@/components/blogPosts/ComprehensiveGuide';
-import DOTCompliance from './components/blogPosts/DOTCompliance';
-import ClaimsManagement from './components/blogPosts/ClaimsManagement';
-import SafetyCulture from './components/blogPosts/SafetyCulture';
-import ComprehensiveTransportationStudy from './components/blogPosts/ComprehensiveTransportationStudy';
-import ComprehensiveAnalysisNavigator from './components/blogPosts/ComprehensiveAnalysisNavigator';
+import DOTCompliance from '@/components/blogPosts/DOTCompliance';
+import ClaimsManagement from '@/components/blogPosts/ClaimsManagement';
+import SafetyCulture from '@/components/blogPosts/SafetyCulture';
+import ComprehensiveTransportationStudy from '@/components/blogPosts/ComprehensiveTransportationStudy';
+import ComprehensiveAnalysisNavigator from '@/components/blogPosts/ComprehensiveAnalysisNavigator';
 
 const SharedLayout = ({ children }) => (
   <>
