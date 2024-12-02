@@ -16,6 +16,7 @@ import SafetyCulture from '@/components/blogposts/SafetyCulture';
 import ComprehensiveTransportationStudy from '@/components/blogposts/ComprehensiveTransportationStudy';
 import ComprehensiveAnalysisNavigator from '@/components/blogposts/ComprehensiveAnalysisNavigator';
 import Testimonials from '@/components/Testimonials';
+import RiskAssessment from '@/components/RiskAssessment';
 
 const SharedLayout = ({ children }) => (
   <>
@@ -72,6 +73,10 @@ function App() {
 	  path="/testimonials" 
 	  element={<SharedLayout><Testimonials /></SharedLayout>}
 	/>  
+	<Route 
+          path="/risk-assessment" 
+          element={<SharedLayout><RiskAssessment /></SharedLayout>} 
+	/>
       </Routes>
     </Router>
   );

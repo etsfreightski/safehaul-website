@@ -23,6 +23,7 @@ const Header = () => (
           <a href="#about" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">About</a>
           <Link to="/testimonials" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Testimonials</Link>
 	  <Link to="/blog" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Blog</Link>
+	  <Link to="/risk-assessment" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Risk Assessment</Link>
           <a href="#contact" className="text-lg font-black border-3 border-[#40CBB5] px-8 py-3 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all shadow-xl">Contact</a>
         </div>
       </div>
