@@ -70,7 +70,8 @@ function App() {
         />
 	<Route 
 	  path="/testimonials" 
-	  element={<SharedLayout><Testimonials /></SharedLayout>} 
+	  element={<SharedLayout><Testimonials /></SharedLayout>}
+	/>  
       </Routes>
     </Router>
   );
