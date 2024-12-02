@@ -68,12 +68,10 @@ const RiskAssessment = () => {
    setError('');
  };
 
- const calculateRisk = (e) => {
-   e.preventDefault();
-   
+ const calculateRisk = () => {
    if (Object.keys(scores).length === 0) {
      setError('Please fill in at least one assessment item');
-     return;
+     return 0;
    }
 
    let totalScore = 0;
@@ -149,50 +147,48 @@ const RiskAssessment = () => {
        </p>
      </div>
      
-     <form onSubmit={calculateRisk}>
-       <div className="space-y-8">
-         {categories.map(category => (
-           <div key={category.id} className="bg-white p-6 rounded-xl shadow-lg">
-             <h2 className="text-xl font-bold text-gray-900 mb-4">{category.name}</h2>
-             <div className="space-y-4">
-               {category.questions.map(question => (
-                 <div key={question.id} className="flex items-center p-2 hover:bg-gray-50 rounded-lg">
-                   <select
-                     className="form-select w-32 mr-4 rounded-lg border-gray-300 shadow-sm"
-                     onChange={(e) => handleScoreChange(category.id, question.id, e.target.value)}
-                     defaultValue=""
-                   >
-                     <option value="" disabled>Select</option>
-                     <option value="5">Excellent</option>
-                     <option value="4">Good</option>
-                     <option value="3">Fair</option>
-                     <option value="2">Poor</option>
-                     <option value="1">Critical</option>
-                   </select>
-                   <span className="text-gray-700">{question.text}</span>
-                   {question.weight === 3 && (
-                     <span className="ml-2 text-red-500 text-sm">(Critical Factor)</span>
-                   )}
-                 </div>
-               ))}
-             </div>
+     <div className="space-y-8">
+       {categories.map(category => (
+         <div key={category.id} className="bg-white p-6 rounded-xl shadow-lg">
+           <h2 className="text-xl font-bold text-gray-900 mb-4">{category.name}</h2>
+           <div className="space-y-4">
+             {category.questions.map(question => (
+               <div key={question.id} className="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                 <select
+                   className="form-select w-32 mr-4 rounded-lg border-gray-300 shadow-sm"
+                   onChange={(e) => handleScoreChange(category.id, question.id, e.target.value)}
+                   defaultValue=""
+                 >
+                   <option value="" disabled>Select</option>
+                   <option value="5">Excellent</option>
+                   <option value="4">Good</option>
+                   <option value="3">Fair</option>
+                   <option value="2">Poor</option>
+                   <option value="1">Critical</option>
+                 </select>
+                 <span className="text-gray-700">{question.text}</span>
+                 {question.weight === 3 && (
+                   <span className="ml-2 text-red-500 text-sm">(Critical Factor)</span>
+                 )}
+               </div>
+             ))}
            </div>
-         ))}
-       </div>
+         </div>
+       ))}
+     </div>
 
-       {error && (
-         <div className="mt-4 text-red-500">{error}</div>
-       )}
+     {error && (
+       <div className="mt-4 text-red-500">{error}</div>
+     )}
 
-       <div className="flex justify-center mt-8">
-         <button
-           type="submit"
-           className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 shadow-lg transition duration-200"
-         >
-           Calculate Risk Level
-         </button>
-       </div>
-     </form>
+     <div className="flex justify-center mt-8">
+       <button
+         onClick={calculateRisk}
+         className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 shadow-lg transition duration-200"
+       >
+         Calculate Risk Level
+       </button>
+     </div>
 
      {showResults && (
        <div className="mt-8">
