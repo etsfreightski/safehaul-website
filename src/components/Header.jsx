@@ -21,7 +21,8 @@ const Header = () => (
           </a>
           <a href="#why-us" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Why Us</a>
           <a href="#about" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">About</a>
-          <Link to="/blog" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Blog</Link>
+          <Link to="/testimonials" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Testimonials</Link>
+	  <Link to="/blog" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Blog</Link>
           <a href="#contact" className="text-lg font-black border-3 border-[#40CBB5] px-8 py-3 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all shadow-xl">Contact</a>
         </div>
       </div>

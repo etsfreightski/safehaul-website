@@ -69,9 +69,8 @@ function App() {
           element={<SharedLayout><ComprehensiveAnalysisNavigator /></SharedLayout>} 
         />
 	<Route 
-  	  path="/testimonials" 
-  	  element={<SharedLayout><Testimonials /></SharedLayout>} 
-	/> 
+	  path="/testimonials" 
+	  element={<SharedLayout><Testimonials /></SharedLayout>} 
       </Routes>
     </Router>
   );
