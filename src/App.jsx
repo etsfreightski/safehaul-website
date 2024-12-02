@@ -9,12 +9,12 @@ import SubscriptionsSection from '@/components/SubscriptionsSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import BlogPage from '@/components/BlogPage';
-import ComprehensiveGuide from '@/components/blogPosts/ComprehensiveGuide';
-import DOTCompliance from '@/components/blogPosts/DOTCompliance';
-import ClaimsManagement from '@/components/blogPosts/ClaimsManagement';
-import SafetyCulture from '@/components/blogPosts/SafetyCulture';
-import ComprehensiveTransportationStudy from '@/components/blogPosts/ComprehensiveTransportationStudy';
-import ComprehensiveAnalysisNavigator from '@/components/blogPosts/ComprehensiveAnalysisNavigator';
+import ComprehensiveGuide from '@/components/blogposts/ComprehensiveGuide';
+import DOTCompliance from '@/components/blogposts/DOTCompliance';
+import ClaimsManagement from '@/components/blogposts/ClaimsManagement';
+import SafetyCulture from '@/components/blogposts/SafetyCulture';
+import ComprehensiveTransportationStudy from '@/components/blogposts/ComprehensiveTransportationStudy';
+import ComprehensiveAnalysisNavigator from '@/components/blogposts/ComprehensiveAnalysisNavigator';
 
 const SharedLayout = ({ children }) => (
   <>
