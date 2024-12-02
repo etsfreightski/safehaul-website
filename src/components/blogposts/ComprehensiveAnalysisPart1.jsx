@@ -303,7 +303,7 @@ const ComprehensiveTransportationStudy = () => {
                     <strong>Statistical Significance:</strong>
                     <ul className="list-disc pl-6 mt-2">
                       <li>95% confidence interval</li>
-                      <li>P-value < 0.001 for key metrics</li>
+                      <li>P-value &lt; 0.001 for key metrics</li>
                       <li>R-squared value of 0.92 for predictive models</li>
                     </ul>
                   </li>
@@ -316,6 +316,64 @@ const ComprehensiveTransportationStudy = () => {
                     </ul>
                   </li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-2xl font-bold text-[#40CBB5] mb-4">
+                Key Performance Metrics
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Claims Cost Reduction</h4>
+                  <div className="h-64">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={theftTrendData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="year" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="amount" fill="#40CBB5" name="Theft Amount ($K)" />
+                        <Bar dataKey="preventedLosses" fill="#82ca9d" name="Prevented Losses ($K)" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Resolution Time Improvement</h4>
+                  <div className="h-64">  
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={regionalAnalysis}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="state" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Line type="monotone" dataKey="interventionMetrics.resolutionRate" stroke="#82ca9d" name="Resolution Rate (%)" />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-2xl font-bold text-[#40CBB5] mb-4">
+                Regional Performance Analysis
+              </h3>
+              <div className="h-96">
+                <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart cx="50%" cy="50%" outerRadius="80%" data={regionalAnalysis}>
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="state" />
+                    <PolarRadiusAxis />
+                    <Radar name="Risk Score" dataKey="riskScore" stroke="#ff7300" fill="#ff7300" fillOpacity={0.6} />
+                    <Radar name="Recovery Rate" dataKey="recoveryRate" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+                    <Tooltip />
+                    <Legend />
+                  </RadarChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </section>
@@ -352,4 +410,35 @@ const ComprehensiveTransportationStudy = () => {
                     <ul className="list-disc pl-6 mt-2">
                       <li>Real-time risk assessment</li>
                       <li>Automated intervention triggers</li>
-                      <li>Dynamic
+                      <li>Dynamic resource optimization</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Conclusion */}
+          <section>
+            <h2 className="text-3xl font-black text-gray-900 mb-6">Conclusion</h2>
+            <div className="prose max-w-none">
+              <p className="text-gray-700 leading-relaxed mb-6">
+                This comprehensive analysis demonstrates the effectiveness of our proprietary safety and claims management 
+                framework. By integrating advanced analytics, real-time interventions, and continuous optimization, we've 
+                achieved unprecedented improvements in key performance metrics.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Our ongoing commitment to research and development ensures that we will remain at the forefront of the 
+                industry, delivering unparalleled value to our clients and stakeholders. Through the continued refinement 
+                of our methodologies and the integration of cutting-edge technologies, we are poised to revolutionize the 
+                field of transportation safety and claims management.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensiveTransportationStudy;
