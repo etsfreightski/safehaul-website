@@ -43,7 +43,7 @@ const blogPosts = [
     excerpt: 'An in-depth academic analysis of modern safety and claims management methodologies, including     implementation frameworks and statistical validation.',
     date: 'November 27, 2024',
     readTime: '45 min read'
-   }
+  }
 ];
 
 const BlogPage = () => {
