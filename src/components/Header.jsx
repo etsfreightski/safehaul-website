@@ -10,10 +10,9 @@ const Header = () => (
            <img src="/safehaul-logo.svg.PNG" alt="Safe Haul Claims & Safety Management" className="h-36 w-auto drop-shadow-xl" />
          </Link>
        </div>
-       <div className="hidden md:flex items-center space-x-8">
+       <div className="hidden md:flex items-center space-x-6">
          <Link to="/" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Home</Link>
          <a href="#services" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Services</a>
-         <a href="#permits" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Permits</a>
          <a href="#subscriptions" className="text-lg font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md flex items-center">
            <span className="text-[#FFB951] mr-2 drop-shadow-lg">★</span>
            Subscriptions
