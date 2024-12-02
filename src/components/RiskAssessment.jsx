@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { AlertTriangle, CheckCircle, HelpCircle } from 'lucide-react';
+import { AlertTriangle, HelpCircle, Download } from 'lucide-react';
 
 const RiskAssessment = () => {
   const [scores, setScores] = useState({});
   const [recommendations, setRecommendations] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
   const categories = [
     {
@@ -94,6 +95,7 @@ const RiskAssessment = () => {
 
     const riskPercentage = ((maxPossibleScore - totalScore) / maxPossibleScore) * 100;
     setRecommendations(newRecommendations);
+    setShowResults(true);
     return riskPercentage;
   };
 
@@ -103,19 +105,56 @@ const RiskAssessment = () => {
     return { level: 'High', color: 'text-red-600' };
   };
 
+  const generateReport = () => {
+    const riskPercentage = calculateRisk();
+    const riskLevel = getRiskLevel(riskPercentage);
+    
+    let report = `Safe Haul Risk Assessment Report\n`;
+    report += `Date: ${new Date().toLocaleDateString()}\n\n`;
+    report += `Overall Risk Level: ${riskLevel.level} (${riskPercentage.toFixed(1)}%)\n\n`;
+    
+    categories.forEach(category => {
+      report += `\n${category.name}:\n`;
+      category.questions.forEach(question => {
+        const score = scores[`${category.id}_${question.id}`] || 0;
+        report += `- ${question.text}: ${score}/5\n`;
+      });
+    });
+
+    report += '\n\nPriority Recommendations:\n';
+    recommendations.forEach(rec => {
+      report += `- [${rec.priority}] ${rec.category}: ${rec.item}\n`;
+    });
+
+    const blob = new Blob([report], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'risk-assessment-report.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Carrier Risk Assessment</h1>
+      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Safety Risk Assessment Tool</h1>
+        <p className="text-gray-600 mb-8">
+          Evaluate your carrier's safety program across key risk areas. Rate each item from 1 (Critical) to 5 (Excellent).
+        </p>
+      </div>
       
       <div className="space-y-8">
         {categories.map(category => (
-          <div key={category.id} className="bg-white p-6 rounded-lg shadow">
+          <div key={category.id} className="bg-white p-6 rounded-xl shadow-lg">
             <h2 className="text-xl font-bold text-gray-900 mb-4">{category.name}</h2>
             <div className="space-y-4">
               {category.questions.map(question => (
-                <div key={question.id} className="flex items-center">
+                <div key={question.id} className="flex items-center p-2 hover:bg-gray-50 rounded-lg">
                   <select
-                    className="form-select w-24 mr-4"
+                    className="form-select w-32 mr-4 rounded-lg border-gray-300 shadow-sm"
                     onChange={(e) => handleScoreChange(category.id, question.id, e.target.value)}
                     defaultValue=""
                   >
@@ -137,43 +176,58 @@ const RiskAssessment = () => {
         ))}
       </div>
 
-      <button
-        onClick={() => calculateRisk()}
-        className="mt-8 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-      >
-        Calculate Risk Level
-      </button>
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => calculateRisk()}
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 shadow-lg transition duration-200"
+        >
+          Calculate Risk Level
+        </button>
+      </div>
 
-      {recommendations.length > 0 && (
+      {showResults && (
         <div className="mt-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Risk Analysis Results</h2>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="mb-6">
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Risk Analysis Results</h2>
+            
+            <div className="mb-8">
               <h3 className="text-xl font-bold mb-2">Overall Risk Level</h3>
-              <div className={`text-2xl font-bold ${getRiskLevel(calculateRisk()).color}`}>
+              <div className={`text-3xl font-bold ${getRiskLevel(calculateRisk()).color}`}>
                 {getRiskLevel(calculateRisk()).level} Risk ({calculateRisk().toFixed(1)}%)
               </div>
             </div>
             
-            <h3 className="text-xl font-bold mb-4">Priority Recommendations</h3>
-            <div className="space-y-4">
-              {recommendations.map((rec, index) => (
-                <div key={index} className="flex items-start">
-                  {rec.priority === 'High' ? (
-                    <AlertTriangle className="w-5 h-5 text-red-500 mr-2 flex-shrink-0" />
-                  ) : (
-                    <HelpCircle className="w-5 h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                  )}
-                  <div>
-                    <div className="font-semibold">{rec.category}</div>
-                    <div className="text-gray-600">{rec.item}</div>
-                    <div className={`text-sm ${rec.priority === 'High' ? 'text-red-500' : 'text-yellow-500'}`}>
-                      {rec.priority} Priority
+            {recommendations.length > 0 && (
+              <>
+                <h3 className="text-xl font-bold mb-4">Priority Recommendations</h3>
+                <div className="space-y-4 mb-8">
+                  {recommendations.map((rec, index) => (
+                    <div key={index} className="flex items-start p-4 bg-gray-50 rounded-lg">
+                      {rec.priority === 'High' ? (
+                        <AlertTriangle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0" />
+                      ) : (
+                        <HelpCircle className="w-6 h-6 text-yellow-500 mr-3 flex-shrink-0" />
+                      )}
+                      <div>
+                        <div className="font-semibold text-lg">{rec.category}</div>
+                        <div className="text-gray-600">{rec.item}</div>
+                        <div className={`text-sm mt-1 ${rec.priority === 'High' ? 'text-red-500' : 'text-yellow-500'}`}>
+                          {rec.priority} Priority
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </>
+            )}
+
+            <button
+              onClick={generateReport}
+              className="flex items-center px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition duration-200"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Report
+            </button>
           </div>
         </div>
       )}
