@@ -9,7 +9,7 @@ import SubscriptionsSection from './components/SubscriptionsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import BlogPage from './components/BlogPage';
-import ComprehensiveGuide from './components/blogPosts/ComprehensiveGuide';
+import ComprehensiveGuide from '@/components/blogPosts/ComprehensiveGuide';
 import DOTCompliance from './components/blogPosts/DOTCompliance';
 import ClaimsManagement from './components/blogPosts/ClaimsManagement';
 import SafetyCulture from './components/blogPosts/SafetyCulture';
