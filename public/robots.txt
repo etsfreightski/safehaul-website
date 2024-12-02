@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://safehaulsite.netlify.app/sitemap.xml
