@@ -36,7 +36,14 @@ const blogPosts = [
     excerpt: 'An in-depth research study on modern challenges and solutions in transportation claims.',
     date: 'November 27, 2024',
     readTime: '15 min read'
-  }
+  },
+  {
+    id: 'comprehensive-analysis',
+    title: 'Transportation Safety and Claims Management: A Comprehensive Analysis',
+    excerpt: 'An in-depth academic analysis of modern safety and claims management methodologies, including     implementation frameworks and statistical validation.',
+    date: 'November 27, 2024',
+    readTime: '45 min read'
+   }
 ];
 
 const BlogPage = () => {

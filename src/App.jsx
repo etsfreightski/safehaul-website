@@ -14,6 +14,7 @@ import DOTCompliance from './components/blogposts/DOTCompliance';
 import ClaimsManagement from './components/blogposts/ClaimsManagement';
 import SafetyCulture from './components/blogposts/SafetyCulture';
 import ComprehensiveTransportationStudy from './components/blogposts/ComprehensiveTransportationStudy';
+import ComprehensiveAnalysisNavigator from './components/blogPosts/ComprehensiveAnalysisNavigator';
 
 const SharedLayout = ({ children }) => (
   <>
@@ -62,6 +63,10 @@ function App() {
           path="/blog/comprehensive-transportation-study" 
           element={<SharedLayout><ComprehensiveTransportationStudy /></SharedLayout>} 
         />
+	<Route 
+  	  path="/blog/comprehensive-analysis" 
+  	  element={<SharedLayout><ComprehensiveAnalysisNavigator /></SharedLayout>} 
+	/>
       </Routes>
     </Router>
   );
