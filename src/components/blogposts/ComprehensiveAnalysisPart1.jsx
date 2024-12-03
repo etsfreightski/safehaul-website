@@ -8,7 +8,6 @@ import {
 } from 'recharts';
 
 const ComprehensiveTransportationStudy = () => {
-  // Enhanced datasets with sophisticated metrics
   const theftTrendData = [
     { 
       year: '2019', 
@@ -19,8 +18,7 @@ const ComprehensiveTransportationStudy = () => {
       interventionSuccess: 67,
       costPerIntervention: 12400,
       roi: 328
-    },
-    // ... [Additional years with enhanced metrics]
+    }
   ];
 
   const regionalAnalysis = [
@@ -36,8 +34,7 @@ const ComprehensiveTransportationStudy = () => {
         resolutionRate: 76,
         costEfficiency: 82
       }
-    },
-    // ... [Additional states with detailed metrics]
+    }
   ];
 
   const implementationPhases = [
@@ -49,17 +46,12 @@ const ComprehensiveTransportationStudy = () => {
         accuracy: 94,
         predictiveValue: 88
       }
-    },
-    // ... [Additional implementation phases]
+    }
   ];
 
   return (
     <div className="bg-gray-200 min-h-screen pt-8">
       <div className="max-w-6xl mx-auto px-4 pb-16">
-        <Link to="/blog" className="text-[#40CBB5] font-bold mb-8 inline-block hover:underline">
-          ← Back to Blog
-        </Link>
-        
         <article className="bg-white rounded-lg shadow-xl p-8">
           <header className="mb-12">
             <h1 className="text-4xl font-black text-gray-900 mb-6">
@@ -67,9 +59,9 @@ const ComprehensiveTransportationStudy = () => {
               A Comprehensive Implementation Framework
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              An academic analysis of sophisticated safety and claims management strategies, 
-              demonstrating the implementation of industry-leading methodologies and their 
-              measurable impacts on operational excellence.
+              An academic analysis of sophisticated safety and <Link to="/solutions/claims-management" className="text-[#40CBB5] hover:underline">claims management strategies</Link>, 
+              demonstrating the implementation of <Link to="/technologies/industry-methodologies" className="text-[#40CBB5] hover:underline">industry-leading methodologies</Link> and 
+              their measurable impacts on <Link to="/solutions/operational-excellence" className="text-[#40CBB5] hover:underline">operational excellence</Link>.
             </p>
             <div className="flex gap-4 text-sm text-gray-600 mb-6">
               <span>Data Coverage: 2019-2024</span>
@@ -80,25 +72,26 @@ const ComprehensiveTransportationStudy = () => {
             </div>
           </header>
 
-          {/* Executive Summary Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-black text-gray-900 mb-6">Executive Summary</h2>
             <div className="prose max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
                 This comprehensive study presents a sophisticated framework for implementing 
-                advanced safety and claims management protocols within transportation operations. 
+                <Link to="/solutions/safety-protocols" className="text-[#40CBB5] hover:underline">advanced safety</Link> and 
+                <Link to="/solutions/claims-management" className="text-[#40CBB5] hover:underline">claims management protocols</Link> within transportation operations. 
                 Through rigorous analysis of over 15,000 claims across five years, we demonstrate 
-                the effectiveness of our proprietary multi-stage intervention methodology.
+                the effectiveness of our <Link to="/analysis/comprehensive-part2" className="text-[#40CBB5] hover:underline">proprietary multi-stage intervention methodology</Link>.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Our research validates a revolutionary approach that integrates predictive analytics, 
-                real-time intervention protocols, and advanced risk modeling to achieve unprecedented 
-                improvements in safety metrics and claims outcomes.
+                Our research validates a revolutionary approach that integrates 
+                <Link to="/technologies/predictive-analytics" className="text-[#40CBB5] hover:underline">predictive analytics</Link>, 
+                <Link to="/solutions/real-time-interventions" className="text-[#40CBB5] hover:underline">real-time intervention protocols</Link>, and 
+                <Link to="/technologies/risk-modeling" className="text-[#40CBB5] hover:underline">advanced risk modeling</Link> to achieve 
+                unprecedented improvements in safety metrics and claims outcomes.
               </p>
             </div>
           </section>
 
-          {/* Methodological Framework Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-black text-gray-900 mb-6">
               Proprietary Methodological Framework
@@ -113,13 +106,13 @@ const ComprehensiveTransportationStudy = () => {
                   Phase 1: Advanced Risk Assessment Protocol
                 </h4>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Our proprietary risk assessment methodology incorporates multiple data streams 
+                  Our <Link to="/methodologies/risk-assessment" className="text-[#40CBB5] hover:underline">proprietary risk assessment methodology</Link> incorporates multiple data streams 
                   for comprehensive evaluation:
                 </p>
                 <ul className="list-disc pl-6 space-y-3 text-gray-700">
                   <li>
                     <strong>Historical Data Analysis:</strong> 
-                    Advanced statistical modeling using machine learning algorithms to identify 
+                    <Link to="/technologies/machine-learning" className="text-[#40CBB5] hover:underline">Advanced statistical modeling</Link> using machine learning algorithms to identify 
                     patterns in historical claims data. Key components include:
                     <ul className="list-disc pl-6 mt-2">
                       <li>Bayesian inference models for risk prediction</li>
@@ -129,7 +122,7 @@ const ComprehensiveTransportationStudy = () => {
                   </li>
                   <li>
                     <strong>Real-time Data Integration:</strong>
-                    Sophisticated systems for incorporating live data streams:
+                    <Link to="/technologies/data-systems" className="text-[#40CBB5] hover:underline">Sophisticated systems</Link> for incorporating live data streams:
                     <ul className="list-disc pl-6 mt-2">
                       <li>AI-powered telematics analysis</li>
                       <li>Weather pattern integration</li>
@@ -143,7 +136,7 @@ const ComprehensiveTransportationStudy = () => {
                   Phase 2: Intervention Protocol Implementation
                 </h4>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Our intervention system operates on three distinct levels:
+                  Our <Link to="/solutions/intervention-system" className="text-[#40CBB5] hover:underline">intervention system</Link> operates on three distinct levels:
                 </p>
                 <ul className="list-disc pl-6 space-y-3 text-gray-700">
                   <li>
@@ -174,7 +167,6 @@ const ComprehensiveTransportationStudy = () => {
               </div>
             </div>
 
-            {/* Implementation Results Analysis */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-2xl font-bold text-[#40CBB5] mb-6">
                 Implementation Results Analysis
@@ -200,7 +192,7 @@ const ComprehensiveTransportationStudy = () => {
                     Implementation Metrics Analysis
                   </h4>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Our implementation data reveals significant improvements across all key metrics:
+                    Our <Link to="/analysis/comprehensive-part2" className="text-[#40CBB5] hover:underline">implementation data</Link> reveals significant improvements across all key metrics:
                   </p>
                   <ul className="list-disc pl-6 space-y-3 text-gray-700">
                     <li>
@@ -227,15 +219,16 @@ const ComprehensiveTransportationStudy = () => {
             </div>
           </section>
 
-          {/* Technology Integration Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-black text-gray-900 mb-6">
-              Advanced Technology Integration
+              Technology Integration
             </h2>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-[#40CBB5] mb-6">
-                Multi-Layer Technology Stack
-              </h3>
+              <Link to="/technologies/integration" className="text-[#40CBB5] hover:underline">
+                <h3 className="text-2xl font-bold text-[#40CBB5] mb-6">
+                  Multi-Layer Technology Stack
+                </h3>
+              </Link>
               
               <div className="prose max-w-none">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">
@@ -259,179 +252,16 @@ const ComprehensiveTransportationStudy = () => {
                     </ul>
                   </li>
                 </ul>
-
-                <h4 className="text-xl font-bold text-gray-900 mt-8 mb-4">
-                  Processing Layer
-                </h4>
-                <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                  <li>
-                    <strong>AI/ML Systems:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Neural network pattern recognition</li>
-                      <li>Predictive analytics engines</li>
-                      <li>Natural language processing for documentation</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Real-time Analysis:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Stream processing architecture</li>
-                      <li>Edge computing implementation</li>
-                      <li>Distributed processing systems</li>
-                    </ul>
-                  </li>
-                </ul>
               </div>
             </div>
           </section>
 
-          {/* Results and Validation Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-black text-gray-900 mb-6">
-              Statistical Validation and Results
-            </h2>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="prose max-w-none">
-                <h3 className="text-2xl font-bold text-[#40CBB5] mb-4">
-                  Methodology Validation
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Our methodology has been validated through rigorous statistical analysis:
-                </p>
-                <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                  <li>
-                    <strong>Statistical Significance:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>95% confidence interval</li>
-                      <li>P-value &lt; 0.001 for key metrics</li>
-                      <li>R-squared value of 0.92 for predictive models</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Performance Metrics:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>47% reduction in claims costs</li>
-                      <li>76% improvement in resolution times</li>
-                      <li>89% accuracy in risk prediction</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-[#40CBB5] mb-4">
-                Key Performance Metrics
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Claims Cost Reduction</h4>
-                  <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={theftTrendData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="year" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="amount" fill="#40CBB5" name="Theft Amount ($K)" />
-                        <Bar dataKey="preventedLosses" fill="#82ca9d" name="Prevented Losses ($K)" />
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Resolution Time Improvement</h4>
-                  <div className="h-64">  
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={regionalAnalysis}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="state" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Line type="monotone" dataKey="interventionMetrics.resolutionRate" stroke="#82ca9d" name="Resolution Rate (%)" />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-[#40CBB5] mb-4">
-                Regional Performance Analysis
-              </h3>
-              <div className="h-96">
-                <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart cx="50%" cy="50%" outerRadius="80%" data={regionalAnalysis}>
-                    <PolarGrid />
-                    <PolarAngleAxis dataKey="state" />
-                    <PolarRadiusAxis />
-                    <Radar name="Risk Score" dataKey="riskScore" stroke="#ff7300" fill="#ff7300" fillOpacity={0.6} />
-                    <Radar name="Recovery Rate" dataKey="recoveryRate" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
-                    <Tooltip />
-                    <Legend />
-                  </RadarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-          </section>
-
-          {/* Future Developments Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-black text-gray-900 mb-6">
-              Future Developments and Enhancements
-            </h2>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="prose max-w-none">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Our ongoing research and development focuses on:
-                </p>
-                <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                  <li>
-                    <strong>Advanced AI Integration:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Deep learning for pattern recognition</li>
-                      <li>Natural language processing for documentation</li>
-                      <li>Computer vision for incident analysis</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Blockchain Implementation:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Smart contracts for claims processing</li>
-                      <li>Immutable incident records</li>
-                      <li>Automated compliance verification</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Predictive Analytics Enhancement:</strong>
-                    <ul className="list-disc pl-6 mt-2">
-                      <li>Real-time risk assessment</li>
-                      <li>Automated intervention triggers</li>
-                      <li>Dynamic resource optimization</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Conclusion */}
           <section>
-            <h2 className="text-3xl font-black text-gray-900 mb-6">Conclusion</h2>
+            <h2 className="text-3xl font-black text-gray-900 mb-6">Next Steps</h2>
             <div className="prose max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                This comprehensive analysis demonstrates the effectiveness of our proprietary safety and claims management 
-                framework. By integrating advanced analytics, real-time interventions, and continuous optimization, we've 
-                achieved unprecedented improvements in key performance metrics.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Our ongoing commitment to research and development ensures that we will remain at the forefront of the 
-                industry, delivering unparalleled value to our clients and stakeholders. Through the continued refinement 
-                of our methodologies and the integration of cutting-edge technologies, we are poised to revolutionize the 
-                field of transportation safety and claims management.
+                Continue reading about our <Link to="/analysis/comprehensive-part2" className="text-[#40CBB5] hover:underline">implementation details</Link> and 
+                <Link to="/analysis/comprehensive-part3" className="text-[#40CBB5] hover:underline">statistical validation</Link> in the following sections.
               </p>
             </div>
           </section>
