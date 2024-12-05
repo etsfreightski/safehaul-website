@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
   Tooltip, Legend, ResponsiveContainer, PieChart, Pie,
@@ -7,6 +8,7 @@ import {
 } from 'recharts';
 
 const ComprehensiveAnalysisPart3 = () => {
+  // Initialize navigation hook for page transitions
   const navigate = useNavigate();
 
   // Implementation results data
@@ -44,7 +46,8 @@ const ComprehensiveAnalysisPart3 = () => {
   return (
     <div className="bg-gray-200 min-h-screen pt-8">
       <div className="max-w-6xl mx-auto px-4 pb-16">
-        <article className="bg-white rounded-lg shadow-xl p-8 mb-8">
+        {/* Statistical Validation Section */}
+        <section className="bg-white rounded-lg shadow-xl p-8 mb-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Statistical Validation and Implementation Results
           </h2>
@@ -160,10 +163,10 @@ const ComprehensiveAnalysisPart3 = () => {
               </div>
             </div>
           </div>
-        </article>
+        </section>
 
-        {/* Advanced Technology Integration */}
-        <article className="bg-white rounded-lg shadow-xl p-8 mb-8">
+        {/* Future Developments Section */}
+        <section className="bg-white rounded-lg shadow-xl p-8 mb-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Technology Integration and Future Developments
           </h2>
@@ -275,10 +278,10 @@ const ComprehensiveAnalysisPart3 = () => {
               </div>
             </div>
           </div>
-        </article>
+        </section>
 
-        {/* Conclusion */}
-        <article className="bg-white rounded-lg shadow-xl p-8">
+        {/* Conclusion Section */}
+        <section className="bg-white rounded-lg shadow-xl p-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Conclusion and Strategic Implications
           </h2>
@@ -298,24 +301,26 @@ const ComprehensiveAnalysisPart3 = () => {
               ensures sustained competitive advantage for our clients in an increasingly 
               complex operational environment.
             </p>
-          </div>
 
-          {/* Bottom Navigation - with navigation to previous part */}
-      <div className="mt-12 flex justify-between items-center border-t pt-8">
-        <div className="flex-1 text-left">
-          <button 
-            onClick={() => navigate('/blog/comprehensive-analysis/part2')}
-            className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
-          >
-            <span className="mr-2">←</span> Previous: Part 2
-          </button>
-        </div>
-        <div className="flex-1 text-center">
-          <span className="text-gray-700 font-bold">Part 3 of 3</span>
-        </div>
-        <div className="flex-1">
-          {/* Part 3 has no next */}
-        </div>
+            {/* Bottom Navigation */}
+            <div className="mt-12 flex justify-between items-center border-t pt-8">
+              <div className="flex-1 text-left">
+                <button 
+                  onClick={() => navigate('/blog/comprehensive-analysis/part2')}
+                  className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+                >
+                  <span className="mr-2">←</span> Previous: Part 2
+                </button>
+              </div>
+              <div className="flex-1 text-center">
+                <span className="text-gray-700 font-bold">Part 3 of 3</span>
+              </div>
+              <div className="flex-1">
+                {/* Part 3 has no next */}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

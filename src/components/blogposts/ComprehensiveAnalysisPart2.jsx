@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
   Tooltip, Legend, ResponsiveContainer, PieChart, Pie,
@@ -7,9 +8,10 @@ import {
 } from 'recharts';
 
 const ComprehensiveAnalysisPart2 = () => {
+  // Initialize navigation hook for page transitions
   const navigate = useNavigate();
 
-  // Advanced implementation metrics
+  // Implementation metrics data
   const interventionData = [
     {
       phase: 'Initial Contact',
@@ -44,8 +46,7 @@ const ComprehensiveAnalysisPart2 = () => {
   return (
     <div className="bg-gray-200 min-h-screen pt-8">
       <div className="max-w-6xl mx-auto px-4 pb-16">
-        {/* Claims Process Implementation Section */}
-        <section className="bg-white rounded-lg shadow-xl p-8 mb-8">
+        <article className="bg-white rounded-lg shadow-xl p-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Advanced Claims Process Implementation
           </h2>
@@ -233,27 +234,29 @@ const ComprehensiveAnalysisPart2 = () => {
             </div>
           </div>
 
-          {/* Bottom Navigation - with proper bi-directional navigation */}
-      <div className="mt-12 flex justify-between items-center border-t pt-8">
-        <div className="flex-1 text-left">
-          <button 
-            onClick={() => navigate('/blog/comprehensive-analysis')}
-            className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
-          >
-            <span className="mr-2">←</span> Previous: Part 1
-          </button>
-        </div>
-        <div className="flex-1 text-center">
-          <span className="text-gray-700 font-bold">Part 2 of 3</span>
-        </div>
-        <div className="flex-1 text-right">
-          <button 
-            onClick={() => navigate('/blog/comprehensive-analysis/part3')}
-            className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
-          >
-            Next: Part 3 <span className="ml-2">→</span>
-          </button>
-        </div>
+          {/* Bottom Navigation */}
+          <div className="mt-12 flex justify-between items-center border-t pt-8">
+            <div className="flex-1 text-left">
+              <button 
+                onClick={() => navigate('/blog/comprehensive-analysis')}
+                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+              >
+                <span className="mr-2">←</span> Previous: Part 1
+              </button>
+            </div>
+            <div className="flex-1 text-center">
+              <span className="text-gray-700 font-bold">Part 2 of 3</span>
+            </div>
+            <div className="flex-1 text-right">
+              <button 
+                onClick={() => navigate('/blog/comprehensive-analysis/part3')}
+                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+              >
+                Next: Part 3 <span className="ml-2">→</span>
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   );
