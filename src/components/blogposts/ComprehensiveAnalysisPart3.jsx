@@ -296,12 +296,31 @@ const ComprehensiveAnalysisPart3 = () => {
               management. Our commitment to technological advancement and process optimization 
               ensures sustained competitive advantage for our clients in an increasingly 
               complex operational environment.
-            </p>
-          </div>
-        </section>
+                </p>
+              </div>
+            </section>
+
+            {/* Bottom Navigation */}
+            <div className="mt-12 flex justify-between items-center border-t pt-8">
+              <div className="flex-1 text-left">
+                <button 
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+                >
+                  <span className="mr-2">←</span> Previous: Part 2
+                </button>
+              </div>
+              <div className="flex-1 text-center">
+                <span className="text-gray-700 font-bold">Part 3 of 3</span>
+              </div>
+              <div className="flex-1">
+                {/* Part 3 has no next */}
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  );
+    );
 };
 
-export default ComprehensiveAnalysisPart3;
+export default ComprehensiveAnalysisPart3;  

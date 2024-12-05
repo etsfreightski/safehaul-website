@@ -425,9 +425,27 @@ const ComprehensiveTransportationStudy = () => {
                 industry, delivering unparalleled value to our clients and stakeholders. Through the continued refinement 
                 of our methodologies and the integration of cutting-edge technologies, we are poised to revolutionize the 
                 field of transportation safety and claims management.
-              </p>
+               </p>
             </div>
           </section>
+
+          {/* Bottom Navigation */}
+          <div className="mt-12 flex justify-between items-center border-t pt-8">
+            <div className="flex-1">
+              {/* Part 1 has no previous */}
+            </div>
+            <div className="flex-1 text-center">
+              <span className="text-gray-700 font-bold">Part 1 of 3</span>
+            </div>
+            <div className="flex-1 text-right">
+              <button 
+                onClick={() => window.scrollTo(0, 0)}
+                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+              >
+                Next: Part 2 <span className="ml-2">→</span>
+              </button>
+            </div>
+          </div>
         </article>
       </div>
     </div>

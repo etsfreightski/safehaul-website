@@ -232,9 +232,28 @@ const ComprehensiveAnalysisPart2 = () => {
           </div>
         </section>
 
-        {/* Results and Validation Section continues in Part 3... */}
-      </div>
-    </div>
+         {/* Bottom Navigation */}
+          <div className="mt-12 flex justify-between items-center border-t pt-8">
+            <div className="flex-1 text-left">
+              <button 
+                onClick={() => window.scrollTo(0, 0)}
+                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+              >
+                <span className="mr-2">←</span> Previous: Part 1
+              </button>
+            </div>
+            <div className="flex-1 text-center">
+              <span className="text-gray-700 font-bold">Part 2 of 3</span>
+            </div>
+            <div className="flex-1 text-right">
+              <button 
+                onClick={() => window.scrollTo(0, 0)}
+                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+              >
+                Next: Part 3 <span className="ml-2">→</span>
+              </button>
+            </div>
+          </div>
   );
 };
 
