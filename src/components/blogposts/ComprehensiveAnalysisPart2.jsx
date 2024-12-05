@@ -230,9 +230,8 @@ const ComprehensiveAnalysisPart2 = () => {
               </ul>
             </div>
           </div>
-        </section>
 
-         {/* Bottom Navigation */}
+          {/* Bottom Navigation */}
           <div className="mt-12 flex justify-between items-center border-t pt-8">
             <div className="flex-1 text-left">
               <button 
@@ -254,6 +253,9 @@ const ComprehensiveAnalysisPart2 = () => {
               </button>
             </div>
           </div>
+        </section>
+      </div>
+    </div>
   );
 };
 
