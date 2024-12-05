@@ -18,15 +18,15 @@ const ComprehensiveAnalysisNavigator = () => {
               Transportation Safety and Claims Management: A Comprehensive Analysis
             </h1>
             <div className="flex space-x-4">
-              <Link to="/blog/comprehensive-analysis/part1" 
+              <Link to="part1" 
                 className="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-bold transition-colors">
                 Part 1
               </Link>
-              <Link to="/blog/comprehensive-analysis/part2"
+              <Link to="part2"
                 className="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-bold transition-colors">
                 Part 2
               </Link>
-              <Link to="/blog/comprehensive-analysis/part3"
+              <Link to="part3"
                 className="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-bold transition-colors">
                 Part 3
               </Link>
