@@ -7,6 +7,8 @@ import {
 } from 'recharts';
 
 const ComprehensiveAnalysisPart3 = () => {
+  const navigate = useNavigate();
+
   // Implementation results data
   const performanceMetrics = [
     {
@@ -298,24 +300,22 @@ const ComprehensiveAnalysisPart3 = () => {
             </p>
           </div>
 
-          {/* Bottom Navigation */}
-          <div className="mt-12 flex justify-between items-center border-t pt-8">
-            <div className="flex-1 text-left">
-              <button 
-                onClick={() => window.scrollTo(0, 0)}
-                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
-              >
-                <span className="mr-2">←</span> Previous: Part 2
-              </button>
-            </div>
-            <div className="flex-1 text-center">
-              <span className="text-gray-700 font-bold">Part 3 of 3</span>
-            </div>
-            <div className="flex-1">
-              {/* Part 3 has no next */}
-            </div>
-          </div>
-        </article>
+          {/* Bottom Navigation - with navigation to previous part */}
+      <div className="mt-12 flex justify-between items-center border-t pt-8">
+        <div className="flex-1 text-left">
+          <button 
+            onClick={() => navigate('/blog/comprehensive-analysis/part2')}
+            className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+          >
+            <span className="mr-2">←</span> Previous: Part 2
+          </button>
+        </div>
+        <div className="flex-1 text-center">
+          <span className="text-gray-700 font-bold">Part 3 of 3</span>
+        </div>
+        <div className="flex-1">
+          {/* Part 3 has no next */}
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,16 @@
-//ComprehensiveAnalysisPart1.jsx
 import React from 'react';
+// Add useNavigate for proper page navigation
+import { useNavigate } from 'react-router-dom';
 import { 
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
   Tooltip, Legend, ResponsiveContainer, PieChart, Pie,
   ComposedChart, Scatter, ScatterChart, RadarChart,
   PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar
 } from 'recharts';
+
+const ComprehensiveAnalysisPart1 = () => {
+  // Initialize the navigate function for routing
+  const navigate = useNavigate();
 
 const ComprehensiveTransportationStudy = () => {
   // Enhanced datasets with sophisticated metrics
@@ -429,27 +434,25 @@ const ComprehensiveTransportationStudy = () => {
             </div>
           </section>
 
-          {/* Bottom Navigation */}
-          <div className="mt-12 flex justify-between items-center border-t pt-8">
-            <div className="flex-1">
-              {/* Part 1 has no previous */}
-            </div>
-            <div className="flex-1 text-center">
-              <span className="text-gray-700 font-bold">Part 1 of 3</span>
-            </div>
-            <div className="flex-1 text-right">
-              <button 
-                onClick={() => window.scrollTo(0, 0)}
-                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
-              >
-                Next: Part 2 <span className="ml-2">→</span>
-              </button>
-            </div>
-          </div>
-        </article>
+          {/* Bottom Navigation - now with actual page navigation */}
+      <div className="mt-12 flex justify-between items-center border-t pt-8">
+        <div className="flex-1">
+          {/* Part 1 has no previous */}
+        </div>
+        <div className="flex-1 text-center">
+          <span className="text-gray-700 font-bold">Part 1 of 3</span>
+        </div>
+        <div className="flex-1 text-right">
+          <button 
+            onClick={() => navigate('/blog/comprehensive-analysis/part2')}
+            className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+          >
+            Next: Part 2 <span className="ml-2">→</span>
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ComprehensiveTransportationStudy;
+export default ComprehensiveAnalysisPart1;
