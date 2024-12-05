@@ -42,8 +42,7 @@ const ComprehensiveAnalysisPart3 = () => {
   return (
     <div className="bg-gray-200 min-h-screen pt-8">
       <div className="max-w-6xl mx-auto px-4 pb-16">
-        {/* Statistical Validation Section */}
-        <section className="bg-white rounded-lg shadow-xl p-8 mb-8">
+        <article className="bg-white rounded-lg shadow-xl p-8 mb-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Statistical Validation and Implementation Results
           </h2>
@@ -159,10 +158,10 @@ const ComprehensiveAnalysisPart3 = () => {
               </div>
             </div>
           </div>
-        </section>
+        </article>
 
         {/* Advanced Technology Integration */}
-        <section className="bg-white rounded-lg shadow-xl p-8 mb-8">
+        <article className="bg-white rounded-lg shadow-xl p-8 mb-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Technology Integration and Future Developments
           </h2>
@@ -274,10 +273,10 @@ const ComprehensiveAnalysisPart3 = () => {
               </div>
             </div>
           </div>
-        </section>
+        </article>
 
         {/* Conclusion */}
-        <section className="bg-white rounded-lg shadow-xl p-8">
+        <article className="bg-white rounded-lg shadow-xl p-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">
             Conclusion and Strategic Implications
           </h2>
@@ -296,9 +295,8 @@ const ComprehensiveAnalysisPart3 = () => {
               management. Our commitment to technological advancement and process optimization 
               ensures sustained competitive advantage for our clients in an increasingly 
               complex operational environment.
-              </p>
-            </div>
-          </section>
+            </p>
+          </div>
 
           {/* Bottom Navigation */}
           <div className="mt-12 flex justify-between items-center border-t pt-8">
@@ -323,4 +321,4 @@ const ComprehensiveAnalysisPart3 = () => {
   );
 };
 
-export default ComprehensiveAnalysisPart3;  
+export default ComprehensiveAnalysisPart3;
