@@ -1,25 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import ComprehensiveAnalysisPart1 from './ComprehensiveAnalysisPart1';
-import ComprehensiveAnalysisPart2 from './ComprehensiveAnalysisPart2';
-import ComprehensiveAnalysisPart3 from './ComprehensiveAnalysisPart3';
+import React from 'react';
+import { Link, Routes, Route } from 'react-router-dom';
 
 const ComprehensiveAnalysisNavigator = () => {
-  const [currentPart, setCurrentPart] = useState(1);
-
-  const renderCurrentPart = () => {
-    switch(currentPart) {
-      case 1:
-        return <ComprehensiveAnalysisPart1 />;
-      case 2:
-        return <ComprehensiveAnalysisPart2 />;
-      case 3:
-        return <ComprehensiveAnalysisPart3 />;
-      default:
-        return <ComprehensiveAnalysisPart1 />;
-    }
-  };
-
   return (
     <div className="bg-gray-200 min-h-screen pt-8">
       <div className="max-w-6xl mx-auto px-4 pb-16">
@@ -27,59 +9,34 @@ const ComprehensiveAnalysisNavigator = () => {
           ← Back to Blog
         </Link>
 
-        {/* Navigation Controls */}
         <div className="bg-white rounded-lg shadow-xl p-4 mb-8">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-black text-gray-900">
               Transportation Safety and Claims Management: A Comprehensive Analysis
             </h1>
             <div className="flex space-x-4">
-              {[1, 2, 3].map((part) => (
-                <button
-                  key={part}
-                  onClick={() => setCurrentPart(part)}
-                  className={`px-4 py-2 rounded-full ${
-                    currentPart === part
-                      ? 'bg-[#40CBB5] text-white'
-                      : 'text-gray-700 hover:bg-gray-100'
-                  } font-bold transition-colors`}
-                >
-                  Part {part}
-                </button>
-              ))}
+              <Link to="/blog/comprehensive-analysis/part1" 
+                className="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-bold transition-colors">
+                Part 1
+              </Link>
+              <Link to="/blog/comprehensive-analysis/part2"
+                className="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-bold transition-colors">
+                Part 2
+              </Link>
+              <Link to="/blog/comprehensive-analysis/part3"
+                className="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 font-bold transition-colors">
+                Part 3
+              </Link>
             </div>
           </div>
-          
-          {/* Part Description */}
-          <div className="mt-4 text-gray-700">
-            {currentPart === 1 && "Methodological Framework and Initial Analysis"}
-            {currentPart === 2 && "Implementation Process and Intervention Protocols"}
-            {currentPart === 3 && "Statistical Validation and Future Developments"}
-          </div>
         </div>
 
-        {/* Render Current Part */}
-        {renderCurrentPart()}
-
-        {/* Bottom Navigation */}
-        <div className="bg-white rounded-lg shadow-xl p-4 mt-8 flex justify-between">
-          <button
-            onClick={() => setCurrentPart(prev => Math.max(1, prev - 1))}
-            className={`px-4 py-2 rounded-full ${
-              currentPart === 1 ? 'invisible' : 'text-[#40CBB5] hover:bg-gray-100'
-            } font-bold transition-colors`}
-          >
-            ← Previous Part
-          </button>
-          <button
-            onClick={() => setCurrentPart(prev => Math.min(3, prev + 1))}
-            className={`px-4 py-2 rounded-full ${
-              currentPart === 3 ? 'invisible' : 'text-[#40CBB5] hover:bg-gray-100'
-            } font-bold transition-colors`}
-          >
-            Next Part →
-          </button>
-        </div>
+        <Routes>
+          <Route path="/part1" element={<ComprehensiveAnalysisPart1 />} />
+          <Route path="/part2" element={<ComprehensiveAnalysisPart2 />} />
+          <Route path="/part3" element={<ComprehensiveAnalysisPart3 />} />
+          <Route index element={<ComprehensiveAnalysisPart1 />} />
+        </Routes>
       </div>
     </div>
   );
