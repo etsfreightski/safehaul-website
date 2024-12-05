@@ -15,6 +15,8 @@ import ClaimsManagement from '@/components/blogposts/ClaimsManagement';
 import SafetyCulture from '@/components/blogposts/SafetyCulture';
 import ComprehensiveTransportationStudy from '@/components/blogposts/ComprehensiveTransportationStudy';
 import ComprehensiveAnalysisNavigator from '@/components/blogposts/ComprehensiveAnalysisNavigator';
+import ComprehensiveAnalysisPart2 from '@/components/blogposts/ComprehensiveAnalysisPart2';
+import ComprehensiveAnalysisPart3 from '@/components/blogposts/ComprehensiveAnalysisPart3';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
 
@@ -69,14 +71,22 @@ function App() {
           path="/blog/comprehensive-analysis" 
           element={<SharedLayout><ComprehensiveAnalysisNavigator /></SharedLayout>} 
         />
-	<Route 
-	  path="/testimonials" 
-	  element={<SharedLayout><Testimonials /></SharedLayout>}
-	/>  
-	<Route 
+        <Route 
+          path="/blog/comprehensive-analysis/part2" 
+          element={<SharedLayout><ComprehensiveAnalysisPart2 /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/comprehensive-analysis/part3" 
+          element={<SharedLayout><ComprehensiveAnalysisPart3 /></SharedLayout>} 
+        />
+        <Route 
+          path="/testimonials" 
+          element={<SharedLayout><Testimonials /></SharedLayout>}
+        />  
+        <Route 
           path="/risk-assessment" 
           element={<SharedLayout><RiskAssessment /></SharedLayout>} 
-	/>
+        />
       </Routes>
     </Router>
   );
