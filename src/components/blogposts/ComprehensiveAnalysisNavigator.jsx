@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
+import ComprehensiveAnalysisPart1 from './ComprehensiveAnalysisPart1';
+import ComprehensiveAnalysisPart2 from './ComprehensiveAnalysisPart2';
+import ComprehensiveAnalysisPart3 from './ComprehensiveAnalysisPart3';
 
 const ComprehensiveAnalysisNavigator = () => {
   return (
@@ -32,9 +35,9 @@ const ComprehensiveAnalysisNavigator = () => {
         </div>
 
         <Routes>
-          <Route path="/part1" element={<ComprehensiveAnalysisPart1 />} />
-          <Route path="/part2" element={<ComprehensiveAnalysisPart2 />} />
-          <Route path="/part3" element={<ComprehensiveAnalysisPart3 />} />
+          <Route path="part1" element={<ComprehensiveAnalysisPart1 />} />
+          <Route path="part2" element={<ComprehensiveAnalysisPart2 />} />
+          <Route path="part3" element={<ComprehensiveAnalysisPart3 />} />
           <Route index element={<ComprehensiveAnalysisPart1 />} />
         </Routes>
       </div>
