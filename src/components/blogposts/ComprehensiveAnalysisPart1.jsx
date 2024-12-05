@@ -343,7 +343,7 @@ const ComprehensiveTransportationStudy = () => {
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Line type="monotone" dataKey="interventionMetrics.resolutionRate" stroke="#82ca9d" name="Resolution Rate (%) />
+                        <Line type="monotone" dataKey="interventionMetrics.resolutionRate" stroke="#82ca9d" name="Resolution Rate (%)" />
                       </LineChart>
                     </ResponsiveContainer>
                   </div>
