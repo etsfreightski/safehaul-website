@@ -1,5 +1,4 @@
 import React from 'react';
-// Add useNavigate for proper page navigation
 import { useNavigate } from 'react-router-dom';
 import { 
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
@@ -9,10 +8,8 @@ import {
 } from 'recharts';
 
 const ComprehensiveAnalysisPart1 = () => {
-  // Initialize the navigate function for routing
   const navigate = useNavigate();
 
-const ComprehensiveTransportationStudy = () => {
   // Enhanced datasets with sophisticated metrics
   const theftTrendData = [
     { 
@@ -347,8 +344,13 @@ const ComprehensiveTransportationStudy = () => {
                         <XAxis dataKey="state" />
                         <YAxis />
                         <Tooltip />
-                        <Legend />
-                        <Line type="monotone" dataKey="interventionMetrics.resolutionRate" stroke="#82ca9d" name="Resolution Rate (%)" />
+<Legend />
+                        <Line 
+                          type="monotone" 
+                          dataKey="interventionMetrics.resolutionRate" 
+                          stroke="#82ca9d" 
+                          name="Resolution Rate (%)" 
+                        />
                       </LineChart>
                     </ResponsiveContainer>
                   </div>
@@ -368,8 +370,8 @@ const ComprehensiveTransportationStudy = () => {
                     <PolarRadiusAxis />
                     <Radar name="Risk Score" dataKey="riskScore" stroke="#ff7300" fill="#ff7300" fillOpacity={0.6} />
                     <Radar name="Recovery Rate" dataKey="recoveryRate" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
-                    <Tooltip />
                     <Legend />
+                    <Tooltip />
                   </RadarChart>
                 </ResponsiveContainer>
               </div>
@@ -430,26 +432,28 @@ const ComprehensiveTransportationStudy = () => {
                 industry, delivering unparalleled value to our clients and stakeholders. Through the continued refinement 
                 of our methodologies and the integration of cutting-edge technologies, we are poised to revolutionize the 
                 field of transportation safety and claims management.
-               </p>
+              </p>
             </div>
           </section>
 
-          {/* Bottom Navigation - now with actual page navigation */}
-      <div className="mt-12 flex justify-between items-center border-t pt-8">
-        <div className="flex-1">
-          {/* Part 1 has no previous */}
-        </div>
-        <div className="flex-1 text-center">
-          <span className="text-gray-700 font-bold">Part 1 of 3</span>
-        </div>
-        <div className="flex-1 text-right">
-          <button 
-            onClick={() => navigate('/blog/comprehensive-analysis/part2')}
-            className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
-          >
-            Next: Part 2 <span className="ml-2">→</span>
-          </button>
-        </div>
+          {/* Bottom Navigation */}
+          <div className="mt-12 flex justify-between items-center border-t pt-8">
+            <div className="flex-1">
+              {/* Part 1 has no previous */}
+            </div>
+            <div className="flex-1 text-center">
+              <span className="text-gray-700 font-bold">Part 1 of 3</span>
+            </div>
+            <div className="flex-1 text-right">
+              <button 
+                onClick={() => navigate('/blog/comprehensive-analysis/part2')}
+                className="inline-flex items-center text-[#40CBB5] font-bold hover:underline"
+              >
+                Next: Part 2 <span className="ml-2">→</span>
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   );
