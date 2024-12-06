@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
-import { Quote } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+const CustomArrow = ({ direction, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === 'prev' ? 'left-0 -ml-6' : 'right-0 -mr-6'}
+    z-10 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all
+    text-gray-600 hover:text-[#40CBB5] focus:outline-none`}
+  >
+    {direction === 'prev' ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
+  </button>
+);
 
 const Testimonials = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -104,7 +115,7 @@ const Testimonials = () => {
 
   const filteredTestimonials = activeCategory === 'all' 
     ? testimonials 
-    : testimonials.filter(t => t.category === activeCategory);
+    : [...new Set(testimonials.filter(t => t.category === activeCategory).map(JSON.stringify))].map(JSON.parse);
 
   const settings = {
     dots: true,
@@ -115,6 +126,9 @@ const Testimonials = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    arrows: true,
+    nextArrow: <div className="slick-next"><ChevronRight size={24} /></div>,
+    prevArrow: <div className="slick-prev"><ChevronLeft size={24} /></div>,
     responsive: [
       {
         breakpoint: 1024,
@@ -157,40 +171,68 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <Slider {...settings} className="testimonials-slider -mx-4">
-          {filteredTestimonials.map((testimonial) => (
-            <div key={testimonial.id} className="px-4">
-              <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-                <Quote className="w-8 h-8 text-[#40CBB5] mb-4" />
-                <div className="space-y-4">
-                  <p className="text-gray-700 text-lg leading-relaxed min-h-[150px]">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="pt-4 border-t border-gray-100">
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-gray-600">{testimonial.title}</p>
-                    <span className="inline-block mt-2 px-3 py-1 bg-[#40CBB5] bg-opacity-10 text-[#40CBB5] rounded-full text-sm">
-                      {testimonial.category}
-                    </span>
+        <div className="relative px-8">
+          <Slider {...settings} className="testimonials-slider">
+            {filteredTestimonials.map((testimonial) => (
+              <div key={testimonial.id} className="px-4">
+                <div className="bg-white rounded-xl shadow-lg p-8 h-full">
+                  <Quote className="w-8 h-8 text-[#40CBB5] mb-4" />
+                  <div className="space-y-4">
+                    <p className="text-gray-700 text-lg leading-relaxed min-h-[150px]">
+                      "{testimonial.text}"
+                    </p>
+                    <div className="pt-4 border-t border-gray-100">
+                      <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                      <p className="text-gray-600">{testimonial.title}</p>
+                      <span className="inline-block mt-2 px-3 py-1 bg-[#40CBB5] bg-opacity-10 text-[#40CBB5] rounded-full text-sm">
+                        {testimonial.category}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+            ))}
+          </Slider>
+        </div>
 
-      <style jsx>{`
-        .testimonials-slider .slick-slide {
-          padding: 1rem;
-        }
-        .testimonials-slider .slick-dots li button:before {
-          color: #40CBB5;
-        }
-        .testimonials-slider .slick-dots li.slick-active button:before {
-          color: #40CBB5;
-        }
-      `}</style>
+        <style jsx>{`
+          .testimonials-slider .slick-slide {
+            padding: 1rem;
+          }
+          .testimonials-slider .slick-dots li button:before {
+            color: #40CBB5;
+          }
+          .testimonials-slider .slick-dots li.slick-active button:before {
+            color: #40CBB5;
+          }
+          .testimonials-slider .slick-prev,
+          .testimonials-slider .slick-next {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            transition: all 0.3s ease;
+          }
+          .testimonials-slider .slick-prev:hover,
+          .testimonials-slider .slick-next:hover {
+            background: #40CBB5;
+            color: white;
+            transform: scale(1.1);
+          }
+          .testimonials-slider .slick-prev {
+            left: -50px;
+          }
+          .testimonials-slider .slick-next {
+            right: -50px;
+          }
+          .testimonials-slider .slick-prev:before,
+          .testimonials-slider .slick-next:before {
+            display: none;
+          }
+        `}</style>
+      </div>
     </div>
   );
 };
