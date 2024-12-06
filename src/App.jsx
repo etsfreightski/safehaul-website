@@ -23,6 +23,8 @@ import RiskAssessment from '@/components/RiskAssessment';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQ from '@/components/FAQ';
 import ServiceSchema from '@/components/ServiceSchema';
+import CaseStudies from '@/components/CaseStudies';
+import IndustryNews from '@/components/IndustryNews';
 import { Helmet } from 'react-helmet';
 
 // SharedLayout component ensures consistent header and navigation across all pages
@@ -60,6 +62,8 @@ const HomePage = () => (
       <HeroSection />
       <ServicesSection />
       <PermitsSection />
+      <CaseStudies />
+      <IndustryNews />
       <SubscriptionsSection />
       <AboutSection />
       <FAQ />
