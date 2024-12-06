@@ -3,114 +3,196 @@ import { Helmet } from 'react-helmet';
 
 const ClaimsManagement2024 = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <Helmet>
-        <title>Best Practices for Claims Management in 2024 - Safe Haul</title>
-        <meta name="description" content="Updated guidelines and best practices for efficient transportation claims processing and resolution in 2024." />
+        <title>Claims Management Best Practices 2024 - Safe Haul</title>
+        <meta name="description" content="Discover the latest best practices and strategies for effective claims management in the transportation industry for 2024." />
       </Helmet>
 
-      <div className="mb-8">
-        <span className="text-sm text-[#40CBB5] font-semibold">Best Practices</span>
-        <h1 className="text-3xl font-bold mt-2 mb-4">Best Practices for Claims Management in 2024</h1>
+      <div className="mb-10">
+        <div className="text-sm font-medium mb-2">
+          <span className="text-[#40CBB5] bg-[#40CBB5]/10 px-3 py-1 rounded-full">Latest News</span>
+        </div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Claims Management Best Practices 2024</h1>
         <div className="flex items-center text-gray-600 text-sm">
-          <span>January 10, 2024</span>
+          <span className="font-medium">January 10, 2024</span>
           <span className="mx-2">•</span>
-          <span>6 min read</span>
+          <span>7 min read</span>
         </div>
       </div>
 
       <div className="prose prose-lg max-w-none">
-        <p className="lead">
-          As we move into 2024, effective claims management has become more critical than ever for transportation companies. Here are the latest best practices and strategies for optimizing your claims process.
+        <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          As we move into 2024, effective claims management remains crucial for transportation companies. Here's our comprehensive guide to the latest best practices and strategies.
         </p>
 
-        <h2>Digital Transformation in Claims Processing</h2>
-        <p>
-          Modern claims management requires leveraging digital tools and automation to streamline processes and improve accuracy.
-        </p>
-        <ul>
-          <li>AI-powered claims assessment</li>
-          <li>Mobile-first documentation tools</li>
-          <li>Real-time claim tracking systems</li>
-          <li>Automated notification workflows</li>
-        </ul>
-
-        <h2>Key Components of Effective Claims Management</h2>
-        <h3>1. Initial Response and Documentation</h3>
-        <ul>
-          <li>Immediate incident reporting</li>
-          <li>Comprehensive documentation protocols</li>
-          <li>Digital evidence collection</li>
-          <li>Witness statement management</li>
-        </ul>
-
-        <h3>2. Assessment and Analysis</h3>
-        <ul>
-          <li>Systematic claim evaluation process</li>
-          <li>Data-driven severity assessment</li>
-          <li>Root cause analysis</li>
-          <li>Liability determination protocols</li>
-        </ul>
-
-        <h3>3. Resolution Strategy</h3>
-        <ul>
-          <li>Early intervention programs</li>
-          <li>Alternative dispute resolution options</li>
-          <li>Settlement evaluation frameworks</li>
-          <li>Litigation management guidelines</li>
-        </ul>
-
-        <h2>Preventive Measures and Risk Management</h2>
-        <p>
-          Effective claims management starts with strong preventive measures:
-        </p>
-        <ol>
-          <li>Regular driver training and education</li>
-          <li>Vehicle maintenance documentation</li>
-          <li>Safety protocol implementation</li>
-          <li>Risk assessment procedures</li>
-          <li>Compliance monitoring systems</li>
-        </ol>
-
-        <h2>Technology Integration</h2>
-        <p>
-          Essential technology tools for modern claims management:
-        </p>
-        <ul>
-          <li>Claims management software</li>
-          <li>Document management systems</li>
-          <li>Analytics and reporting tools</li>
-          <li>Mobile apps for field documentation</li>
-          <li>Integration with telematics data</li>
-        </ul>
-
-        <h2>Measuring Success</h2>
-        <p>
-          Key performance indicators for claims management:
-        </p>
-        <ul>
-          <li>Average claim resolution time</li>
-          <li>Claims closure rate</li>
-          <li>Cost per claim</li>
-          <li>Customer satisfaction metrics</li>
-          <li>Recovery success rate</li>
-        </ul>
-
-        <div className="bg-gray-100 p-4 rounded-lg mt-8">
-          <h3>Safe Haul's Claims Management Solutions</h3>
-          <p>
-            Our comprehensive claims management platform incorporates all these best practices and more. We provide:
-          </p>
-          <ul>
-            <li>24/7 claims reporting and support</li>
-            <li>Advanced claims tracking technology</li>
-            <li>Expert claims handlers and adjusters</li>
-            <li>Regular performance analytics</li>
-            <li>Continuous process improvement</li>
+        <div className="bg-gradient-to-r from-[#40CBB5]/10 to-transparent p-6 rounded-lg mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Claims Management Trends</h2>
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-start">
+              <span className="text-[#40CBB5] mr-2">•</span>
+              Digital-first claims processing
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#40CBB5] mr-2">•</span>
+              AI-powered claims analysis
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#40CBB5] mr-2">•</span>
+              Real-time incident reporting
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#40CBB5] mr-2">•</span>
+              Automated documentation systems
+            </li>
           </ul>
-          <p className="mt-4">
-            Contact us to learn how we can help optimize your claims management process for 2024 and beyond.
+        </div>
+
+        <section className="space-y-8">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Essential Components of Modern Claims Management</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white shadow-md rounded-lg p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">Prevention Strategies</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Proactive risk assessment
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Driver safety programs
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Regular maintenance checks
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white shadow-md rounded-lg p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">Response Protocols</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Immediate incident reporting
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Evidence preservation
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Stakeholder communication
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Technology Integration</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Data Collection</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Telematics systems
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Dashboard cameras
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    IoT sensors
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">Analysis Tools</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Predictive analytics
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Machine learning models
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#40CBB5] mr-2">•</span>
+                    Real-time monitoring
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Documentation Best Practices</h2>
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-[#40CBB5] mr-2">1.</span>
+                  Implement digital documentation systems
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#40CBB5] mr-2">2.</span>
+                  Establish clear documentation protocols
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#40CBB5] mr-2">3.</span>
+                  Train staff on proper documentation
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#40CBB5] mr-2">4.</span>
+                  Regular documentation audits
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div className="bg-gradient-to-br from-[#40CBB5]/20 to-white p-8 rounded-xl mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Enhance Your Claims Management with Safe Haul</h2>
+          <p className="text-gray-700 mb-6">
+            Let our experts help you implement these best practices and optimize your claims management process.
           </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start">
+                <span className="text-[#40CBB5] mr-2">✓</span>
+                Custom process development
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#40CBB5] mr-2">✓</span>
+                Technology implementation
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#40CBB5] mr-2">✓</span>
+                Staff training programs
+              </li>
+            </ul>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start">
+                <span className="text-[#40CBB5] mr-2">✓</span>
+                Ongoing support
+              </li>
+              <li className="flex items-start">
+                <span className="text-[#40CBB5] mr-2">✓</span>
+                Regular process optimization
+              </li>
+            </ul>
+          </div>
+          <div className="mt-6 text-center">
+            <button 
+              onClick={() => window.location.href = '/contact'}
+              className="inline-flex items-center px-6 py-3 border-2 border-[#40CBB5] text-lg font-semibold rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+            >
+              Improve Your Claims Process
+            </button>
+          </div>
         </div>
       </div>
     </div>

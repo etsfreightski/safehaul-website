@@ -435,6 +435,52 @@ const MishandledClaimsCosts = () => {
              </div>
            </section>
 
+           {/* Technology Solutions Section */}
+           <section className="mb-16">
+             <h2 className="text-3xl font-black text-gray-900 mb-6">Implement Smart Prevention with Safe Haul</h2>
+             
+             <div className="bg-[#E6FBF8] p-8 rounded-xl mt-12">
+               <h2 className="text-2xl font-bold text-gray-900 mb-4">Implement Smart Prevention with Safe Haul</h2>
+               <p className="text-gray-700 mb-6">
+                 Our technology-driven approach to claims prevention combines cutting-edge solutions with expert implementation and support.
+               </p>
+               <div className="grid md:grid-cols-2 gap-4 mb-6">
+                 <ul className="space-y-2 text-gray-700">
+                   <li className="flex items-start">
+                     <span className="text-[#40CBB5] mr-2">✓</span>
+                     Customized technology solutions
+                   </li>
+                   <li className="flex items-start">
+                     <span className="text-[#40CBB5] mr-2">✓</span>
+                     Integration with existing systems
+                   </li>
+                   <li className="flex items-start">
+                     <span className="text-[#40CBB5] mr-2">✓</span>
+                     24/7 monitoring and support
+                   </li>
+                 </ul>
+                 <ul className="space-y-2 text-gray-700">
+                   <li className="flex items-start">
+                     <span className="text-[#40CBB5] mr-2">✓</span>
+                     Regular system updates
+                   </li>
+                   <li className="flex items-start">
+                     <span className="text-[#40CBB5] mr-2">✓</span>
+                     Performance analytics
+                   </li>
+                 </ul>
+               </div>
+               <div className="text-center">
+                 <button 
+                   onClick={() => window.location.href = '/services'}
+                   className="inline-flex items-center px-6 py-3 border-2 border-[#40CBB5] text-lg font-semibold rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                 >
+                   Learn About Our Services
+                 </button>
+               </div>
+             </div>
+           </section>
+
            {/* Call to Action Section */}
            <section className="bg-gray-50 p-8 rounded-lg">
              <h2 className="text-3xl font-black text-gray-900 mb-6">Why Safe Haul is the Right Choice</h2>
