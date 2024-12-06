@@ -17,7 +17,7 @@ import ComprehensiveTransportationStudy from '@/components/blogposts/Comprehensi
 import ComprehensiveAnalysisNavigator from '@/components/blogposts/ComprehensiveAnalysisNavigator';
 import ComprehensiveAnalysisPart2 from '@/components/blogposts/ComprehensiveAnalysisPart2';
 import ComprehensiveAnalysisPart3 from '@/components/blogposts/ComprehensiveAnalysisPart3';
-import MishandledClaimsCosts from '@/components/blogposts/MishandledClaimsCosts';
+import MishandledClaimsCosts from '@/components/blogposts/MishandledClaimsCosts.jsx';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
 
