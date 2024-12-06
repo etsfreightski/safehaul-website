@@ -280,42 +280,42 @@ const MishandledClaimsCosts = () => {
                  </div>
 
                  <div className="bg-white p-4 rounded-lg mb-6">
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Consequences of Non-Compliance</h4>
-                <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                  <li>
-                    <strong>Fines and Penalties:</strong> Failure to comply with post-accident testing can result in fines of up to $15,691 per violation.
-                  </li>
-                  <li>
-                    <strong>Insurance Implications:</strong> Non-compliance can void insurance coverage, leaving carriers to absorb costs.
-                  </li>
-                  <li>
-                    <strong>Litigation Risks:</strong> In lawsuits, failure to conduct testing is often used as evidence of negligence.
-                  </li>
-                </ul>
-              </div>
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Consequences of Non-Compliance</h4>
+                   <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                     <li>
+                       <strong>Fines and Penalties:</strong> Failure to comply with post-accident testing can result in fines of up to $15,691 per violation.
+                     </li>
+                     <li>
+                       <strong>Insurance Implications:</strong> Non-compliance can void insurance coverage, leaving carriers to absorb costs.
+                     </li>
+                     <li>
+                       <strong>Litigation Risks:</strong> In lawsuits, failure to conduct testing is often used as evidence of negligence.
+                     </li>
+                   </ul>
+                 </div>
 
-              <div className="bg-white p-4 rounded-lg mb-6">
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Example: Missed Testing Deadline</h4>
-                <p className="text-gray-700 leading-relaxed">
-                  A carrier failed to test a driver involved in an accident within the 8-hour window for alcohol testing. During litigation, this non-compliance was cited as evidence of liability, resulting in a $1.5 million settlement that could have been avoided.
-                </p>
+                 <div className="bg-white p-4 rounded-lg mb-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Example: Missed Testing Deadline</h4>
+                   <p className="text-gray-700 leading-relaxed">
+                     A carrier failed to test a driver involved in an accident within the 8-hour window for alcohol testing. During litigation, this non-compliance was cited as evidence of liability, resulting in a $1.5 million settlement that could have been avoided.
+                   </p>
+                 </div>
+		
+		 <div className="mt-6">
+                  <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
+                  <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                    <li>
+                      <strong>Clear Policies:</strong> Implement strict post-accident procedures, including immediate testing.
+                    </li>
+                    <li>
+                      <strong>Driver Training:</strong> Educate drivers on post-accident testing requirements to ensure timely compliance.
+                    </li>
+                  </ul>
+                </div>
               </div>
+            </section>
 
-              <div className="mt-6">
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
-                <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                  <li>
-                    <strong>Clear Policies:</strong> Implement strict post-accident procedures, including immediate testing.
-                  </li>
-                  <li>
-                    <strong>Driver Training:</strong> Educate drivers on post-accident testing requirements to ensure timely compliance.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Auto Liability Claims Section */}
+            {/* Auto Liability Claims Section */}
             <section className="mb-16">
               <h2 className="text-3xl font-black text-gray-900 mb-6">Auto Liability Claims: Managing Third-Party Costs</h2>
               
