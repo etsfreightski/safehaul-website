@@ -300,181 +300,192 @@ const MishandledClaimsCosts = () => {
                      A carrier failed to test a driver involved in an accident within the 8-hour window for alcohol testing. During litigation, this non-compliance was cited as evidence of liability, resulting in a $1.5 million settlement that could have been avoided.
                    </p>
                  </div>
-		
-		 <div className="mt-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
-                  <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                    <li>
-                      <strong>Clear Policies:</strong> Implement strict post-accident procedures, including immediate testing.
-                    </li>
-                    <li>
-                      <strong>Driver Training:</strong> Educate drivers on post-accident testing requirements to ensure timely compliance.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
 
-            {/* Auto Liability Claims Section */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Auto Liability Claims: Managing Third-Party Costs</h2>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="prose max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    Auto liability insurance covers damages to third parties. Mishandling these claims often leads to higher settlements, legal fees, and reputational damage.
-                  </p>
+                 <div className="mt-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
+                   <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                     <li>
+                       <strong>Clear Policies:</strong> Implement strict post-accident procedures, including immediate testing.
+                     </li>
+                     <li>
+                       <strong>Driver Training:</strong> Educate drivers on post-accident testing requirements to ensure timely compliance.
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </section>
 
-                  <div className="bg-white p-4 rounded-lg mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Key Statistics</h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      The average settlement for severe injuries in auto liability claims is $1.2 million, and settlements can exceed $10 million in extreme cases (ATA Litigation Center).
-                    </p>
-                  </div>
+           {/* Auto Liability Claims Section */}
+           <section className="mb-16">
+             <h2 className="text-3xl font-black text-gray-900 mb-6">Auto Liability Claims: Managing Third-Party Costs</h2>
+             
+             <div className="bg-gray-50 p-6 rounded-lg">
+               <div className="prose max-w-none">
+                 <p className="text-gray-700 leading-relaxed mb-6">
+                   Auto liability insurance covers damages to third parties. Mishandling these claims often leads to higher settlements, legal fees, and reputational damage.
+                 </p>
 
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Common Issues</h4>
-                  <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                    <li>
-                      <strong>Failure to Challenge Exaggerated Claims:</strong> Inexperienced claims reps often accept inflated medical costs without contesting them.
-                    </li>
-                    <li>
-                      <strong>Delayed Reporting:</strong> Late reporting can void insurance coverage, leaving carriers liable for the full amount.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+                 <div className="bg-white p-4 rounded-lg mb-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Key Statistics</h4>
+                   <p className="text-gray-700 leading-relaxed">
+                     The average settlement for severe injuries in auto liability claims is $1.2 million, and settlements can exceed $10 million in extreme cases (ATA Litigation Center).
+                   </p>
+                 </div>
 
-            {/* Cargo Insurance Claims Section */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Cargo Insurance Claims: Protecting Freight and Reputation</h2>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="prose max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    Cargo claims arise from loss, theft, or damage to goods in transit. Mishandling these claims not only results in financial losses but also damages carrier relationships with shippers.
-                  </p>
+                 <h4 className="text-lg font-bold text-gray-900 mb-3">Common Issues</h4>
+                 <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                   <li>
+                     <strong>Failure to Challenge Exaggerated Claims:</strong> Inexperienced claims reps often accept inflated medical costs without contesting them.
+                   </li>
+                   <li>
+                     <strong>Delayed Reporting:</strong> Late reporting can void insurance coverage, leaving carriers liable for the full amount.
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </section>
 
-                  <div className="h-80 mb-8">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart data={monthlyClaimsData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="month" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Line type="monotone" dataKey="cargoLoss" stroke="#40CBB5" name="Cargo Loss Claims" />
-                        <Line type="monotone" dataKey="physicalDamage" stroke="#ff7300" name="Physical Damage Claims" />
-                        <Line type="monotone" dataKey="liability" stroke="#8884d8" name="Liability Claims" />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </div>
+           {/* Cargo Insurance Claims Section */}
+           <section className="mb-16">
+             <h2 className="text-3xl font-black text-gray-900 mb-6">Cargo Insurance Claims: Protecting Freight and Reputation</h2>
+             
+             <div className="bg-gray-50 p-6 rounded-lg">
+               <div className="prose max-w-none">
+                 <p className="text-gray-700 leading-relaxed mb-6">
+                   Cargo claims arise from loss, theft, or damage to goods in transit. Mishandling these claims not only results in financial losses but also damages carrier relationships with shippers.
+                 </p>
 
-                  <div className="bg-white p-4 rounded-lg mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Key Statistics</h4>
-                    <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                      <li>
-                        <strong>Cargo theft costs the industry over $223 million annually</strong>, with electronics, food, and pharmaceuticals being the most targeted goods, according to <a href="https://www.cargonet.com/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">CargoNet</a>.
-                      </li>
-                      <li>
-                        Weather-related cargo damage accounts for 12% of claims, often due to improper tarping or refrigeration failures, as reported by the <a href="https://www.natcargo.org/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">National Cargo Bureau</a>.
-                      </li>
-                    </ul>
-                  </div>
+                 <div className="h-80 mb-8">
+                   <ResponsiveContainer width="100%" height="100%">
+                     <LineChart data={monthlyClaimsData}>
+                       <CartesianGrid strokeDasharray="3 3" />
+                       <XAxis dataKey="month" />
+                       <YAxis />
+                       <Tooltip />
+                       <Legend />
+                       <Line type="monotone" dataKey="cargoLoss" stroke="#40CBB5" name="Cargo Loss Claims" />
+                       <Line type="monotone" dataKey="physicalDamage" stroke="#ff7300" name="Physical Damage Claims" />
+                       <Line type="monotone" dataKey="liability" stroke="#8884d8" name="Liability Claims" />
+                     </LineChart>
+                   </ResponsiveContainer>
+                 </div>
 
-                  <div className="bg-white p-4 rounded-lg mb-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Example: Refrigeration Failure</h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      A carrier transporting $300,000 worth of frozen food experienced a refrigeration unit failure. The claims department failed to file a timely claim under the Carmack Amendment's 9-month deadline, forcing the carrier to absorb the loss.
-                    </p>
-                  </div>
+                 <div className="bg-white p-4 rounded-lg mb-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Key Statistics</h4>
+                   <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                     <li>
+                       <strong>Cargo theft costs the industry over $223 million annually</strong>, with electronics, food, and pharmaceuticals being the most targeted goods, according to <a href="https://www.cargonet.com/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">CargoNet</a>.
+                     </li>
+                     <li>
+                       Weather-related cargo damage accounts for 12% of claims, often due to improper tarping or refrigeration failures, as reported by the <a href="https://www.natcargo.org/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">National Cargo Bureau</a>.
+                     </li>
+                   </ul>
+                 </div>
 
-                  <div className="mt-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
-                    <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                      <li>
-                        <strong>Invest in Technology:</strong> Use GPS tracking and temperature sensors to monitor cargo conditions.
-                      </li>
-                      <li>
-                        <strong>Timely Reporting:</strong> Adhere to strict reporting deadlines for theft or damage claims per <a href="https://www.transportation.gov/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">DOT Cargo Claims Guidance</a>.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+                 <div className="bg-white p-4 rounded-lg mb-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Example: Refrigeration Failure</h4>
+                   <p className="text-gray-700 leading-relaxed">
+                     A carrier transporting $300,000 worth of frozen food experienced a refrigeration unit failure. The claims department failed to file a timely claim under the Carmack Amendment's 9-month deadline, forcing the carrier to absorb the loss.
+                   </p>
+                 </div>
 
-            {/* OCAC Claims Section */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Occupational Accident (OCAC) Claims: Protecting Independent Contractors</h2>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <div className="prose max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    OCAC insurance is essential for protecting drivers not covered under workers' compensation. Mishandling these claims leads to driver dissatisfaction and increased turnover.
-                  </p>
+                 <div className="mt-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
+                   <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                     <li>
+                       <strong>Invest in Technology:</strong> Use GPS tracking and temperature sensors to monitor cargo conditions.
+                     </li>
+                     <li>
+                       <strong>Timely Reporting:</strong> Adhere to strict reporting deadlines for theft or damage claims per <a href="https://www.transportation.gov/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">DOT Cargo Claims Guidance</a>.
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </section>
 
-                  <h4 className="text-lg font-bold text-gray-900 mb-3">Key Issues</h4>
-                  <ul className="list-disc pl-6 space-y-3 text-gray-700">
-                    <li>
-                      <strong>Delayed Processing:</strong> Inexperienced claims reps often fail to process medical reimbursements promptly.
-                    </li>
-                    <li>
-                      <strong>Inadequate Coverage:</strong> Many policies fail to cover catastrophic injuries, leaving drivers exposed to significant medical costs.
-                    </li>
-                  </ul>
+           {/* OCAC Claims Section */}
+           <section className="mb-16">
+             <h2 className="text-3xl font-black text-gray-900 mb-6">Occupational Accident (OCAC) Claims: Protecting Independent Contractors</h2>
+             
+             <div className="bg-gray-50 p-6 rounded-lg">
+               <div className="prose max-w-none">
+                 <p className="text-gray-700 leading-relaxed mb-6">
+                   OCAC insurance is essential for protecting drivers not covered under workers' compensation. Mishandling these claims leads to driver dissatisfaction and increased turnover.
+                 </p>
 
-                  <div className="mt-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      Ensure drivers understand their coverage and the claims process through comprehensive orientation and ongoing communication. Refer to <a href="https://www.fmcsa.dot.gov/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">FMCSA Independent Contractor Resources</a> for guidance.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
+                 <h4 className="text-lg font-bold text-gray-900 mb-3">Key Issues</h4>
+                 <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                   <li>
+                     <strong>Delayed Processing:</strong> Inexperienced claims reps often fail to process medical reimbursements promptly.
+                   </li>
+                   <li>
+                     <strong>Inadequate Coverage:</strong> Many policies fail to cover catastrophic injuries, leaving drivers exposed to significant medical costs.
+                   </li>
+                 </ul>
 
-            {/* Call to Action Section */}
-            <section className="bg-gray-50 p-8 rounded-lg">
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Why Safe Haul is the Right Choice</h2>
-              
-              <p className="text-gray-700 leading-relaxed mb-6">
-                At Safe Haul Claims and Safety Management, we bring decades of experience in managing safety, claims, and insurance for motor carriers. Unlike generic safety companies, we understand the intricacies of towing negotiations, regulatory compliance, and cargo claims defense.
-              </p>
+                 <div className="mt-6">
+                   <h4 className="text-lg font-bold text-gray-900 mb-3">Best Practices</h4>
+                   <p className="text-gray-700 leading-relaxed">
+                     Ensure drivers understand their coverage and the claims process through comprehensive orientation and ongoing communication. Refer to <a href="https://www.fmcsa.dot.gov/" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">FMCSA Independent Contractor Resources</a> for guidance.
+                   </p>
+                 </div>
+               </div>
+             </div>
+           </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#40CBB5] mb-4">Aggressive Claims Defense</h3>
-                  <p className="text-gray-700">We minimize settlements and ensure carriers aren't overcharged.</p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#40CBB5] mb-4">Compliance Assurance</h3>
-                  <p className="text-gray-700">From post-accident testing to DOT audits, we ensure you stay compliant.</p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#40CBB5] mb-4">Cost Control</h3>
-                  <p className="text-gray-700">We negotiate towing and storage costs to avoid excessive charges.</p>
-                </div>
-              </div>
-            </section>
+           {/* Call to Action Section */}
+           <section className="bg-gray-50 p-8 rounded-lg">
+             <h2 className="text-3xl font-black text-gray-900 mb-6">Why Safe Haul is the Right Choice</h2>
+             
+             <p className="text-gray-700 leading-relaxed mb-6">
+               At Safe Haul Claims and Safety Management, we bring decades of experience in managing safety, claims, and insurance for motor carriers. Unlike generic safety companies, we understand the intricacies of towing negotiations, regulatory compliance, and cargo claims defense.
+             </p>
 
-            {/* Conclusion */}
-            <section className="mt-16">
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Conclusion</h2>
-              
-              <div className="prose max-w-none">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Mishandled claims are more than a financial risk—they threaten your entire business. With the growing complexity of claims, from towing costs to post-accident testing, partnering with experts like Safe Haul Claims and Safety Management ensures your claims are handled efficiently and effectively.
-                </p>
-              </div>
-            </section>
-          </article>
-        </div>
-      </div>
-    </>
-  );
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+               <div className="bg-white p-6 rounded-lg shadow-md">
+                 <h3 className="text-xl font-bold text-[#40CBB5] mb-4">Aggressive Claims Defense</h3>
+                 <p className="text-gray-700">We minimize settlements and ensure carriers aren't overcharged.</p>
+               </div>
+               
+               <div className="bg-white p-6 rounded-lg shadow-md">
+                 <h3 className="text-xl font-bold text-[#40CBB5] mb-4">Compliance Assurance</h3>
+                 <p className="text-gray-700">From post-accident testing to DOT audits, we ensure you stay compliant.</p>
+               </div>
+               
+               <div className="bg-white p-6 rounded-lg shadow-md">
+                 <h3 className="text-xl font-bold text-[#40CBB5] mb-4">Cost Control</h3>
+                 <p className="text-gray-700">We negotiate towing and storage costs to avoid excessive charges.</p>
+               </div>
+             </div>
+           </section>
+
+           {/* Conclusion */}
+           <section className="mt-16">
+             <h2 className="text-3xl font-black text-gray-900 mb-6">Conclusion</h2>
+             
+             <div className="prose max-w-none">
+               <p className="text-gray-700 leading-relaxed mb-6">
+                 Mishandled claims are more than just a financial burden—they represent lost opportunities, damaged relationships, and potential regulatory violations. Professional claims management is not an expense but an investment in your carrier's future.
+               </p>
+               
+               <p className="text-gray-700 leading-relaxed mb-6">
+                 Contact Safe Haul today to learn how our expert claims management can protect your business and improve your bottom line.
+               </p>
+
+               <div className="mt-8">
+                 <Link to="/contact" className="inline-block bg-[#40CBB5] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#35a996] transition-colors">
+                   Get Expert Claims Management
+                 </Link>
+               </div>
+             </div>
+           </section>
+         </article>
+       </div>
+     </div>
+   </>
+ );
 };
 
 export default MishandledClaimsCosts;
