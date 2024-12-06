@@ -475,7 +475,19 @@ const MishandledClaimsCosts = () => {
                </p>
 
                <div className="mt-8">
-                 <Link to="/contact" className="inline-block bg-[#40CBB5] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#35a996] transition-colors">
+                 <Link 
+                   to="/#contact-form" 
+                   className="inline-block bg-[#40CBB5] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#35a996] transition-colors"
+                   onClick={(e) => {
+                     e.preventDefault();
+                     const contactForm = document.getElementById('contact-form');
+                     if (contactForm) {
+                       contactForm.scrollIntoView({ behavior: 'smooth' });
+                     } else {
+                       window.location.href = '/#contact-form';
+                     }
+                   }}
+                 >
                    Get Expert Claims Management
                  </Link>
                </div>
