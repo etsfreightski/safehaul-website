@@ -40,22 +40,22 @@ const Header = () => {
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Home</Link>
-            <button onClick={() => scrollToSection('services')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Services</button>
-            <button onClick={() => scrollToSection('subscriptions')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md flex items-center">
-              <span className="text-[#FFB951] mr-2 text-2xl drop-shadow-lg">★</span>
+          <div className="hidden md:flex items-center space-x-4">
+            <Link to="/" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Home</Link>
+            <button onClick={() => scrollToSection('services')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Services</button>
+            <button onClick={() => scrollToSection('subscriptions')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md flex items-center">
+              <span className="text-[#FFB951] mr-1 text-lg drop-shadow-lg">★</span>
               Subscriptions
-              <span className="text-[#FFB951] ml-2 text-2xl drop-shadow-lg">★</span>
+              <span className="text-[#FFB951] ml-1 text-lg drop-shadow-lg">★</span>
             </button>
-            <button onClick={() => scrollToSection('why-us')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Why Us</button>
-            <button onClick={() => scrollToSection('about')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">About</button>
-            <Link to="/risk-assessment" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Risk Assessment</Link>
-            <Link to="/testimonials" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Testimonials</Link>
-            <Link to="/blog" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Blog</Link>
+            <button onClick={() => scrollToSection('why-us')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Why Us</button>
+            <button onClick={() => scrollToSection('about')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">About</button>
+            <Link to="/risk-assessment" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Risk Assessment</Link>
+            <Link to="/testimonials" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Testimonials</Link>
+            <Link to="/blog" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Blog</Link>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-xl font-black border-4 border-[#40CBB5] px-10 py-4 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              className="text-base font-semibold border-2 border-[#40CBB5] px-6 py-2 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
             >
               Contact
             </button>
@@ -66,21 +66,21 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute left-0 right-0 bg-white shadow-lg p-6 z-50">
             <div className="flex flex-col space-y-6">
-              <Link to="/" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors">Home</Link>
-              <button onClick={() => scrollToSection('services')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors text-left">Services</button>
-              <button onClick={() => scrollToSection('subscriptions')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors flex items-center">
-                <span className="text-[#FFB951] mr-2 text-2xl">★</span>
+              <Link to="/" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors">Home</Link>
+              <button onClick={() => scrollToSection('services')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors text-left">Services</button>
+              <button onClick={() => scrollToSection('subscriptions')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors flex items-center">
+                <span className="text-[#FFB951] mr-1 text-lg">★</span>
                 Subscriptions
-                <span className="text-[#FFB951] ml-2 text-2xl">★</span>
+                <span className="text-[#FFB951] ml-1 text-lg">★</span>
               </button>
-              <button onClick={() => scrollToSection('why-us')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors text-left">Why Us</button>
-              <button onClick={() => scrollToSection('about')} className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors text-left">About</button>
-              <Link to="/risk-assessment" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors">Risk Assessment</Link>
-              <Link to="/testimonials" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors">Testimonials</Link>
-              <Link to="/blog" className="text-xl font-black text-gray-900 hover:text-[#40CBB5] transition-colors">Blog</Link>
+              <button onClick={() => scrollToSection('why-us')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors text-left">Why Us</button>
+              <button onClick={() => scrollToSection('about')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors text-left">About</button>
+              <Link to="/risk-assessment" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors">Risk Assessment</Link>
+              <Link to="/testimonials" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors">Testimonials</Link>
+              <Link to="/blog" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors">Blog</Link>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-xl font-black border-4 border-[#40CBB5] px-10 py-4 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all text-center shadow-xl"
+                className="text-base font-semibold border-2 border-[#40CBB5] px-6 py-2 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all text-center shadow-md"
               >
                 Contact
               </button>

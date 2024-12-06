@@ -18,6 +18,9 @@ import ComprehensiveAnalysisNavigator from '@/components/blogposts/Comprehensive
 import ComprehensiveAnalysisPart2 from '@/components/blogposts/ComprehensiveAnalysisPart2';
 import ComprehensiveAnalysisPart3 from '@/components/blogposts/ComprehensiveAnalysisPart3';
 import MishandledClaimsCosts from '@/components/blogposts/MishandledClaimsCosts';
+import FMCSASafetyRegulations from '@/components/blogposts/FMCSASafetyRegulations';
+import InsuranceCostAnalysis from '@/components/blogposts/InsuranceCostAnalysis';
+import ClaimsManagement2024 from '@/components/blogposts/ClaimsManagement2024';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -116,6 +119,20 @@ function App() {
         <Route 
           path="/blog/mishandled-claims-costs" 
           element={<SharedLayout><MishandledClaimsCosts /></SharedLayout>} 
+        />
+        
+        {/* Industry News routes */}
+        <Route 
+          path="/blog/fmcsa-safety-regulations" 
+          element={<SharedLayout><FMCSASafetyRegulations /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/insurance-cost-analysis" 
+          element={<SharedLayout><InsuranceCostAnalysis /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/claims-management-2024" 
+          element={<SharedLayout><ClaimsManagement2024 /></SharedLayout>} 
         />
         
         {/* Additional feature routes */}

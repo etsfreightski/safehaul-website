@@ -1,22 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const CustomArrow = ({ direction, onClick }) => (
-  <button
-    onClick={onClick}
-    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === 'prev' ? 'left-0 -ml-6' : 'right-0 -mr-6'}
-    z-10 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all
-    text-gray-600 hover:text-[#40CBB5] focus:outline-none`}
-  >
-    {direction === 'prev' ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
-  </button>
-);
-
 const Testimonials = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
   const testimonials = [
     {
       id: 1,
@@ -66,56 +54,8 @@ const Testimonials = () => {
       title: "Fleet Safety Manager",
       text: "We were struggling with frequent safety violations and accidents in our fleet, but Safe Haul completely turned things around. They assessed our safety procedures, implemented new protocols, and provided training for our team. Since working with them, our safety record has improved dramatically.",
       category: "Safety Improvement"
-    },
-    {
-      id: 8,
-      author: "Anna R.",
-      title: "Transportation Company Owner",
-      text: "When I started my trucking company, I was overwhelmed by the requirements—permits, insurance policies, DOT compliance, you name it. Safe Haul guided me through every step, from incorporating my business to growing a fleet of over 100 trucks.",
-      category: "Business Development"
-    },
-    {
-      id: 9,
-      author: "Sarah H.",
-      title: "LTL Carrier Owner",
-      text: "We had a particularly complex freight claim that seemed unwinnable—until Safe Haul got involved. Their deep understanding of carrier operations and claims defense was the difference maker. They didn't settle for anything less than the best outcome, and their strategic approach saved us thousands.",
-      category: "Claims Defense"
-    },
-    {
-      id: 10,
-      author: "Danielle T.",
-      title: "Logistics Manager",
-      text: "Safe Haul's owners have decades of experience as safety directors and managing a large safety services company, and it shows. They've defended our claims to the fullest, ensuring we get the best outcomes every time.",
-      category: "Industry Experience"
-    },
-    {
-      id: 11,
-      author: "Tom W.",
-      title: "Fleet Manager",
-      text: "The driver training program offered by Safe Haul has been a game-changer for our company. Their experts provided hands-on workshops that taught our team the latest safety techniques and compliance requirements. Our drivers are now more confident and prepared.",
-      category: "Training Programs"
-    },
-    {
-      id: 12,
-      author: "Michael G.",
-      title: "Fleet Safety Director",
-      text: "Safe Haul's decades of experience running safety and insurance departments gives them an edge that most safety companies just don't have. They know how to keep carriers compliant because they've done it themselves for years. Their advice isn't theoretical—it's practical, real-world solutions that work.",
-      category: "Practical Solutions"
-    },
-    {
-      id: 13,
-      author: "Bryan K.",
-      title: "Carrier Owner-Operator",
-      text: "From starting our company to scaling to over 150 trucks, Safe Haul has been by our side. Their experience managing safety and claims departments means they know exactly what carriers need to grow while staying compliant.",
-      category: "Growth Support"
     }
   ];
-
-  const categories = ['all', ...new Set(testimonials.map(t => t.category))];
-
-  const filteredTestimonials = activeCategory === 'all' 
-    ? testimonials 
-    : [...new Set(testimonials.filter(t => t.category === activeCategory).map(JSON.stringify))].map(JSON.parse);
 
   const settings = {
     dots: true,
@@ -153,27 +93,11 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
           <p className="text-xl text-gray-600 mb-8">Real experiences from transportation professionals</p>
-          
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                  activeCategory === category
-                    ? 'bg-[#40CBB5] text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </button>
-            ))}
-          </div>
         </div>
 
         <div className="relative px-8">
           <Slider {...settings} className="testimonials-slider">
-            {filteredTestimonials.map((testimonial) => (
+            {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="px-4">
                 <div className="bg-white rounded-xl shadow-lg p-8 h-full">
                   <Quote className="w-8 h-8 text-[#40CBB5] mb-4" />
