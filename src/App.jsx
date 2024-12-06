@@ -17,91 +17,115 @@ import ComprehensiveTransportationStudy from '@/components/blogposts/Comprehensi
 import ComprehensiveAnalysisNavigator from '@/components/blogposts/ComprehensiveAnalysisNavigator';
 import ComprehensiveAnalysisPart2 from '@/components/blogposts/ComprehensiveAnalysisPart2';
 import ComprehensiveAnalysisPart3 from '@/components/blogposts/ComprehensiveAnalysisPart3';
-import MishandledClaimsCosts from '@/components/blogposts/MishandledClaimsCosts.jsx';
+import MishandledClaimsCosts from '@/components/blogposts/MishandledClaimsCosts';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import FAQ from '@/components/FAQ';
+import ServiceSchema from '@/components/ServiceSchema';
+import { Helmet } from 'react-helmet';
 
 // SharedLayout component ensures consistent header and navigation across all pages
 const SharedLayout = ({ children }) => (
- <>
-   <TopBar />
-   <Header />
-   {children}
- </>
+  <>
+    <ServiceSchema />
+    <Helmet>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#40CBB5" />
+      <link rel="canonical" href={window.location.href} />
+      <meta name="robots" content="index, follow" />
+    </Helmet>
+    <TopBar />
+    <Header />
+    <Breadcrumbs />
+    {children}
+  </>
 );
 
 // HomePage component combines all the main sections of the landing page
 const HomePage = () => (
- <SharedLayout>
-   <main>
-     <HeroSection />
-     <ServicesSection />
-     <PermitsSection />
-     <SubscriptionsSection />
-     <AboutSection />
-     <ContactSection />
-   </main>
- </SharedLayout>
+  <SharedLayout>
+    <Helmet>
+      <title>Safe Haul - Professional Transportation Claims & Safety Management</title>
+      <meta name="description" content="Expert transportation claims management, DOT compliance, and safety services. Protect your fleet with industry-leading solutions from Safe Haul." />
+      <meta property="og:title" content="Safe Haul - Transportation Claims & Safety Management" />
+      <meta property="og:description" content="Expert transportation claims management and safety services for carriers." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={window.location.href} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Safe Haul - Transportation Claims & Safety Management" />
+      <meta name="twitter:description" content="Expert transportation claims management and safety services for carriers." />
+    </Helmet>
+    <main>
+      <HeroSection />
+      <ServicesSection />
+      <PermitsSection />
+      <SubscriptionsSection />
+      <AboutSection />
+      <FAQ />
+      <ContactSection />
+    </main>
+  </SharedLayout>
 );
 
 function App() {
- return (
-   <Router>
-     <Routes>
-       {/* Main landing page route */}
-       <Route path="/" element={<HomePage />} />
-       
-       {/* Blog section routes */}
-       <Route path="/blog" element={<SharedLayout><BlogPage /></SharedLayout>} />
-       <Route 
-         path="/blog/comprehensive-guide" 
-         element={<SharedLayout><ComprehensiveGuide /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/dot-compliance" 
-         element={<SharedLayout><DOTCompliance /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/claims-management" 
-         element={<SharedLayout><ClaimsManagement /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/safety-culture" 
-         element={<SharedLayout><SafetyCulture /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/comprehensive-transportation-study" 
-         element={<SharedLayout><ComprehensiveTransportationStudy /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/comprehensive-analysis" 
-         element={<SharedLayout><ComprehensiveAnalysisNavigator /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/comprehensive-analysis/part2" 
-         element={<SharedLayout><ComprehensiveAnalysisPart2 /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/comprehensive-analysis/part3" 
-         element={<SharedLayout><ComprehensiveAnalysisPart3 /></SharedLayout>} 
-       />
-       <Route 
-         path="/blog/mishandled-claims-costs" 
-         element={<SharedLayout><MishandledClaimsCosts /></SharedLayout>} 
-       />
-       
-       {/* Additional feature routes */}
-       <Route 
-         path="/testimonials" 
-         element={<SharedLayout><Testimonials /></SharedLayout>}
-       />  
-       <Route 
-         path="/risk-assessment" 
-         element={<SharedLayout><RiskAssessment /></SharedLayout>} 
-       />
-     </Routes>
-   </Router>
- );
+  return (
+    <Router>
+      <Routes>
+        {/* Main landing page route */}
+        <Route path="/" element={<HomePage />} />
+        
+        {/* Blog section routes */}
+        <Route path="/blog" element={<SharedLayout><BlogPage /></SharedLayout>} />
+        <Route 
+          path="/blog/comprehensive-guide" 
+          element={<SharedLayout><ComprehensiveGuide /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/dot-compliance" 
+          element={<SharedLayout><DOTCompliance /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/claims-management" 
+          element={<SharedLayout><ClaimsManagement /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/safety-culture" 
+          element={<SharedLayout><SafetyCulture /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/comprehensive-transportation-study" 
+          element={<SharedLayout><ComprehensiveTransportationStudy /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/comprehensive-analysis" 
+          element={<SharedLayout><ComprehensiveAnalysisNavigator /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/comprehensive-analysis/part2" 
+          element={<SharedLayout><ComprehensiveAnalysisPart2 /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/comprehensive-analysis/part3" 
+          element={<SharedLayout><ComprehensiveAnalysisPart3 /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/mishandled-claims-costs" 
+          element={<SharedLayout><MishandledClaimsCosts /></SharedLayout>} 
+        />
+        
+        {/* Additional feature routes */}
+        <Route 
+          path="/testimonials" 
+          element={<SharedLayout><Testimonials /></SharedLayout>}
+        />  
+        <Route 
+          path="/risk-assessment" 
+          element={<SharedLayout><RiskAssessment /></SharedLayout>} 
+        />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
