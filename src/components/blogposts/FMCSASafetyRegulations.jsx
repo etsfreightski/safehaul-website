@@ -1,9 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const FMCSASafetyRegulations = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <BlogPostSchema 
+        title="FMCSA Proposes New Safety Regulations"
+        description="FMCSA announces new proposed safety regulations aimed at enhancing road safety through advanced driver assistance systems."
+        publishDate="2024-01-15"
+        url="https://safehaulsite.netlify.app/blog/fmcsa-safety-regulations"
+      />
       <Helmet>
         <title>FMCSA Proposes New Safety Regulations - Safe Haul</title>
         <meta name="description" content="FMCSA announces new proposed safety regulations aimed at enhancing road safety through advanced driver assistance systems." />

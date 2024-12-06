@@ -1,9 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const ClaimsManagement2024 = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <BlogPostSchema 
+        title="Claims Management Best Practices 2024"
+        description="Discover the latest best practices and strategies for effective claims management in the transportation industry for 2024."
+        publishDate="2024-01-10"
+        url="https://safehaulsite.netlify.app/blog/claims-management-2024"
+      />
       <Helmet>
         <title>Claims Management Best Practices 2024 - Safe Haul</title>
         <meta name="description" content="Discover the latest best practices and strategies for effective claims management in the transportation industry for 2024." />

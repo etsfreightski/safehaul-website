@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const InsuranceCostAnalysis = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <BlogPostSchema 
+        title="Transportation Insurance Cost Analysis 2024"
+        description="An in-depth analysis of transportation insurance costs, trends, and strategies for optimizing coverage while managing expenses effectively."
+        publishDate="2024-01-10"
+        url="https://safehaulsite.netlify.app/blog/insurance-cost-analysis"
+      />
       <Helmet>
         <title>Transportation Insurance Cost Analysis 2024 - Safe Haul</title>
-        <meta name="description" content="Analysis of rising insurance costs in the transportation industry and strategies for cost management." />
+        <meta name="description" content="An in-depth analysis of transportation insurance costs, trends, and strategies for optimizing coverage while managing expenses effectively." />
       </Helmet>
 
       <div className="mb-10">
