@@ -549,7 +549,7 @@ const MishandledClaimsCosts = () => {
          </article>
        </div>
      </div>
-   </>
+   </div>
  );
 };
 
