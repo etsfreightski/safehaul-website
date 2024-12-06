@@ -5,6 +5,7 @@ import {
  LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, 
  Tooltip, Legend, ResponsiveContainer 
 } from 'recharts';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const MishandledClaimsCosts = () => {
  // Data for visualizations
@@ -87,7 +88,13 @@ const MishandledClaimsCosts = () => {
  ];
 
  return (
-   <>
+   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+     <BlogPostSchema 
+       title="The True Cost of Mishandled Claims in Transportation"
+       description="Discover how mishandled insurance claims impact carriers' operations, from towing costs to regulatory compliance. Learn expert strategies for managing physical damage, auto liability, and cargo claims."
+       publishDate="2024-12-05"
+       url="https://safehaulsite.netlify.app/blog/mishandled-claims-costs"
+     />
      <Helmet>
        <title>The True Cost of Mishandled Claims in Transportation | Safe Haul</title>
        <meta name="description" content="Discover how mishandled insurance claims impact carriers' operations, from towing costs to regulatory compliance. Learn expert strategies for managing physical damage, auto liability, and cargo claims." />
