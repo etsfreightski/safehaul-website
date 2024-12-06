@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const TechnologyClaimsPrevention = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <BlogPostSchema 
+        title="Technology's Role in Claims Prevention"
+        description="Discover how modern technology is revolutionizing claims prevention in the transportation industry, from telematics to AI-powered risk assessment."
+        publishDate="2024-01-10"
+        url="https://safehaulsite.netlify.app/blog/technology-claims-prevention"
+      />
       <Helmet>
-        <title>Technology in Claims Prevention - Safe Haul</title>
-        <meta name="description" content="Discover how modern technology is revolutionizing claims prevention in the transportation industry." />
+        <title>Technology's Role in Claims Prevention - Safe Haul</title>
+        <meta name="description" content="Discover how modern technology is revolutionizing claims prevention in the transportation industry, from telematics to AI-powered risk assessment." />
       </Helmet>
 
       <div className="mb-10">

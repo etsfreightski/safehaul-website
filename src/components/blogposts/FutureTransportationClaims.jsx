@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const FutureTransportationClaims = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <BlogPostSchema 
+        title="The Future of Transportation Claims: Trends and Predictions"
+        description="Explore emerging trends in transportation claims management, from AI-driven processing to predictive analytics, and prepare your fleet for the future."
+        publishDate="2024-01-10"
+        url="https://safehaulsite.netlify.app/blog/future-transportation-claims"
+      />
       <Helmet>
         <title>The Future of Transportation Claims - Safe Haul</title>
-        <meta name="description" content="Expert analysis on emerging trends and future developments in transportation claims management." />
+        <meta name="description" content="Explore emerging trends in transportation claims management, from AI-driven processing to predictive analytics, and prepare your fleet for the future." />
       </Helmet>
 
       <div className="mb-10">

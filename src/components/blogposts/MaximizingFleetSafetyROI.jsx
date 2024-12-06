@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const MaximizingFleetSafetyROI = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <BlogPostSchema 
+        title="Maximizing Fleet Safety ROI: A Data-Driven Approach"
+        description="Learn how to maximize your fleet safety investments through data-driven strategies, proven methodologies, and innovative technologies."
+        publishDate="2024-01-10"
+        url="https://safehaulsite.netlify.app/blog/maximizing-fleet-safety-roi"
+      />
       <Helmet>
         <title>Maximizing Fleet Safety ROI - Safe Haul</title>
-        <meta name="description" content="Learn effective strategies for optimizing safety investments and reducing incidents in your transportation fleet." />
+        <meta name="description" content="Learn how to maximize your fleet safety investments through data-driven strategies, proven methodologies, and innovative technologies." />
       </Helmet>
 
       <div className="mb-10">
