@@ -94,7 +94,8 @@ const IndustryNews = () => {
         author: "Safe Haul Team",
         date: "2024-01-08",
         summary: "Expert analysis on emerging trends in transportation claims management",
-        readTime: "8 min read"
+        readTime: "8 min read",
+        link: "/blog/future-transportation-claims"
       },
       {
         id: 2,
@@ -102,7 +103,8 @@ const IndustryNews = () => {
         author: "Safe Haul Team",
         date: "2024-01-05",
         summary: "Strategies for optimizing safety investments and reducing incidents",
-        readTime: "7 min read"
+        readTime: "7 min read",
+        link: "/blog/maximizing-fleet-safety-roi"
       },
       {
         id: 3,
@@ -110,7 +112,8 @@ const IndustryNews = () => {
         author: "Safe Haul Team",
         date: "2024-01-03",
         summary: "How modern technology is revolutionizing claims prevention",
-        readTime: "6 min read"
+        readTime: "6 min read",
+        link: "/blog/technology-claims-prevention"
       }
     ]
   };
@@ -224,10 +227,13 @@ const IndustryNews = () => {
                     <span>{item.date}</span>
                     <span>{item.readTime}</span>
                   </div>
-                  <button className="flex items-center space-x-2 text-[#40CBB5] hover:text-[#35ab98] transition-colors">
+                  <Link 
+                    to={item.link}
+                    className="flex items-center space-x-2 text-[#40CBB5] hover:text-[#35ab98] transition-colors group"
+                  >
                     <span>Read More</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}

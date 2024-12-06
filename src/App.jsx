@@ -21,6 +21,9 @@ import MishandledClaimsCosts from '@/components/blogposts/MishandledClaimsCosts'
 import FMCSASafetyRegulations from '@/components/blogposts/FMCSASafetyRegulations';
 import InsuranceCostAnalysis from '@/components/blogposts/InsuranceCostAnalysis';
 import ClaimsManagement2024 from '@/components/blogposts/ClaimsManagement2024';
+import FutureTransportationClaims from '@/components/blogposts/FutureTransportationClaims';
+import MaximizingFleetSafetyROI from '@/components/blogposts/MaximizingFleetSafetyROI';
+import TechnologyClaimsPrevention from '@/components/blogposts/TechnologyClaimsPrevention';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -133,6 +136,20 @@ function App() {
         <Route 
           path="/blog/claims-management-2024" 
           element={<SharedLayout><ClaimsManagement2024 /></SharedLayout>} 
+        />
+        
+        {/* Safe Haul Team Insights routes */}
+        <Route 
+          path="/blog/future-transportation-claims" 
+          element={<SharedLayout><FutureTransportationClaims /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/maximizing-fleet-safety-roi" 
+          element={<SharedLayout><MaximizingFleetSafetyROI /></SharedLayout>} 
+        />
+        <Route 
+          path="/blog/technology-claims-prevention" 
+          element={<SharedLayout><TechnologyClaimsPrevention /></SharedLayout>} 
         />
         
         {/* Additional feature routes */}
