@@ -13,13 +13,25 @@ const HeroSection = () => (
             Industry leaders in transportation safety, bringing executive-level expertise and proven success in fleet safety management.
           </p>
           <div className="mt-10">
-            <a href="#contact" className="inline-block bg-[#40CBB5] text-white text-xl px-12 py-4 rounded-lg hover:bg-[#35af9e] transition-all duration-300 shadow-2xl font-black">
+            <a 
+              href="#contact" 
+              className="inline-block bg-[#40CBB5] text-white text-xl px-12 py-4 rounded-lg hover:bg-[#35af9e] transition-all duration-300 shadow-2xl font-black"
+              aria-label="Contact us to get started with professional claims and safety management"
+            >
               Get Started
             </a>
           </div>
         </div>
         <div>
-          <img src="/truck-driver.JPG" alt="Professional truck driver" className="w-full rounded-lg shadow-2xl" />
+          <img 
+            src="/truck-driver.JPG" 
+            alt="Professional truck driver in a modern commercial vehicle, representing Safe Haul's commitment to transportation safety" 
+            className="w-full rounded-lg shadow-2xl" 
+            loading="eager" 
+            width="800"
+            height="600"
+            fetchpriority="high"
+          />
         </div>
       </div>
     </div>
