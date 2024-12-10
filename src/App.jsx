@@ -32,6 +32,11 @@ import ServiceSchema from '@/components/ServiceSchema';
 import CaseStudies from '@/components/CaseStudies';
 import IndustryNews from '@/components/IndustryNews';
 import Archive from './pages/Archive';
+import SustainableTransportation from '@/components/blogposts/SustainableTransportation';
+import FMCSADriverTraining from '@/components/blogposts/FMCSADriverTraining';
+import ELDComplianceUpdate from '@/components/blogposts/ELDComplianceUpdate';
+import WinterWeatherAdvisory from '@/components/blogposts/WinterWeatherAdvisory';
+import DOTHoursOfService from '@/components/blogposts/DOTHoursOfService';
 import { Helmet } from 'react-helmet';
 
 // SharedLayout component ensures consistent header and navigation across all pages
@@ -235,6 +240,51 @@ function App() {
             description="Learn how to use technology for claims prevention in transportation. Expert guidance on safety management and compliance."
           >
             <TechnologyClaimsPrevention />
+          </SharedLayout>
+        } />
+        
+        <Route path="/blog/sustainable-transportation-strategies" element={
+          <SharedLayout 
+            title="Sustainable Transportation Strategies - Safe Haul"
+            description="Learn about sustainable transportation strategies. Expert guidance on safety management and compliance."
+          >
+            <SustainableTransportation />
+          </SharedLayout>
+        } />
+        
+        <Route path="/blog/fmcsa-new-entry-level-driver-training-requirements" element={
+          <SharedLayout 
+            title="FMCSA New Entry-Level Driver Training Requirements - Safe Haul"
+            description="Stay compliant with FMCSA new entry-level driver training requirements. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
+          >
+            <FMCSADriverTraining />
+          </SharedLayout>
+        } />
+        
+        <Route path="/blog/eld-compliance-updated-guidelines" element={
+          <SharedLayout 
+            title="ELD Compliance Updated Guidelines - Safe Haul"
+            description="Stay compliant with ELD regulations. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
+          >
+            <ELDComplianceUpdate />
+          </SharedLayout>
+        } />
+        
+        <Route path="/blog/winter-weather-advisory-updated-safety-protocols" element={
+          <SharedLayout 
+            title="Winter Weather Advisory Updated Safety Protocols - Safe Haul"
+            description="Learn about winter weather advisory updated safety protocols. Expert guidance on safety management and compliance."
+          >
+            <WinterWeatherAdvisory />
+          </SharedLayout>
+        } />
+        
+        <Route path="/blog/dot-new-hours-of-service-flexibility-rules" element={
+          <SharedLayout 
+            title="DOT New Hours of Service Flexibility Rules - Safe Haul"
+            description="Stay compliant with DOT new hours of service flexibility rules. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
+          >
+            <DOTHoursOfService />
           </SharedLayout>
         } />
         
