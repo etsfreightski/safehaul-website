@@ -1,59 +1,99 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Breadcrumbs = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
 
+  // Function to format breadcrumb names
+  const formatName = (name) => {
+    return name
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
+
+  // Generate breadcrumb data
+  const breadcrumbs = [
+    {
+      name: 'Home',
+      path: '/',
+      position: 1
+    },
+    ...pathnames.map((name, index) => ({
+      name: formatName(name),
+      path: `/${pathnames.slice(0, index + 1).join('/')}`,
+      position: index + 2
+    }))
+  ];
+
   // Schema.org breadcrumb data
-  const breadcrumbList = {
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": pathnames.map((name, index) => ({
+    "itemListElement": breadcrumbs.map(({ name, path, position }) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "name": name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' '),
-      "item": `${window.location.origin}/${pathnames.slice(0, index + 1).join('/')}`
+      "position": position,
+      "name": name,
+      "item": `${window.location.origin}${path}`
     }))
   };
 
   return (
-    <nav className="bg-gray-50 py-3 mb-6">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center space-x-2 text-sm">
-          <Link to="/" className="text-[#40CBB5] hover:text-[#35a996]">
-            Home
-          </Link>
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
 
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
+      <nav 
+        aria-label="Breadcrumb" 
+        className="bg-gray-50 py-3 mb-6"
+      >
+        <div className="max-w-6xl mx-auto px-4">
+          <ol className="flex items-center space-x-2 text-sm" role="list">
+            {breadcrumbs.map((item, index) => {
+              const isLast = index === breadcrumbs.length - 1;
 
-            return (
-              <React.Fragment key={name}>
-                <span className="text-gray-500">/</span>
-                {isLast ? (
-                  <span className="text-gray-700">
-                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
-                  </span>
-                ) : (
-                  <Link
-                    to={routeTo}
-                    className="text-[#40CBB5] hover:text-[#35a996]"
-                  >
-                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
-                  </Link>
-                )}
-              </React.Fragment>
-            );
-          })}
+              return (
+                <li 
+                  key={item.path}
+                  className="flex items-center"
+                >
+                  {index > 0 && (
+                    <span 
+                      className="mx-2 text-gray-400" 
+                      aria-hidden="true"
+                    >
+                      /
+                    </span>
+                  )}
+                  
+                  {isLast ? (
+                    <span 
+                      className="text-gray-700" 
+                      aria-current="page"
+                    >
+                      {item.name}
+                    </span>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className="text-[#40CBB5] hover:text-[#35a996] transition-colors"
+                      aria-label={`Go to ${item.name}`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
         </div>
-      </div>
-      
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbList)}
-      </script>
-    </nav>
+      </nav>
+    </>
   );
 };
 
