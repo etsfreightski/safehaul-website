@@ -9,30 +9,30 @@ const IndustryNews = () => {
     news: [
       {
         id: 1,
-        title: "FMCSA Proposes New Safety Regulations for Commercial Vehicles",
-        date: "2024-01-15",
-        summary: "New proposals aim to enhance road safety with advanced driver assistance systems.",
+        title: "FMCSA Announces 2025 Safety Technology Requirements",
+        date: "2024-12-05",
+        summary: "New mandates for advanced collision avoidance systems and driver monitoring technology to be implemented by Q3 2025.",
         category: "Regulatory",
         readTime: "5 min read",
-        link: "/blog/fmcsa-safety-regulations"
+        link: "/blog/fmcsa-safety-technology-requirements"
       },
       {
         id: 2,
-        title: "Rising Insurance Costs Impact Transportation Industry",
-        date: "2024-01-12",
-        summary: "Analysis of increasing insurance premiums and strategies for mitigation.",
+        title: "AI Integration in Fleet Management: 2025 Outlook",
+        date: "2024-12-01",
+        summary: "How artificial intelligence is revolutionizing route optimization and predictive maintenance in transportation.",
         category: "Industry Trends",
         readTime: "4 min read",
-        link: "/blog/insurance-cost-analysis"
+        link: "/blog/ai-integration-fleet-management"
       },
       {
         id: 3,
-        title: "Best Practices for Claims Management in 2024",
-        date: "2024-01-10",
-        summary: "Updated guidelines for efficient claims processing and resolution.",
+        title: "Sustainable Transportation Strategies for 2025",
+        date: "2024-11-28",
+        summary: "Implementing eco-friendly practices while maintaining operational efficiency and cost-effectiveness.",
         category: "Best Practices",
         readTime: "6 min read",
-        link: "/blog/claims-management-2024"
+        link: "/blog/sustainable-transportation-strategies"
       }
     ],
     trends: [
@@ -64,26 +64,26 @@ const IndustryNews = () => {
     regulatory: [
       {
         id: 1,
-        title: "Hours of Service Updates",
+        title: "ELD Compliance Updates",
         status: "Pending",
-        effectiveDate: "2024-07-01",
-        summary: "Proposed changes to electronic logging device requirements",
+        effectiveDate: "2025-03-01",
+        summary: "New electronic logging device specifications for cross-border operations",
         impact: "High"
       },
       {
         id: 2,
-        title: "Emissions Standards Revision",
+        title: "Zero-Emission Vehicle Transition Plan",
         status: "In Effect",
-        effectiveDate: "2024-01-01",
-        summary: "New EPA guidelines for commercial vehicle emissions",
+        effectiveDate: "2025-01-15",
+        summary: "Updated timeline for commercial fleet electrification requirements",
         impact: "Medium"
       },
       {
         id: 3,
-        title: "Safety Score Calculations",
+        title: "Driver Training Requirements 2025",
         status: "Under Review",
-        effectiveDate: "TBD",
-        summary: "FMCSA reviewing CSA score methodology",
+        effectiveDate: "2025-02-01",
+        summary: "Enhanced certification requirements for commercial drivers",
         impact: "High"
       }
     ],

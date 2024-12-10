@@ -31,6 +31,7 @@ import FAQ from '@/components/FAQ';
 import ServiceSchema from '@/components/ServiceSchema';
 import CaseStudies from '@/components/CaseStudies';
 import IndustryNews from '@/components/IndustryNews';
+import Archive from './pages/Archive';
 import { Helmet } from 'react-helmet';
 
 // SharedLayout component ensures consistent header and navigation across all pages
@@ -252,6 +253,15 @@ function App() {
             description="Professional risk assessment services for transportation companies. Identify and mitigate safety risks with expert guidance."
           >
             <RiskAssessment />
+          </SharedLayout>
+        } />
+        
+        <Route path="/archive" element={
+          <SharedLayout 
+            title="Archive - Safe Haul"
+            description="Archive of Safe Haul's transportation safety and claims management resources."
+          >
+            <Archive />
           </SharedLayout>
         } />
       </Routes>
