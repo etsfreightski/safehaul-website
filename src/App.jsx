@@ -38,10 +38,34 @@ const SharedLayout = ({ children }) => (
   <>
     <ServiceSchema />
     <Helmet>
+      <title>Safe Haul - Professional Transportation Claims & Safety Management</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#40CBB5" />
-      <link rel="canonical" href={window.location.href} />
+      <meta name="description" content="Expert transportation safety and claims management services in English, Polish, Russian, Spanish, and Ukrainian. DOT compliance, accident prevention, and fleet safety solutions." />
+      <meta name="keywords" content="transportation safety, DOT compliance, claims management, fleet safety, accident prevention, CSA scores, safety rating, HOS compliance, Polish trucking, Russian trucking, Spanish trucking, Ukrainian trucking" />
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content="Safe Haul - Transportation Claims & Safety Management" />
+      <meta property="og:description" content="Expert transportation safety and claims management services. Available in English, Polish, Russian, Spanish, and Ukrainian." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://safehaulclaims.com" />
+      <meta property="og:site_name" content="Safe Haul" />
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Safe Haul - Transportation Safety Experts" />
+      <meta name="twitter:description" content="Professional transportation safety and claims management services in multiple languages." />
+      
+      {/* Language Support Tags */}
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="pl_PL" />
+      <meta property="og:locale:alternate" content="ru_RU" />
+      <meta property="og:locale:alternate" content="es_ES" />
+      <meta property="og:locale:alternate" content="uk_UA" />
+      
+      {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
+      <meta name="author" content="Safe Haul Claims & Safety Management" />
+      <link rel="canonical" href="https://safehaulclaims.com" />
     </Helmet>
     <TopBar />
     <Header />

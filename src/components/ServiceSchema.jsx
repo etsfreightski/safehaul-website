@@ -2,85 +2,87 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const ServiceSchema = () => {
-  const services = [
-    {
-      "@type": "Service",
-      "name": "Claims Management",
-      "description": "Professional transportation claims management including physical damage, cargo, and liability claims.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Safe Haul"
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Safe Haul",
+    "description": "Expert transportation safety and claims management services available in English, Polish, Russian, Spanish, and Ukrainian.",
+    "url": "https://safehaulclaims.com",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "availableLanguage": [
+      {
+        "@type": "Language",
+        "name": "English",
+        "alternateName": "en"
       },
-      "areaServed": "United States",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Transportation Claims Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Physical Damage Claims",
-              "description": "Expert handling of truck and trailer damage claims"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Cargo Claims",
-              "description": "Professional cargo loss and damage claims management"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Liability Claims",
-              "description": "Comprehensive auto liability claims handling"
-            }
-          }
-        ]
+      {
+        "@type": "Language",
+        "name": "Polish",
+        "alternateName": "pl"
+      },
+      {
+        "@type": "Language",
+        "name": "Russian",
+        "alternateName": "ru"
+      },
+      {
+        "@type": "Language",
+        "name": "Spanish",
+        "alternateName": "es"
+      },
+      {
+        "@type": "Language",
+        "name": "Ukrainian",
+        "alternateName": "ua"
       }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Transportation Safety & Claims Services",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "Claims Management",
+          "description": "Professional transportation claims management including physical damage, cargo, and liability claims.",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "DOT Compliance",
+          "description": "Comprehensive DOT compliance services and auditing",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Safety Management",
+          "description": "Fleet safety programs and risk management solutions",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
     },
-    {
-      "@type": "Service",
-      "name": "DOT Compliance",
-      "description": "Comprehensive DOT compliance management and consulting services.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Safe Haul"
-      },
-      "areaServed": "United States"
-    },
-    {
-      "@type": "Service",
-      "name": "Safety Management",
-      "description": "Professional safety program development and management for transportation companies.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Safe Haul"
-      },
-      "areaServed": "United States"
-    }
-  ];
+    "knowsLanguage": ["en", "pl", "ru", "es", "ua"],
+    "sameAs": [
+      "https://www.facebook.com/safehaulclaims",
+      "https://www.linkedin.com/company/safe-haul"
+    ]
+  };
 
   return (
     <Helmet>
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Safe Haul",
-          "url": window.location.origin,
-          "logo": `${window.location.origin}/logo.png`,
-          "description": "Professional transportation claims and safety management services",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Safe Haul Services",
-            "itemListElement": services
-          }
-        })}
+        {JSON.stringify(schema)}
       </script>
     </Helmet>
   );
