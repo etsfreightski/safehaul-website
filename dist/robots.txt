@@ -1,8 +1,6 @@
-# Safe Haul Claims and Safety Management - Transportation Claims & Safety Management
+# Allow all web crawlers
 User-agent: *
 Allow: /
-
-# CSS, JS, Images
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.png$
@@ -14,5 +12,5 @@ Allow: /*.ico$
 # Host
 Host: https://safehaulsite.netlify.app
 
-# Sitemaps
+# Sitemap
 Sitemap: https://safehaulsite.netlify.app/sitemap.xml
