@@ -10,7 +10,7 @@ Allow: /*.svg$
 Allow: /*.ico$
 
 # Host
-Host: https://safehaulsite.netlify.app
+Host: https://safehaulclaims.com
 
 # Sitemap
-Sitemap: https://safehaulsite.netlify.app/sitemap.xml
+Sitemap: https://safehaulclaims.com/sitemap.xml

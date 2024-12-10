@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Home Page -->
   <url>
-    <loc>https://safehaulsite.netlify.app/</loc>
+    <loc>https://safehaulclaims.com/</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,31 +11,31 @@
 
   <!-- Main Sections -->
   <url>
-    <loc>https://safehaulsite.netlify.app/about</loc>
+    <loc>https://safehaulclaims.com/about</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://safehaulsite.netlify.app/services</loc>
+    <loc>https://safehaulclaims.com/services</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://safehaulsite.netlify.app/contact</loc>
+    <loc>https://safehaulclaims.com/contact</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://safehaulsite.netlify.app/claims-management</loc>
+    <loc>https://safehaulclaims.com/claims-management</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://safehaulsite.netlify.app/safety-management</loc>
+    <loc>https://safehaulclaims.com/safety-management</loc>
     <lastmod>2024-12-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
