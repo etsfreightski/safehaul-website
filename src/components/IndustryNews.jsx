@@ -33,6 +33,42 @@ const IndustryNews = () => {
         category: "Best Practices",
         readTime: "6 min read",
         link: "/blog/sustainable-transportation-strategies"
+      },
+      {
+        id: 4,
+        title: "FMCSA Announces New Entry-Level Driver Training Requirements for 2024",
+        date: "December 8, 2024",
+        category: "Regulatory Update",
+        summary: "The Federal Motor Carrier Safety Administration has implemented enhanced training requirements for entry-level drivers, focusing on safety protocols and advanced vehicle handling techniques.",
+        readTime: "4 min read",
+        link: "/blog/fmcsa-new-entry-level-driver-training-requirements"
+      },
+      {
+        id: 5,
+        title: "ELD Compliance: Updated Guidelines for Fleet Operators",
+        date: "December 5, 2024",
+        category: "Compliance",
+        summary: "New electronic logging device (ELD) guidelines have been released, requiring fleet operators to upgrade their systems by March 2025 to meet enhanced data security standards.",
+        readTime: "5 min read",
+        link: "/blog/eld-compliance-updated-guidelines"
+      },
+      {
+        id: 6,
+        title: "Winter Weather Advisory: Updated Safety Protocols for Commercial Drivers",
+        date: "December 1, 2024",
+        category: "Safety",
+        summary: "Latest winter safety protocols released for commercial drivers, including new requirements for chain usage and mandatory rest periods during severe weather conditions.",
+        readTime: "3 min read",
+        link: "/blog/winter-weather-advisory-updated-safety-protocols"
+      },
+      {
+        id: 7,
+        title: "DOT Announces New Hours of Service Flexibility Rules",
+        date: "November 28, 2024",
+        category: "Regulatory Update",
+        summary: "The Department of Transportation has introduced new flexibility in hours-of-service rules, providing additional options for split-sleeper berth periods.",
+        readTime: "6 min read",
+        link: "/blog/dot-new-hours-of-service-flexibility-rules"
       }
     ],
     trends: [
