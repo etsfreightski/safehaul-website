@@ -32,6 +32,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import CaseStudies from '@/components/CaseStudies';
 import IndustryNews from '@/components/IndustryNews';
 import ClaimsServicePage from '@/components/pages/ClaimsServicePage';
+import VideoPlayer from './components/VideoPlayer';
 import { Helmet } from 'react-helmet';
 
 // SharedLayout component ensures consistent header and navigation across all pages
@@ -73,6 +74,7 @@ const HomePage = () => (
     description="Expert transportation safety and claims management services. Multilingual support in English, Polish, Russian, Spanish, and Ukrainian. Get started today!"
   >
     <main>
+      <VideoPlayer />
       <HeroSection />
       <ServicesSection />
       <PermitsSection />
