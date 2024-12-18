@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const VideoPlayer = () => {
-  const videoRef = useRef(null);
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,24 +40,17 @@ const VideoPlayer = () => {
         </div>
         
         <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white">
-          <div className="aspect-w-16 aspect-h-9">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              controls
-              playsInline
-              preload="auto"
-              poster="/truck-driver.JPG"
-            >
-              <source src="/safety-vid.MOV" type="video/quicktime" />
-              <source src="/safety-vid.mp4" type="video/mp4" />
-              <p className="text-center p-4">
-                Your browser doesn't support the video. 
-                <a href="/safety-vid.MOV" className="text-teal-600 hover:text-teal-700 underline ml-2" download>
-                  Download the video instead
-                </a>
+          <div className="aspect-w-16 aspect-h-9 bg-gray-100 flex items-center justify-center">
+            <div className="text-center p-8">
+              <img 
+                src="/truck-driver.JPG" 
+                alt="Professional truck driver" 
+                className="w-full h-full object-cover"
+              />
+              <p className="mt-4 text-gray-600">
+                Video is being optimized for web viewing. Please check back soon!
               </p>
-            </video>
+            </div>
           </div>
         </div>
 
