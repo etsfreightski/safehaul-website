@@ -43,6 +43,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-6 ml-0">
             <Link to="/" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Home</Link>
             <button onClick={() => scrollToSection('services')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Services</button>
+            <Link to="/services/claims" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Claims</Link>
             <button onClick={() => scrollToSection('subscriptions')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md flex items-center">
               <span className="text-[#FFB951] mr-1.5 text-xl drop-shadow-lg">★</span>
               Subscriptions
@@ -68,6 +69,7 @@ const Header = () => {
             <div className="flex flex-col space-y-6">
               <Link to="/" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors">Home</Link>
               <button onClick={() => scrollToSection('services')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors text-left">Services</button>
+              <Link to="/services/claims" className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors">Claims</Link>
               <button onClick={() => scrollToSection('subscriptions')} className="text-base font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors flex items-center">
                 <span className="text-[#FFB951] mr-1 text-lg">★</span>
                 Subscriptions
