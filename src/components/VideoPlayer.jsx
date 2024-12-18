@@ -50,8 +50,14 @@ const VideoPlayer = () => {
               preload="auto"
               poster="/truck-driver.JPG"
             >
-              <source src="/safety-vid.MOV" type="video/mp4" />
-              Your browser does not support the video tag.
+              <source src="/safety-vid.MOV" type="video/quicktime" />
+              <source src="/safety-vid.mp4" type="video/mp4" />
+              <p className="text-center p-4">
+                Your browser doesn't support the video. 
+                <a href="/safety-vid.MOV" className="text-teal-600 hover:text-teal-700 underline ml-2" download>
+                  Download the video instead
+                </a>
+              </p>
             </video>
           </div>
         </div>
