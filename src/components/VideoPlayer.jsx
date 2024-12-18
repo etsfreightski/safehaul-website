@@ -47,10 +47,10 @@ const VideoPlayer = () => {
               className="w-full h-full object-cover"
               controls
               playsInline
-              preload="metadata"
+              preload="auto"
               poster="/truck-driver.JPG"
             >
-              <source src="/safety-vid.MOV" type="video/quicktime" />
+              <source src="/safety-vid.MOV" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

@@ -267,6 +267,15 @@ function App() {
             <ClaimsServicePage />
           </SharedLayout>
         } />
+
+        <Route path="/contact" element={
+          <SharedLayout 
+            title="Contact Safe Haul - Get Started with Professional Safety Management"
+            description="Contact Safe Haul for professional transportation safety and claims management services. Get expert help today."
+          >
+            <ContactSection />
+          </SharedLayout>
+        } />
       </Routes>
     </Router>
   );
