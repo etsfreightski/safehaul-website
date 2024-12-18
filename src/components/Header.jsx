@@ -40,23 +40,23 @@ const Header = () => {
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-6 ml-0">
-            <Link to="/" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Home</Link>
-            <button onClick={() => scrollToSection('services')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Services</button>
-            <Link to="/services/claims" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Claims</Link>
-            <button onClick={() => scrollToSection('subscriptions')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md flex items-center">
-              <span className="text-[#FFB951] mr-1.5 text-xl drop-shadow-lg">★</span>
+          <div className="hidden md:flex items-center space-x-4 ml-0">
+            <Link to="/" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Home</Link>
+            <button onClick={() => scrollToSection('services')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Services</button>
+            <Link to="/services/claims" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Claims</Link>
+            <button onClick={() => scrollToSection('subscriptions')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md flex items-center whitespace-nowrap">
+              <span className="text-[#FFB951] mr-1 text-xl drop-shadow-lg">★</span>
               Subscriptions
-              <span className="text-[#FFB951] ml-1.5 text-xl drop-shadow-lg">★</span>
+              <span className="text-[#FFB951] ml-1 text-xl drop-shadow-lg">★</span>
             </button>
-            <button onClick={() => scrollToSection('why-us')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Why Us</button>
-            <button onClick={() => scrollToSection('about')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">About</button>
-            <Link to="/risk-assessment" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Risk Assessment</Link>
-            <Link to="/testimonials" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Testimonials</Link>
-            <Link to="/blog" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md">Blog</Link>
+            <button onClick={() => scrollToSection('why-us')} className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Why Us</button>
+            <Link to="/about" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">About</Link>
+            <Link to="/risk-assessment" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Risk Assessment</Link>
+            <Link to="/testimonials" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Testimonials</Link>
+            <Link to="/blog" className="text-lg font-semibold text-gray-900 hover:text-[#40CBB5] transition-colors drop-shadow-md whitespace-nowrap">Blog</Link>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-lg font-semibold border-2 border-[#40CBB5] px-8 py-2.5 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              className="text-lg font-semibold border-2 border-[#40CBB5] px-8 py-2.5 rounded-full text-[#40CBB5] hover:bg-[#40CBB5] hover:text-white transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 whitespace-nowrap"
             >
               Contact
             </button>
