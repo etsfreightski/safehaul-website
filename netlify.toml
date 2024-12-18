@@ -3,6 +3,28 @@
   publish = "dist"
   environment = { NODE_VERSION = "18", CI = "false" }
 
+# Force HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+# Redirect Netlify domain to primary domain
+[[redirects]]
+  from = "https://safehaulsite.netlify.app/*"
+  to = "https://safehaulclaims.com/:splat"
+  status = 301
+  force = true
+
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.safehaulclaims.com/*"
+  to = "https://safehaulclaims.com/:splat"
+  status = 301
+  force = true
+
+# SPA redirect
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -15,3 +37,5 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"

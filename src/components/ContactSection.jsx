@@ -19,6 +19,16 @@ const ContactSection = () => {
         'O47UT-NgPjCcsMJtP'
       );
       setSubmitted(true);
+      
+      // Track form submission conversion
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-6848128318/form_submit',
+          'value': 1.0,
+          'currency': 'USD',
+          'transaction_id': Date.now().toString()
+        });
+      }
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Failed to send message. Please try again.');

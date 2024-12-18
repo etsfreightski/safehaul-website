@@ -7,42 +7,111 @@
     <meta name="google-site-verification" content="PJwKpr50o0L3LVtgHzylb6TvP8tlLQmToCg3Yefvbkw" />
     
     <!-- SEO Meta Tags -->
-    <title>Safe Haul Claims and Safety Management - Transportation Claims & Safety Solutions</title>
-    <meta name="description" content="Professional transportation claims and safety management services. Expert DOT compliance consulting, claims handling, and comprehensive safety solutions for carriers. Located in Chicago, IL." />
-    <meta name="keywords" content="transportation claims management, DOT compliance, carrier safety, safety management, claims handling, accident claims, cargo claims, workers comp, liability insurance, Chicago" />
+    <title>Transportation Claims & Safety Management Services | Safe Haul Claims</title>
+    <meta name="description" content="Expert transportation claims management and DOT compliance solutions. Specializing in truck accident investigations, cargo claims processing, and FMCSA compliance. Industry-leading safety consulting and risk management for carriers nationwide." />
+    <meta name="keywords" content="transportation claims adjuster, truck accident investigation, FMCSA compliance consultant, cargo claims processing, freight claims management, DOT safety consultant, transportation safety audit, hazmat compliance, ELD compliance solutions, driver qualification files, trucking safety rating, CSA score improvement, transportation risk assessment, cargo damage claims, truck accident reconstruction, safety management systems, DOT audit defense, fleet safety programs, transportation compliance training, BASIC score improvement" />
     
     <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Safe Haul Claims and Safety Management - Transportation Solutions" />
-    <meta property="og:description" content="Professional transportation claims and safety management services in Chicago. Expert solutions for DOT compliance, claims handling, and carrier safety." />
+    <meta property="og:title" content="Transportation Claims & Safety Management Services | Safe Haul Claims" />
+    <meta property="og:description" content="Leading transportation claims and safety management company. Expert DOT compliance, accident prevention, and comprehensive safety solutions for carriers." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://safehaulsite.netlify.app" />
-    <meta property="og:image" content="https://safehaulsite.netlify.app/icon-512.png" />
-    <meta property="og:site_name" content="Safe Haul Claims and Safety Management" />
+    <meta property="og:url" content="https://safehaulclaims.com" />
+    <meta property="og:image" content="https://safehaulclaims.com/icon-512.png" />
+    <meta property="og:site_name" content="Safe Haul Claims" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Safe Haul Claims and Safety Management" />
-    <meta name="twitter:description" content="Professional transportation claims and safety management services in Chicago. Expert solutions for carriers." />
-    <meta name="twitter:image" content="https://safehaulsite.netlify.app/icon-512.png" />
+    <meta name="twitter:title" content="Transportation Claims & Safety Management Services | Safe Haul Claims" />
+    <meta name="twitter:description" content="Leading transportation claims and safety management company. Expert DOT compliance, accident prevention, and safety solutions for carriers." />
+    <meta name="twitter:image" content="https://safehaulclaims.com/icon-512.png" />
 
     <!-- Additional SEO Meta Tags -->
+    <link rel="canonical" href="https://safehaulclaims.com" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <meta name="geo.region" content="US-IL" />
     <meta name="geo.placename" content="Chicago" />
+    
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-6848128318"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-6848128318');
+      
+      // Track phone calls
+      function trackPhoneCall() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-6848128318/phone_call',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+      }
+      
+      // Track form submissions
+      function trackFormSubmission() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-6848128318/form_submit',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+      }
+      
+      // Track service page views
+      function trackServiceView(serviceName) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-6848128318/service_view',
+          'value': 0.5,
+          'currency': 'USD'
+        });
+      }
+
+      // Track document downloads
+      function trackDownload(documentName) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-6848128318/document_download',
+          'value': 0.25,
+          'currency': 'USD'
+        });
+      }
+
+      // Initialize tracking when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
+          element.addEventListener('click', trackPhoneCall);
+        });
+
+        // Track form submissions
+        document.querySelectorAll('form').forEach(function(form) {
+          form.addEventListener('submit', trackFormSubmission);
+        });
+
+        // Track service page views
+        if (window.location.pathname.includes('/services/')) {
+          trackServiceView(window.location.pathname.split('/').pop());
+        }
+
+        // Track document downloads
+        document.querySelectorAll('a[href$=".pdf"], a[href$=".doc"], a[href$=".docx"]').forEach(function(element) {
+          element.addEventListener('click', function() {
+            trackDownload(this.href.split('/').pop());
+          });
+        });
+      });
+    </script>
+    
     <meta name="author" content="Safe Haul Claims and Safety Management" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://safehaulsite.netlify.app" />
-    
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Safe Haul Claims and Safety Management",
-        "image": "https://safehaulsite.netlify.app/icon-512.png",
+        "image": "https://safehaulclaims.com/icon-512.png",
         "description": "Professional transportation claims and safety management services. Expert DOT compliance consulting and comprehensive safety solutions for carriers.",
         "address": {
           "@type": "PostalAddress",
@@ -55,7 +124,7 @@
           "latitude": "41.8781",
           "longitude": "-87.6298"
         },
-        "url": "https://safehaulsite.netlify.app",
+        "url": "https://safehaulclaims.com",
         "telephone": "(218) 203-2097",
         "priceRange": "$$",
         "openingHours": "Mo-Fr 08:00-17:00",
