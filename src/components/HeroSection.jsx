@@ -1,41 +1,68 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const HeroSection = () => (
-  <div className="relative bg-gray-200 py-32">
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="text-left">
-          <h1 className="text-5xl tracking-tight font-black text-gray-900 sm:text-6xl md:text-7xl mb-8 drop-shadow-xl">
-            <span className="block">Professional</span>
-            <span className="block text-[#40CBB5] drop-shadow-xl text-shadow-outline">Claims & Safety Management</span>
+const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <section className="relative bg-gradient-to-b from-blue-50 via-white to-transparent overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      
+      <div className="container mx-auto px-4 pt-20 pb-16 sm:pt-24 sm:pb-20">
+        <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Fleet's
+            <span className="text-teal-600 block">Safety & Claims Management</span>
           </h1>
-          <p className="mt-6 text-xl text-gray-900 md:text-2xl leading-relaxed font-bold drop-shadow-lg">
-            Industry leaders in transportation safety, bringing executive-level expertise and proven success in fleet safety management.
+          
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional claims handling and safety management services in multiple languages. 
+            Reduce costs, improve safety, and protect your business.
           </p>
-          <div className="mt-10">
-            <a 
-              href="#contact" 
-              className="inline-block bg-[#40CBB5] text-white text-xl px-12 py-4 rounded-lg hover:bg-[#35af9e] transition-all duration-300 shadow-2xl font-black"
-              aria-label="Contact us to get started with professional claims and safety management"
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 transition-colors duration-200"
             >
               Get Started
-            </a>
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+            <Link
+              to="/risk-assessment"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-teal-600 bg-white border-2 border-teal-600 rounded-lg hover:bg-teal-50 transition-colors duration-200"
+            >
+              Free Risk Assessment
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center">
+              <div className="text-4xl font-bold text-teal-600 mb-2">24/7</div>
+              <div className="text-gray-600">Support Available</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-4xl font-bold text-teal-600 mb-2">5+</div>
+              <div className="text-gray-600">Languages Supported</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-4xl font-bold text-teal-600 mb-2">98%</div>
+              <div className="text-gray-600">Client Satisfaction</div>
+            </div>
           </div>
         </div>
-        <div>
-          <img 
-            src="/truck-driver.JPG" 
-            alt="Professional truck driver in a modern commercial vehicle, representing Safe Haul's commitment to transportation safety" 
-            className="w-full rounded-lg shadow-2xl" 
-            loading="eager" 
-            width="800"
-            height="600"
-            fetchpriority="high"
-          />
-        </div>
       </div>
-    </div>
-  </div>
-);
+    </section>
+  );
+};
 
 export default HeroSection;
