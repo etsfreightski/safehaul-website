@@ -35,6 +35,7 @@ import ClaimsServicePage from '@/components/pages/ClaimsServicePage';
 import VideoPlayer from './components/VideoPlayer';
 import { Helmet } from 'react-helmet';
 import './styles/patterns.css';
+import usePageTracking from './hooks/usePageTracking';
 
 // SharedLayout component ensures consistent header and navigation across all pages
 const SharedLayout = ({ children, title, description }) => (
@@ -90,6 +91,7 @@ const HomePage = () => (
 );
 
 function App() {
+  usePageTracking();
   return (
     <Router>
       <Routes>
