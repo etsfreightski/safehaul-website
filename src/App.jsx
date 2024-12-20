@@ -91,195 +91,203 @@ const HomePage = () => (
 );
 
 function App() {
-  usePageTracking();
   return (
     <Router>
-      <Routes>
-        {/* Main landing page route */}
-        <Route path="/" element={<HomePage />} />
-        
-        {/* Blog section routes */}
-        <Route path="/blog" element={
-          <SharedLayout 
-            title="Safe Haul Blog - Transportation Safety & Claims Management Insights"
-            description="Expert insights on transportation safety, DOT compliance, and claims management. Stay updated with industry best practices and regulations."
-          >
-            <BlogPage />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/comprehensive-guide" element={
-          <SharedLayout 
-            title="Comprehensive Guide to Transportation Safety - Safe Haul"
-            description="Complete guide to transportation safety management, DOT compliance, and claims handling. Learn industry best practices and expert strategies."
-          >
-            <ComprehensiveGuide />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/dot-compliance" element={
-          <SharedLayout 
-            title="DOT Compliance Guide 2024 - Safe Haul"
-            description="Stay compliant with DOT regulations. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
-          >
-            <DOTCompliance />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/claims-management" element={
-          <SharedLayout 
-            title="Claims Management for Transportation Companies - Safe Haul"
-            description="Expert claims management services for transportation companies. Reduce costs and improve safety with our proven strategies."
-          >
-            <ClaimsManagement />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/safety-culture" element={
-          <SharedLayout 
-            title="Building a Safety Culture in Transportation - Safe Haul"
-            description="Learn how to build a safety culture in your transportation company. Expert guidance on safety management and compliance."
-          >
-            <SafetyCulture />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/comprehensive-transportation-study" element={
-          <SharedLayout 
-            title="Comprehensive Transportation Study - Safe Haul"
-            description="In-depth study on transportation safety and compliance. Learn from industry experts and improve your safety management."
-          >
-            <ComprehensiveTransportationStudy />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/comprehensive-analysis" element={
-          <SharedLayout 
-            title="Comprehensive Analysis of Transportation Safety - Safe Haul"
-            description="Expert analysis of transportation safety and compliance. Learn from industry experts and improve your safety management."
-          >
-            <ComprehensiveAnalysisNavigator />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/comprehensive-analysis/part2" element={
-          <SharedLayout 
-            title="Comprehensive Analysis of Transportation Safety Part 2 - Safe Haul"
-            description="Expert analysis of transportation safety and compliance. Learn from industry experts and improve your safety management."
-          >
-            <ComprehensiveAnalysisPart2 />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/comprehensive-analysis/part3" element={
-          <SharedLayout 
-            title="Comprehensive Analysis of Transportation Safety Part 3 - Safe Haul"
-            description="Expert analysis of transportation safety and compliance. Learn from industry experts and improve your safety management."
-          >
-            <ComprehensiveAnalysisPart3 />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/mishandled-claims-costs" element={
-          <SharedLayout 
-            title="The Cost of Mishandled Claims in Transportation - Safe Haul"
-            description="Learn about the costs of mishandled claims in transportation. Expert guidance on claims management and safety compliance."
-          >
-            <MishandledClaimsCosts />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/fmcsa-safety-regulations" element={
-          <SharedLayout 
-            title="FMCSA Safety Regulations for Transportation Companies - Safe Haul"
-            description="Stay compliant with FMCSA safety regulations. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
-          >
-            <FMCSASafetyRegulations />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/insurance-cost-analysis" element={
-          <SharedLayout 
-            title="Insurance Cost Analysis for Transportation Companies - Safe Haul"
-            description="Expert analysis of insurance costs for transportation companies. Learn how to reduce costs and improve safety."
-          >
-            <InsuranceCostAnalysis />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/claims-management-2024" element={
-          <SharedLayout 
-            title="Claims Management for Transportation Companies in 2024 - Safe Haul"
-            description="Expert claims management services for transportation companies in 2024. Reduce costs and improve safety with our proven strategies."
-          >
-            <ClaimsManagement2024 />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/future-transportation-claims" element={
-          <SharedLayout 
-            title="The Future of Transportation Claims - Safe Haul"
-            description="Learn about the future of transportation claims. Expert guidance on claims management and safety compliance."
-          >
-            <FutureTransportationClaims />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/maximizing-fleet-safety-roi" element={
-          <SharedLayout 
-            title="Maximizing Fleet Safety ROI - Safe Haul"
-            description="Learn how to maximize fleet safety ROI. Expert guidance on safety management and compliance."
-          >
-            <MaximizingFleetSafetyROI />
-          </SharedLayout>
-        } />
-        
-        <Route path="/blog/technology-claims-prevention" element={
-          <SharedLayout 
-            title="Using Technology for Claims Prevention in Transportation - Safe Haul"
-            description="Learn how to use technology for claims prevention in transportation. Expert guidance on safety management and compliance."
-          >
-            <TechnologyClaimsPrevention />
-          </SharedLayout>
-        } />
-        
-        <Route path="/testimonials" element={
-          <SharedLayout 
-            title="Client Success Stories - Safe Haul Transportation Safety"
-            description="Read what our clients say about Safe Haul's transportation safety and claims management services. Real results from real companies."
-          >
-            <Testimonials />
-          </SharedLayout>
-        } />
-        
-        <Route path="/risk-assessment" element={
-          <SharedLayout 
-            title="Transportation Risk Assessment - Safe Haul Safety Solutions"
-            description="Professional risk assessment services for transportation companies. Identify and mitigate safety risks with expert guidance."
-          >
-            <RiskAssessment />
-          </SharedLayout>
-        } />
-        
-        <Route path="/services/claims" element={
-          <SharedLayout 
-            title="Claims Service - Safe Haul"
-            description="Expert claims management services for transportation companies. Reduce costs and improve safety with our proven strategies."
-          >
-            <ClaimsServicePage />
-          </SharedLayout>
-        } />
-
-        <Route path="/contact" element={
-          <SharedLayout 
-            title="Contact Safe Haul - Get Started with Professional Safety Management"
-            description="Contact Safe Haul for professional transportation safety and claims management services. Get expert help today."
-          >
-            <ContactSection />
-          </SharedLayout>
-        } />
-      </Routes>
+      <AppContent />
     </Router>
+  );
+}
+
+// Separate component to use hooks within Router context
+function AppContent() {
+  usePageTracking();
+  
+  return (
+    <Routes>
+      {/* Main landing page route */}
+      <Route path="/" element={<HomePage />} />
+      
+      {/* Blog section routes */}
+      <Route path="/blog" element={
+        <SharedLayout 
+          title="Safe Haul Blog - Transportation Safety & Claims Management Insights"
+          description="Expert insights on transportation safety, DOT compliance, and claims management. Stay updated with industry best practices and regulations."
+        >
+          <BlogPage />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/comprehensive-guide" element={
+        <SharedLayout 
+          title="Comprehensive Guide to Transportation Safety - Safe Haul"
+          description="Complete guide to transportation safety management, DOT compliance, and claims handling. Learn industry best practices and expert strategies."
+        >
+          <ComprehensiveGuide />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/dot-compliance" element={
+        <SharedLayout 
+          title="DOT Compliance Guide 2024 - Safe Haul"
+          description="Stay compliant with DOT regulations. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
+        >
+          <DOTCompliance />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/claims-management" element={
+        <SharedLayout 
+          title="Claims Management for Transportation Companies - Safe Haul"
+          description="Expert claims management services for transportation companies. Reduce costs and improve safety with our proven strategies."
+        >
+          <ClaimsManagement />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/safety-culture" element={
+        <SharedLayout 
+          title="Building a Safety Culture in Transportation - Safe Haul"
+          description="Learn how to build a safety culture in your transportation company. Expert guidance on safety management and compliance."
+        >
+          <SafetyCulture />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/comprehensive-transportation-study" element={
+        <SharedLayout 
+          title="Comprehensive Transportation Study - Safe Haul"
+          description="In-depth study on transportation safety and compliance. Learn from industry experts and improve your safety management."
+        >
+          <ComprehensiveTransportationStudy />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/comprehensive-analysis" element={
+        <SharedLayout 
+          title="Comprehensive Analysis of Transportation Safety - Safe Haul"
+          description="Expert analysis of transportation safety and compliance. Learn from industry experts and improve your safety management."
+        >
+          <ComprehensiveAnalysisNavigator />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/comprehensive-analysis/part2" element={
+        <SharedLayout 
+          title="Comprehensive Analysis of Transportation Safety Part 2 - Safe Haul"
+          description="Expert analysis of transportation safety and compliance. Learn from industry experts and improve your safety management."
+        >
+          <ComprehensiveAnalysisPart2 />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/comprehensive-analysis/part3" element={
+        <SharedLayout 
+          title="Comprehensive Analysis of Transportation Safety Part 3 - Safe Haul"
+          description="Expert analysis of transportation safety and compliance. Learn from industry experts and improve your safety management."
+        >
+          <ComprehensiveAnalysisPart3 />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/mishandled-claims-costs" element={
+        <SharedLayout 
+          title="The Cost of Mishandled Claims in Transportation - Safe Haul"
+          description="Learn about the costs of mishandled claims in transportation. Expert guidance on claims management and safety compliance."
+        >
+          <MishandledClaimsCosts />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/fmcsa-safety-regulations" element={
+        <SharedLayout 
+          title="FMCSA Safety Regulations for Transportation Companies - Safe Haul"
+          description="Stay compliant with FMCSA safety regulations. Expert guidance on safety ratings, CSA scores, and compliance management for transportation companies."
+        >
+          <FMCSASafetyRegulations />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/insurance-cost-analysis" element={
+        <SharedLayout 
+          title="Insurance Cost Analysis for Transportation Companies - Safe Haul"
+          description="Expert analysis of insurance costs for transportation companies. Learn how to reduce costs and improve safety."
+        >
+          <InsuranceCostAnalysis />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/claims-management-2024" element={
+        <SharedLayout 
+          title="Claims Management for Transportation Companies in 2024 - Safe Haul"
+          description="Expert claims management services for transportation companies in 2024. Reduce costs and improve safety with our proven strategies."
+        >
+          <ClaimsManagement2024 />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/future-transportation-claims" element={
+        <SharedLayout 
+          title="The Future of Transportation Claims - Safe Haul"
+          description="Learn about the future of transportation claims. Expert guidance on claims management and safety compliance."
+        >
+          <FutureTransportationClaims />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/maximizing-fleet-safety-roi" element={
+        <SharedLayout 
+          title="Maximizing Fleet Safety ROI - Safe Haul"
+          description="Learn how to maximize fleet safety ROI. Expert guidance on safety management and compliance."
+        >
+          <MaximizingFleetSafetyROI />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/technology-claims-prevention" element={
+        <SharedLayout 
+          title="Using Technology for Claims Prevention in Transportation - Safe Haul"
+          description="Learn how to use technology for claims prevention in transportation. Expert guidance on safety management and compliance."
+        >
+          <TechnologyClaimsPrevention />
+        </SharedLayout>
+      } />
+      
+      <Route path="/testimonials" element={
+        <SharedLayout 
+          title="Client Success Stories - Safe Haul Transportation Safety"
+          description="Read what our clients say about Safe Haul's transportation safety and claims management services. Real results from real companies."
+        >
+          <Testimonials />
+        </SharedLayout>
+      } />
+      
+      <Route path="/risk-assessment" element={
+        <SharedLayout 
+          title="Transportation Risk Assessment - Safe Haul Safety Solutions"
+          description="Professional risk assessment services for transportation companies. Identify and mitigate safety risks with expert guidance."
+        >
+          <RiskAssessment />
+        </SharedLayout>
+      } />
+      
+      <Route path="/services/claims" element={
+        <SharedLayout 
+          title="Claims Service - Safe Haul"
+          description="Expert claims management services for transportation companies. Reduce costs and improve safety with our proven strategies."
+        >
+          <ClaimsServicePage />
+        </SharedLayout>
+      } />
+
+      <Route path="/contact" element={
+        <SharedLayout 
+          title="Contact Safe Haul - Get Started with Professional Safety Management"
+          description="Contact Safe Haul for professional transportation safety and claims management services. Get expert help today."
+        >
+          <ContactSection />
+        </SharedLayout>
+      } />
+    </Routes>
   );
 }
 
