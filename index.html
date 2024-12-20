@@ -6,13 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="PJwKpr50o0L3LVtgHzylb6TvP8tlLQmToCg3Yefvbkw" />
     
-    <!-- Google Analytics -->
+    <!-- Google Analytics and Ads Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMJN963CK0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      // Google Analytics 4 config
       gtag('config', 'G-KMJN963CK0');
+      // Google Ads config
+      gtag('config', 'AW-6848128318');
+      
+      // Track phone calls
+      function trackPhoneCall() {
+        gtag('event', 'phone_call', {
+          'event_category': 'Contact',
+          'event_label': 'Phone Call'
+        });
+      }
+
+      // Track form submissions
+      function trackFormSubmission() {
+        gtag('event', 'form_submission', {
+          'event_category': 'Contact',
+          'event_label': 'Form Submit'
+        });
+      }
+
+      // Track service page views
+      function trackServiceView(serviceName) {
+        gtag('event', 'service_view', {
+          'event_category': 'Service',
+          'event_label': serviceName
+        });
+      }
+
+      // Track document downloads
+      function trackDownload(documentName) {
+        gtag('event', 'download', {
+          'event_category': 'Download',
+          'event_label': documentName
+        });
+      }
+
+      // Initialize tracking when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
+          element.addEventListener('click', function() {
+            trackPhoneCall();
+          });
+        });
+
+        // Track form submissions
+        const forms = document.querySelectorAll('form');
+        forms.forEach(function(form) {
+          form.addEventListener('submit', function() {
+            trackFormSubmission();
+          });
+        });
+      });
     </script>
     
     <!-- SEO Meta Tags -->
