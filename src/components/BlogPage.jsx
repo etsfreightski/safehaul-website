@@ -4,6 +4,13 @@ import { Helmet } from 'react-helmet';
 
 const blogPosts = [
   {
+    id: 'third-party-adjuster-advantage-2024',
+    title: 'The Strategic Advantage of Carrier-Experienced Third-Party Claims Adjusters: A 2024 Analysis',
+    excerpt: 'An in-depth analysis of how third-party claims adjusters with carrier-side experience deliver superior outcomes in transportation claims management, backed by research and industry data.',
+    date: 'December 21, 2024',
+    readTime: '25 min read'
+  },
+  {
     id: 'eld-claims-analysis-2024',
     title: 'The Impact of ELD Data on Transportation Claims: A 2024 Analysis',
     excerpt: 'An in-depth analysis of how Electronic Logging Device (ELD) data is revolutionizing transportation claims management, improving accuracy, and reducing fraud in 2024.',
