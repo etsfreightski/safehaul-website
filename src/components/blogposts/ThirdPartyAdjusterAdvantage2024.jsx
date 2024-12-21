@@ -147,7 +147,7 @@ const ThirdPartyAdjusterAdvantage2024 = () => {
 
                 <div className="prose max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    According to the <a href="https://www.iii.org/fact-statistic/facts-statistics-commercial-motor-vehicle-insurance" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">Insurance Information Institute</a>, claims handled by adjusters with carrier experience show:
+                    According to the <a href="https://www.iii.org/fact-statistic/facts-statistics-commercial-auto-insurance" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">Insurance Information Institute</a>, claims handled by adjusters with carrier experience show:
                   </p>
                   
                   <ul className="list-disc pl-6 space-y-3 text-gray-700">
@@ -166,7 +166,7 @@ const ThirdPartyAdjusterAdvantage2024 = () => {
               <div className="bg-gray-50 p-6 rounded-lg mb-8">
                 <div className="prose max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    The <a href="https://www.trucking.org/news-insights/ata-releases-updated-report-trucking-costs" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">American Transportation Research Institute (ATRI)</a> identifies several key advantages of adjusters with carrier experience:
+                    The <a href="https://www.trucking.org/economics-and-industry-data" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">American Transportation Research Institute (ATRI)</a> identifies several key advantages of adjusters with carrier experience:
                   </p>
                   
                   <ol className="list-decimal pl-6 space-y-6 text-gray-700">
@@ -295,7 +295,7 @@ const ThirdPartyAdjusterAdvantage2024 = () => {
                 
                 <ul className="list-disc pl-6 space-y-3 text-gray-700">
                   <li>
-                    The <a href="https://www.ttnews.com/articles/insurance-costs" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">Transport Topics' Insurance Cost Analysis</a> shows 42% lower total claim costs when handled by adjusters with carrier experience.
+                    The <a href="https://www.ttnews.com/articles/higher-insurance-rates-continue-challenge-trucking-industry" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">Transport Topics' Insurance Cost Analysis</a> shows 42% lower total claim costs when handled by adjusters with carrier experience.
                   </li>
                   <li>
                     <a href="https://www.joc.com/trucking-logistics" target="_blank" rel="noopener noreferrer" className="text-[#40CBB5] hover:underline">Journal of Commerce</a> reports 37% faster claim resolution times with experienced third-party adjusters.
