@@ -24,6 +24,7 @@ import ClaimsManagement2024 from '@/components/blogposts/ClaimsManagement2024';
 import FutureTransportationClaims from '@/components/blogposts/FutureTransportationClaims';
 import MaximizingFleetSafetyROI from '@/components/blogposts/MaximizingFleetSafetyROI';
 import TechnologyClaimsPrevention from '@/components/blogposts/TechnologyClaimsPrevention';
+import ELDClaimsAnalysis2024 from '@/components/blogposts/ELDClaimsAnalysis2024';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -195,6 +196,15 @@ function AppContent() {
           description="Learn about the costs of mishandled claims in transportation. Expert guidance on claims management and safety compliance."
         >
           <MishandledClaimsCosts />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/eld-claims-analysis-2024" element={
+        <SharedLayout 
+          title="The Impact of ELD Data on Transportation Claims: A 2024 Analysis - Safe Haul"
+          description="An in-depth analysis of how Electronic Logging Device (ELD) data is revolutionizing transportation claims management, improving accuracy, and reducing fraud in 2024."
+        >
+          <ELDClaimsAnalysis2024 />
         </SharedLayout>
       } />
       
