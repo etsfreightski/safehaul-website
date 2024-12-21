@@ -103,7 +103,8 @@ const ServiceSchema = () => {
     ],
     "sameAs": [
       "https://www.linkedin.com/company/safe-haul-claims",
-      "https://www.facebook.com/safehaulclaims"
+      "https://www.facebook.com/SafeHaulClaims",
+      "https://www.youtube.com/@SafeHaulClaimsandSafetyManagem"
     ]
   };
 
