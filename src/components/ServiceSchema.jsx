@@ -102,8 +102,7 @@ const ServiceSchema = () => {
       "BASIC score improvement"
     ],
     "sameAs": [
-      "https://www.linkedin.com/company/safe-haul-claims",
-      "https://www.facebook.com/SafeHaulClaims",
+      "https://www.instagram.com/safehaulclaims",
       "https://www.youtube.com/@SafeHaulClaimsandSafetyManagem"
     ]
   };
