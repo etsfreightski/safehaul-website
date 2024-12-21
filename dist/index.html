@@ -6,69 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="PJwKpr50o0L3LVtgHzylb6TvP8tlLQmToCg3Yefvbkw" />
     
+    <!-- Google Analytics and Ads Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMJN963CK0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // Google Analytics 4 config
+      gtag('config', 'G-KMJN963CK0');
+      // Google Ads config
+      gtag('config', 'AW-6848128318');
+      
+      // Track phone calls
+      function trackPhoneCall() {
+        gtag('event', 'phone_call', {
+          'event_category': 'Contact',
+          'event_label': 'Phone Call'
+        });
+      }
+
+      // Track form submissions
+      function trackFormSubmission() {
+        gtag('event', 'form_submission', {
+          'event_category': 'Contact',
+          'event_label': 'Form Submit'
+        });
+      }
+
+      // Track service page views
+      function trackServiceView(serviceName) {
+        gtag('event', 'service_view', {
+          'event_category': 'Service',
+          'event_label': serviceName
+        });
+      }
+
+      // Track document downloads
+      function trackDownload(documentName) {
+        gtag('event', 'download', {
+          'event_category': 'Download',
+          'event_label': documentName
+        });
+      }
+
+      // Initialize tracking when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
+          element.addEventListener('click', function() {
+            trackPhoneCall();
+          });
+        });
+
+        // Track form submissions
+        const forms = document.querySelectorAll('form');
+        forms.forEach(function(form) {
+          form.addEventListener('submit', function() {
+            trackFormSubmission();
+          });
+        });
+      });
+    </script>
+    
     <!-- SEO Meta Tags -->
-    <title>Safe Haul Claims and Safety Management - Transportation Claims & Safety Solutions</title>
-    <meta name="description" content="Professional transportation claims and safety management services. Expert DOT compliance consulting, claims handling, and comprehensive safety solutions for carriers. Located in Chicago, IL." />
-    <meta name="keywords" content="transportation claims management, DOT compliance, carrier safety, safety management, claims handling, accident claims, cargo claims, workers comp, liability insurance, Chicago" />
+    <title>Transportation Claims & Safety Management Services | Safe Haul Claims</title>
+    <meta name="description" content="Expert transportation claims management and DOT compliance solutions. Specializing in truck accident investigations, cargo claims processing, and FMCSA compliance. Industry-leading safety consulting and risk management for carriers nationwide." />
+    <meta name="keywords" content="transportation claims adjuster, truck accident investigation, FMCSA compliance consultant, cargo claims processing, freight claims management, DOT safety consultant, transportation safety audit, hazmat compliance, ELD compliance solutions, driver qualification files, trucking safety rating, CSA score improvement, transportation risk assessment, cargo damage claims, truck accident reconstruction, safety management systems, DOT audit defense, fleet safety programs, transportation compliance training, BASIC score improvement" />
     
     <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Safe Haul Claims and Safety Management - Transportation Solutions" />
-    <meta property="og:description" content="Professional transportation claims and safety management services in Chicago. Expert solutions for DOT compliance, claims handling, and carrier safety." />
+    <meta property="og:title" content="Transportation Claims & Safety Management Services | Safe Haul Claims" />
+    <meta property="og:description" content="Expert transportation claims management and DOT compliance solutions. Specializing in truck accident investigations, cargo claims processing, and FMCSA compliance." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://safehaulclaims.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://safehaulsite.netlify.app" />
-    <meta property="og:image" content="https://safehaulsite.netlify.app/icon-512.png" />
-    <meta property="og:site_name" content="Safe Haul Claims and Safety Management" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Safe Haul Claims and Safety Management" />
-    <meta name="twitter:description" content="Professional transportation claims and safety management services in Chicago. Expert solutions for carriers." />
-    <meta name="twitter:image" content="https://safehaulsite.netlify.app/icon-512.png" />
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="geo.region" content="US-IL" />
-    <meta name="geo.placename" content="Chicago" />
-    <meta name="author" content="Safe Haul Claims and Safety Management" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://safehaulsite.netlify.app" />
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Safe Haul Claims and Safety Management",
-        "image": "https://safehaulsite.netlify.app/icon-512.png",
-        "description": "Professional transportation claims and safety management services. Expert DOT compliance consulting and comprehensive safety solutions for carriers.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chicago",
-          "addressRegion": "IL",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "41.8781",
-          "longitude": "-87.6298"
-        },
-        "url": "https://safehaulsite.netlify.app",
-        "telephone": "(218) 203-2097",
-        "priceRange": "$$",
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "sameAs": [
-          "https://www.linkedin.com/company/safe-haul-claims-and-safety-management",
-          "https://www.facebook.com/safehaulclaims"
-        ]
-      }
-    </script>
-    <script type="module" crossorigin src="/assets/index-bbc9e98b.js"></script>
+    <title>Safe Haul Claims</title>
+    <script type="module" crossorigin src="/assets/index-4ad76e78.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-32c8e16b.js">
     <link rel="modulepreload" crossorigin href="/assets/ui-4b8458a0.js">
-    <link rel="stylesheet" href="/assets/index-5f66dc5f.css">
+    <link rel="stylesheet" href="/assets/index-4d088d34.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
