@@ -35,6 +35,7 @@ import CaseStudies from '@/components/CaseStudies';
 import IndustryNews from '@/components/IndustryNews';
 import ClaimsServicePage from '@/components/pages/ClaimsServicePage';
 import VideoPlayer from './components/VideoPlayer';
+import ReviewSection from '@/components/ReviewSection';
 import { Helmet } from 'react-helmet';
 import './styles/patterns.css';
 import usePageTracking from './hooks/usePageTracking';
@@ -108,6 +109,16 @@ function AppContent() {
     <Routes>
       {/* Main landing page route */}
       <Route path="/" element={<HomePage />} />
+      
+      {/* Reviews section route */}
+      <Route path="/reviews" element={
+        <SharedLayout 
+          title="Client Reviews - Safe Haul Claims & Safety Management"
+          description="Read what our clients say about Safe Haul's claims management and safety services. Share your experience with our expert team."
+        >
+          <ReviewSection />
+        </SharedLayout>
+      } />
       
       {/* Blog section routes */}
       <Route path="/blog" element={
