@@ -65,15 +65,18 @@ const ReviewSection = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Safe Haul Claims & Safety Management",
+            "name": "Safe Haul Claims and Safety Management",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Your Address",
-              "addressLocality": "Your City",
-              "addressRegion": "Your State",
-              "postalCode": "Your Zip",
+              "streetAddress": "2801 Superior Dr NW",
+              "addressLocality": "Rochester",
+              "addressRegion": "MN",
+              "postalCode": "55901",
               "addressCountry": "US"
             },
+            "url": "https://safehaulsite.netlify.app",
+            "telephone": "+12182032097",
+            "image": "https://lh3.googleusercontent.com/p/AF1QipPKt7lGgxVbR3KLH5n_7-3kIVJvYG9nHydRF0Y=s1360-w1360-h1020",
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": averageRating.toFixed(1),
@@ -119,6 +122,20 @@ const ReviewSection = () => {
         <div className="bg-gray-50 rounded-lg p-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Leave a Review</h3>
           
+          <div className="mb-6">
+            <a 
+              href="https://g.page/r/CXoQOPQHrJPMEBM/review" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-[#4285F4] text-white px-6 py-3 rounded-lg hover:bg-[#3367D6] transition-colors mb-4"
+            >
+              Leave a Google Review
+            </a>
+            <p className="text-sm text-gray-600">
+              Your Google review helps others find reliable claims management services. It will appear both on Google and our website.
+            </p>
+          </div>
+            
           {submitted ? (
             <div className="text-green-600 p-4 bg-green-50 rounded-lg">
               Thank you for your review! It will be visible after moderation.
