@@ -124,7 +124,7 @@ const ReviewSection = () => {
           
           <div className="mb-6">
             <a 
-              href="https://g.page/r/CXoQOPQHrJPMEBM/review" 
+              href="https://g.page/r/CVl362Z-7PvlEAI/review" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-[#4285F4] text-white px-6 py-3 rounded-lg hover:bg-[#3367D6] transition-colors mb-4"
