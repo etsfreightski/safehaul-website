@@ -96,7 +96,12 @@ const HomePage = () => (
 function App() {
   return (
     <Router>
-      <AppContent />
+      <div className="App">
+        <div className="holiday-banner bg-[#2C3E50] text-white py-2 text-center font-semibold">
+          <span role="img" aria-label="snowflake">❄️</span> Happy Holidays from Safe Haul! Wishing you a safe and joyful season <span role="img" aria-label="snowflake">❄️</span>
+        </div>
+        <AppContent />
+      </div>
     </Router>
   );
 }
