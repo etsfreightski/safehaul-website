@@ -5,10 +5,10 @@ import { Helmet } from 'react-helmet';
 const blogPosts = [
   {
     id: 'winter-safety-guide-2024',
-    title: 'Winter 2024 Safety Guide: Preventing Cold-Weather Claims Through Technology',
-    excerpt: 'Discover how modern technology and proactive safety measures can significantly reduce winter-related incidents and claims while maintaining operational efficiency.',
+    title: 'Winter Safety Guide 2024: Comprehensive Analysis of Technology-Driven Risk Prevention',
+    excerpt: 'An in-depth analysis of winter safety technologies and their impact on transportation claims prevention, featuring comprehensive data analysis and ROI studies from 2019-2023.',
     date: 'December 26, 2024',
-    readTime: '8 min read'
+    readTime: '25 min read'
   },
   {
     id: 'third-party-adjuster-advantage-2024',
