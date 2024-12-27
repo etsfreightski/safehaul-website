@@ -4,6 +4,13 @@ import { Helmet } from 'react-helmet';
 
 const blogPosts = [
   {
+    id: 'winter-safety-guide-2024',
+    title: 'Winter 2024 Safety Guide: Preventing Cold-Weather Claims Through Technology',
+    excerpt: 'Discover how modern technology and proactive safety measures can significantly reduce winter-related incidents and claims while maintaining operational efficiency.',
+    date: 'December 26, 2024',
+    readTime: '8 min read'
+  },
+  {
     id: 'third-party-adjuster-advantage-2024',
     title: 'The Strategic Advantage of Carrier-Experienced Third-Party Claims Adjusters: A 2024 Analysis',
     excerpt: 'An in-depth analysis of how third-party claims adjusters with carrier-side experience deliver superior outcomes in transportation claims management, backed by research and industry data.',
