@@ -6,7 +6,6 @@ import {
   Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell,
   ComposedChart, Area
 } from 'recharts';
-import BlogPostSchema from '../schemas/BlogPostSchema';
 
 const WinterSafetyGuide2024 = () => {
   const [activeSection, setActiveSection] = useState('abstract');
@@ -37,20 +36,13 @@ const WinterSafetyGuide2024 = () => {
   ];
 
   return (
-    <div className="blog-content">
+    <div className="blog-post winter-safety-guide">
       <Helmet>
-        <title>Winter Safety Guide 2024: Comprehensive Analysis of Technology-Driven Risk Prevention</title>
+        <title>Winter Safety Guide 2024: Comprehensive Analysis - Safe Haul</title>
         <meta name="description" content="In-depth analysis of winter safety technologies and their impact on transportation claims prevention, featuring comprehensive data analysis and ROI studies." />
       </Helmet>
 
-      <BlogPostSchema
-        title="Winter Safety Guide 2024: Comprehensive Analysis of Technology-Driven Risk Prevention"
-        datePublished="2024-12-26"
-        author="Safe Haul Claims and Safety Management"
-        description="In-depth analysis of winter safety technologies and their impact on transportation claims prevention, featuring comprehensive data analysis and ROI studies."
-      />
-
-      <div className="blog-navigation">
+      <div className="navigation-menu">
         <button 
           className={activeSection === 'abstract' ? 'active' : ''} 
           onClick={() => setActiveSection('abstract')}

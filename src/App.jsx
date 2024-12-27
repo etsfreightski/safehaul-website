@@ -26,6 +26,7 @@ import MaximizingFleetSafetyROI from '@/components/blogposts/MaximizingFleetSafe
 import TechnologyClaimsPrevention from '@/components/blogposts/TechnologyClaimsPrevention';
 import ELDClaimsAnalysis2024 from '@/components/blogposts/ELDClaimsAnalysis2024';
 import ThirdPartyAdjusterAdvantage2024 from '@/components/blogposts/ThirdPartyAdjusterAdvantage2024';
+import WinterSafetyGuide2024 from '@/components/blogposts/WinterSafetyGuide2024';
 import Testimonials from '@/components/Testimonials';
 import RiskAssessment from '@/components/RiskAssessment';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -285,6 +286,15 @@ function AppContent() {
           description="Learn how to use technology for claims prevention in transportation. Expert guidance on safety management and compliance."
         >
           <TechnologyClaimsPrevention />
+        </SharedLayout>
+      } />
+      
+      <Route path="/blog/winter-safety-guide-2024" element={
+        <SharedLayout 
+          title="Winter Safety Guide 2024: Comprehensive Analysis - Safe Haul"
+          description="In-depth analysis of winter safety technologies and their impact on transportation claims prevention, featuring comprehensive data analysis and ROI studies."
+        >
+          <WinterSafetyGuide2024 />
         </SharedLayout>
       } />
       
