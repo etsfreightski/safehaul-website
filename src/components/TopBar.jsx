@@ -20,7 +20,7 @@ const TopBar = () => (
       </div>
       <div className="flex items-center space-x-2 mt-2 md:mt-0">
         <Clock size={20} className="drop-shadow-lg" />
-        <span className="text-lg font-bold drop-shadow-lg">Mon - Fri: 8:00 AM - 5:00 PM CST</span>
+        <span className="text-lg font-bold drop-shadow-lg">Mon - Fri: 9:00 AM - 5:00 PM CST</span>
       </div>
     </div>
   </div>
