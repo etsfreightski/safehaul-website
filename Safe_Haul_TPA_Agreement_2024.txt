@@ -1,0 +1,239 @@
+THIRD PARTY ADMINISTRATOR SERVICES AGREEMENT
+
+THIS THIRD PARTY ADMINISTRATOR SERVICES AGREEMENT (the "Agreement") is made effective as of [DATE] (the "Effective Date"), by and between:
+
+Safe Haul Claims, an Illinois corporation with its principal place of business at [ADDRESS] ("Administrator")
+
+and
+
+[INSURANCE COMPANY NAME], a [STATE] corporation with its principal place of business at [ADDRESS] ("Company")
+
+WHEREAS, Company desires to engage Administrator to provide certain claims administration services for its commercial trucking insurance claims; and
+
+WHEREAS, Administrator has the expertise and capability to provide such services;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 "Claim" means any first-party or third-party claim arising under a Policy.
+
+1.2 "Claim File" means all records, data, documents, correspondence, and materials relating to a Claim.
+
+1.3 "Confidential Information" means all non-public information disclosed by either party, including but not limited to trade secrets, technical information, business information, and customer data.
+
+1.4 "Policy" means any insurance policy issued by Company for which Administrator provides Services.
+
+1.5 "Services" means the claims administration services described in Section 2 and Exhibit A.
+
+2. SERVICES AND RESPONSIBILITIES
+
+2.1 Scope of Services. Administrator shall provide the following Services:
+
+    (a) Claims intake and documentation
+    (b) Claims investigation and evaluation
+    (c) Coverage analysis
+    (d) Reserve setting recommendations
+    (e) Claims processing and payment recommendations
+    (f) Litigation management coordination
+    (g) Reporting and analytics
+    (h) Document management and retention
+    (i) Such other services as specified in Exhibit A
+
+2.2 Service Standards. Administrator shall:
+
+    (a) Perform Services in accordance with industry best practices
+    (b) Comply with all applicable laws and regulations
+    (c) Maintain appropriate staffing levels
+    (d) Meet performance standards in Exhibit B
+    (e) Provide regular status updates as specified
+
+2.3 Company Responsibilities. Company shall:
+
+    (a) Provide timely access to necessary information
+    (b) Designate authorized representatives
+    (c) Respond to inquiries within agreed timeframes
+    (d) Process approved payments within specified periods
+    (e) Maintain required insurance coverage
+
+3. COMPENSATION AND PAYMENT
+
+3.1 Fees. Company shall pay Administrator according to the fee schedule in Exhibit C.
+
+3.2 Payment Terms
+    (a) Net 30 days from invoice date
+    (b) 1.5% monthly interest on late payments
+    (c) Right to suspend services for payments 60+ days late
+    (d) Annual fee adjustments limited to 3% unless mutually agreed
+
+3.3 Disputed Charges
+    (a) Notice within 15 days of invoice
+    (b) Payment of undisputed portions required
+    (c) Resolution within 30 days
+    (d) Mediation before litigation
+
+4. TERM AND TERMINATION
+
+4.1 Initial Term. 24 months from Effective Date.
+
+4.2 Renewal. Automatic 12-month renewal unless 90-day notice.
+
+4.3 Termination Rights
+    (a) Material breach: 30 days' notice and opportunity to cure
+    (b) Bankruptcy/insolvency: Immediate
+    (c) Regulatory action: Immediate if material
+    (d) Mutual agreement: Any time
+    (e) Without cause: 120 days' notice
+
+4.4 Post-Termination
+    (a) Orderly transition of services
+    (b) Return of materials within 30 days
+    (c) Payment for services through termination
+    (d) Survival of confidentiality obligations
+    (e) Cooperation with successor administrator
+
+5. LIMITATION OF LIABILITY AND INDEMNIFICATION
+
+5.1 Limitation of Liability
+    (a) Cap at 12 months' fees
+    (b) No consequential damages
+    (c) Exceptions for gross negligence/willful misconduct
+    (d) Separate from indemnification obligations
+
+5.2 Mutual Indemnification
+    (a) Negligence or willful misconduct
+    (b) Breach of agreement
+    (c) Violation of law
+    (d) Intellectual property infringement
+    (e) Data security breaches
+
+5.3 Indemnification Process
+    (a) Prompt notice required
+    (b) Right to defend
+    (c) Cooperation required
+    (d) Settlement restrictions
+    (e) Reasonable attorney fees covered
+
+6. CONFIDENTIALITY AND DATA SECURITY
+
+6.1 Confidentiality Obligations
+    (a) Standard of care
+    (b) Permitted disclosures
+    (c) Employee compliance
+    (d) Return of information
+    (e) 5-year post-termination survival
+
+6.2 Data Security Requirements
+    (a) Industry standard protection
+    (b) Encryption requirements
+    (c) Access controls
+    (d) Breach notification
+    (e) Annual security audits
+
+6.3 Data Ownership and Usage
+    (a) Company owns claim data
+    (b) Administrator owns processes
+    (c) Limited license during term
+    (d) Aggregated data rights
+    (e) Post-termination restrictions
+
+7. REGULATORY COMPLIANCE
+
+7.1 Licensing Requirements
+    (a) Maintenance of licenses
+    (b) Notice of changes
+    (c) Compliance verification
+    (d) Regulatory correspondence
+    (e) Audit cooperation
+
+7.2 Insurance Requirements
+    (a) E&O: $2,000,000 per occurrence
+    (b) Cyber: $2,000,000 aggregate
+    (c) General liability: $1,000,000
+    (d) Annual verification
+    (e) Rating requirements
+
+8. DISPUTE RESOLUTION
+
+8.1 Informal Resolution
+    (a) Good faith negotiations
+    (b) Executive escalation
+    (c) 30-day resolution period
+    (d) Written notice requirements
+    (e) Business continuation
+
+8.2 Mediation
+    (a) Required before litigation
+    (b) Mutually selected mediator
+    (c) Cost sharing
+    (d) Location requirements
+    (e) Confidentiality
+
+8.3 Litigation
+    (a) Illinois courts exclusive jurisdiction
+    (b) Prevailing party fees
+    (c) Jury trial waiver
+    (d) Class action waiver
+    (e) Injunctive relief rights
+
+9. GENERAL PROVISIONS
+
+9.1 Independent Contractor Status
+    (a) No agency relationship
+    (b) No employee benefits
+    (c) Tax responsibility
+    (d) No authority to bind
+    (e) Separate operations
+
+9.2 Force Majeure
+    (a) Defined events
+    (b) Notice requirements
+    (c) Mitigation obligations
+    (d) Termination rights
+    (e) Payment obligations
+
+9.3 Assignment
+    (a) No assignment without consent
+    (b) Permitted successors
+    (c) Change of control
+    (d) Notice requirements
+    (e) Continuing obligations
+
+9.4 Notice Requirements
+    (a) Written notice required
+    (b) Delivery methods
+    (c) Effective dates
+    (d) Address changes
+    (e) Copy requirements
+
+9.5 Amendment and Waiver
+    (a) Written amendments only
+    (b) No implied waivers
+    (c) Continuing obligations
+    (d) Severability
+    (e) Integration clause
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+SAFE HAUL CLAIMS
+
+By: _________________________
+Name: 
+Title: 
+Date: 
+
+[INSURANCE COMPANY]
+
+By: _________________________
+Name: 
+Title: 
+Date: 
+
+EXHIBIT A: Detailed Services Description
+[Detailed breakdown of services]
+
+EXHIBIT B: Performance Standards
+[Specific metrics and requirements]
+
+EXHIBIT C: Fee Schedule
+[Detailed fee structure]

@@ -1,0 +1,92 @@
+THIRD PARTY ADMINISTRATOR SERVICES AGREEMENT
+
+This Third Party Administrator Services Agreement (the "Agreement") is entered into as of [DATE] by and between:
+
+Safe Haul Claims ("Administrator")
+[Chicago Address]
+
+and
+
+[INSURANCE COMPANY NAME] ("Company")
+[Company Address]
+
+1. SCOPE OF SERVICES
+1.1 Administrator shall provide claims administration services for commercial trucking claims including:
+   a) Claims intake and documentation
+   b) Claims processing and coordination
+   c) Communication management
+   d) Documentation and record keeping
+   e) Reporting and analytics
+   f) Compliance monitoring
+
+2. COMPENSATION
+2.1 Company shall pay Administrator according to the following fee schedule:
+   [Fee Schedule to be attached as Exhibit A]
+2.2 Payment terms: Net 30 days from invoice date
+2.3 Late payments subject to 1.5% monthly interest
+
+3. TERM AND TERMINATION
+3.1 Initial term: 12 months
+3.2 Automatic renewal unless 60-day notice provided
+3.3 Either party may terminate with 90 days written notice
+3.4 Immediate termination available for material breach
+
+4. INDEMNIFICATION
+4.1 Mutual indemnification for:
+    a) Gross negligence
+    b) Willful misconduct
+    c) Breach of agreement
+4.2 Liability cap: $1,000,000 per occurrence
+4.3 Excludes fraud or intentional misconduct
+
+5. CONFIDENTIALITY
+5.1 Mutual protection of confidential information
+5.2 Data security requirements
+5.3 HIPAA compliance where applicable
+5.4 5-year survival post-termination
+
+6. PERFORMANCE STANDARDS
+6.1 Response times:
+    a) New claims: 24 hours
+    b) Status updates: 48 hours
+    c) Documentation requests: 72 hours
+6.2 Quality metrics defined in Exhibit B
+6.3 Quarterly performance reviews
+
+7. INSURANCE REQUIREMENTS
+7.1 Administrator shall maintain:
+    a) E&O: $1,000,000 per occurrence
+    b) Cyber liability: $1,000,000
+    c) General liability: $1,000,000
+7.2 Certificates provided annually
+
+8. DISPUTE RESOLUTION
+8.1 Mandatory mediation before litigation
+8.2 Venue: Illinois courts
+8.3 Prevailing party recovers fees
+
+9. GENERAL PROVISIONS
+9.1 Independent contractor status
+9.2 No assignment without consent
+9.3 Force majeure protection
+9.4 Governing law: Illinois
+9.5 Entire agreement clause
+9.6 Severability provision
+
+10. DATA OWNERSHIP
+10.1 Company owns claim data
+10.2 Administrator owns processes
+10.3 Mutual license during term
+10.4 Data return upon termination
+
+SIGNATURES:
+
+Safe Haul Claims
+By: _______________
+Title: _____________
+Date: _____________
+
+[INSURANCE COMPANY]
+By: _______________
+Title: _____________
+Date: _____________
