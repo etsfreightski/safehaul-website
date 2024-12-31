@@ -13,48 +13,25 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       // Google Analytics 4 config
-      gtag('config', 'G-KMJN963CK0');
+      gtag('config', 'G-KMJN963CK0', {
+        'send_page_view': false,  // Defer page view until after critical content loads
+        'optimize_id': 'OPT-XXXXXX'
+      });
       // Google Ads config
-      gtag('config', 'AW-6848128318');
+      gtag('config', 'AW-6848128318', {
+        'send_page_view': false
+      });
       
-      // Track phone calls
-      function trackPhoneCall() {
-        gtag('event', 'phone_call', {
-          'event_category': 'Contact',
-          'event_label': 'Phone Call'
-        });
-      }
-
-      // Track form submissions
-      function trackFormSubmission() {
-        gtag('event', 'form_submission', {
-          'event_category': 'Contact',
-          'event_label': 'Form Submit'
-        });
-      }
-
-      // Track service page views
-      function trackServiceView(serviceName) {
-        gtag('event', 'service_view', {
-          'event_category': 'Service',
-          'event_label': serviceName
-        });
-      }
-
-      // Track document downloads
-      function trackDownload(documentName) {
-        gtag('event', 'download', {
-          'event_category': 'Download',
-          'event_label': documentName
-        });
-      }
-
-      // Initialize tracking when DOM is loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        // Track phone number clicks
+      // Defer non-critical tracking
+      window.addEventListener('load', function() {
+        gtag('event', 'page_view');
+        // Track phone calls
         document.querySelectorAll('a[href^="tel:"]').forEach(function(element) {
           element.addEventListener('click', function() {
-            trackPhoneCall();
+            gtag('event', 'phone_call', {
+              'event_category': 'Contact',
+              'event_label': 'Phone Call'
+            });
           });
         });
 
@@ -62,23 +39,49 @@
         const forms = document.querySelectorAll('form');
         forms.forEach(function(form) {
           form.addEventListener('submit', function() {
-            trackFormSubmission();
+            gtag('event', 'form_submission', {
+              'event_category': 'Contact',
+              'event_label': 'Form Submit'
+            });
           });
         });
+
+        // Track service page views
+        function trackServiceView(serviceName) {
+          gtag('event', 'service_view', {
+            'event_category': 'Service',
+            'event_label': serviceName
+          });
+        }
+
+        // Track document downloads
+        function trackDownload(documentName) {
+          gtag('event', 'download', {
+            'event_category': 'Download',
+            'event_label': documentName
+          });
+        }
       });
     </script>
     
     <!-- SEO Meta Tags -->
-    <title>Transportation Claims & Safety Management Services | Safe Haul Claims</title>
-    <meta name="description" content="Expert transportation claims management and DOT compliance solutions. Specializing in truck accident investigations, cargo claims processing, and FMCSA compliance. Industry-leading safety consulting and risk management for carriers nationwide." />
-    <meta name="keywords" content="transportation claims adjuster, truck accident investigation, FMCSA compliance consultant, cargo claims processing, freight claims management, DOT safety consultant, transportation safety audit, hazmat compliance, ELD compliance solutions, driver qualification files, trucking safety rating, CSA score improvement, transportation risk assessment, cargo damage claims, truck accident reconstruction, safety management systems, DOT audit defense, fleet safety programs, transportation compliance training, BASIC score improvement" />
+    <meta name="description" content="Professional Transportation Claims & Safety Management Services. Expert DOT compliance, cargo claims handling, and safety consulting for trucking companies." />
+    <meta name="keywords" content="transportation claims, DOT compliance, cargo claims, safety management, trucking safety, FMCSA compliance" />
+    <meta name="robots" content="index, follow" />
     
-    <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Transportation Claims & Safety Management Services | Safe Haul Claims" />
-    <meta property="og:description" content="Expert transportation claims management and DOT compliance solutions. Specializing in truck accident investigations, cargo claims processing, and FMCSA compliance." />
-    <meta property="og:image" content="/og-image.jpg" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Safe Haul - Professional Transportation Claims & Safety Management" />
+    <meta property="og:description" content="Expert DOT compliance, cargo claims handling, and safety consulting for trucking companies." />
+    <meta property="og:image" content="/safehaul-logo.svg.PNG" />
     <meta property="og:url" content="https://safehaulclaims.com" />
-    <meta property="og:type" content="website" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://safehaulclaims.com" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/assets/index-53a087b2.css" as="style" />
+    <link rel="preload" href="/assets/index-b4e12def.js" as="script" />
+    <link rel="preload" href="/safehaul-logo.svg.PNG" as="image" />
     
     <title>Safe Haul Claims</title>
   </head>
