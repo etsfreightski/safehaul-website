@@ -220,76 +220,353 @@ const RiskAssessment = () => {
    
    try {
      // In production, this would be an API call to FMCSA or your data provider
-     // For now, we'll simulate the data
+     // For now, we'll generate different simulated data based on USDOT number
      setTimeout(() => {
-       const simulatedData = {
-         basics: [
-           { 
-             category: 'Unsafe Driving', 
-             score: 65, 
-             threshold: 65, 
-             percentile: 75,
-             trend: 'up',
-             relatedCategories: ['hos', 'tech']
-           },
-           { 
-             category: 'Hours-of-Service Compliance', 
-             score: 60, 
-             threshold: 65, 
-             percentile: 70,
-             trend: 'stable',
-             relatedCategories: ['hos']
-           },
-           { 
-             category: 'Driver Fitness', 
-             score: 45, 
-             threshold: 80, 
-             percentile: 55,
-             trend: 'down',
-             relatedCategories: ['dqf']
-           },
-           { 
-             category: 'Controlled Substances/Alcohol', 
-             score: 30, 
-             threshold: 80, 
-             percentile: 35,
-             trend: 'stable',
-             relatedCategories: ['drug']
-           },
-           { 
-             category: 'Vehicle Maintenance', 
-             score: 75, 
-             threshold: 80, 
-             percentile: 80,
-             trend: 'up',
-             relatedCategories: ['tech']
-           },
-           { 
-             category: 'Hazardous Materials Compliance', 
-             score: 50, 
-             threshold: 80, 
-             percentile: 60,
-             trend: 'down',
-             relatedCategories: []
-           },
-           { 
-             category: 'Crash Indicator', 
-             score: 70, 
-             threshold: 65, 
-             percentile: 85,
-             trend: 'up',
-             relatedCategories: ['claims', 'tech']
-           }
-         ],
-         inspections: 42,
-         violations: 15,
-         crashes: 3,
-         outOfService: 2,
-         lastUpdated: '2025-03-15'
-       };
+       // Seed random data generation based on USDOT number to ensure consistency
+       const numSeed = parseInt(usdotNumber) || usdotNumber.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
        
-       setCsaData(simulatedData);
-       generateCSAInsights(simulatedData);
+       // Generate different carrier profiles based on USDOT patterns
+       let carrierProfile;
+       
+       if (numSeed % 5 === 0) {
+         // High-risk carrier with multiple critical BASICs
+         carrierProfile = {
+           basics: [
+             { 
+               category: 'Unsafe Driving', 
+               score: 65, 
+               threshold: 65, 
+               percentile: 85,
+               trend: 'up',
+               relatedCategories: ['hos', 'tech']
+             },
+             { 
+               category: 'Hours-of-Service Compliance', 
+               score: 60, 
+               threshold: 65, 
+               percentile: 80,
+               trend: 'up',
+               relatedCategories: ['hos']
+             },
+             { 
+               category: 'Driver Fitness', 
+               score: 45, 
+               threshold: 80, 
+               percentile: 35,
+               trend: 'down',
+               relatedCategories: ['dqf']
+             },
+             { 
+               category: 'Controlled Substances/Alcohol', 
+               score: 30, 
+               threshold: 80, 
+               percentile: 45,
+               trend: 'stable',
+               relatedCategories: ['drug']
+             },
+             { 
+               category: 'Vehicle Maintenance', 
+               score: 75, 
+               threshold: 80, 
+               percentile: 90,
+               trend: 'up',
+               relatedCategories: ['tech']
+             },
+             { 
+               category: 'Hazardous Materials Compliance', 
+               score: 50, 
+               threshold: 80, 
+               percentile: 25,
+               trend: 'down',
+               relatedCategories: []
+             },
+             { 
+               category: 'Crash Indicator', 
+               score: 70, 
+               threshold: 65, 
+               percentile: 85,
+               trend: 'up',
+               relatedCategories: ['claims', 'tech']
+             }
+           ],
+           inspections: 68,
+           violations: 37,
+           crashes: 6,
+           outOfService: 8,
+           lastUpdated: '2025-03-15'
+         };
+       } else if (numSeed % 5 === 1) {
+         // Medium-risk carrier with HOS issues
+         carrierProfile = {
+           basics: [
+             { 
+               category: 'Unsafe Driving', 
+               score: 65, 
+               threshold: 65, 
+               percentile: 55,
+               trend: 'stable',
+               relatedCategories: ['hos', 'tech']
+             },
+             { 
+               category: 'Hours-of-Service Compliance', 
+               score: 60, 
+               threshold: 65, 
+               percentile: 72,
+               trend: 'up',
+               relatedCategories: ['hos']
+             },
+             { 
+               category: 'Driver Fitness', 
+               score: 45, 
+               threshold: 80, 
+               percentile: 40,
+               trend: 'stable',
+               relatedCategories: ['dqf']
+             },
+             { 
+               category: 'Controlled Substances/Alcohol', 
+               score: 30, 
+               threshold: 80, 
+               percentile: 20,
+               trend: 'down',
+               relatedCategories: ['drug']
+             },
+             { 
+               category: 'Vehicle Maintenance', 
+               score: 75, 
+               threshold: 80, 
+               percentile: 65,
+               trend: 'up',
+               relatedCategories: ['tech']
+             },
+             { 
+               category: 'Hazardous Materials Compliance', 
+               score: 50, 
+               threshold: 80, 
+               percentile: 30,
+               trend: 'stable',
+               relatedCategories: []
+             },
+             { 
+               category: 'Crash Indicator', 
+               score: 70, 
+               threshold: 65, 
+               percentile: 60,
+               trend: 'stable',
+               relatedCategories: ['claims', 'tech']
+             }
+           ],
+           inspections: 42,
+           violations: 15,
+           crashes: 3,
+           outOfService: 2,
+           lastUpdated: '2025-03-01'
+         };
+       } else if (numSeed % 5 === 2) {
+         // Low-risk carrier with good compliance
+         carrierProfile = {
+           basics: [
+             { 
+               category: 'Unsafe Driving', 
+               score: 65, 
+               threshold: 65, 
+               percentile: 35,
+               trend: 'down',
+               relatedCategories: ['hos', 'tech']
+             },
+             { 
+               category: 'Hours-of-Service Compliance', 
+               score: 60, 
+               threshold: 65, 
+               percentile: 25,
+               trend: 'down',
+               relatedCategories: ['hos']
+             },
+             { 
+               category: 'Driver Fitness', 
+               score: 45, 
+               threshold: 80, 
+               percentile: 15,
+               trend: 'down',
+               relatedCategories: ['dqf']
+             },
+             { 
+               category: 'Controlled Substances/Alcohol', 
+               score: 30, 
+               threshold: 80, 
+               percentile: 10,
+               trend: 'stable',
+               relatedCategories: ['drug']
+             },
+             { 
+               category: 'Vehicle Maintenance', 
+               score: 75, 
+               threshold: 80, 
+               percentile: 45,
+               trend: 'down',
+               relatedCategories: ['tech']
+             },
+             { 
+               category: 'Hazardous Materials Compliance', 
+               score: 50, 
+               threshold: 80, 
+               percentile: 20,
+               trend: 'down',
+               relatedCategories: []
+             },
+             { 
+               category: 'Crash Indicator', 
+               score: 70, 
+               threshold: 65, 
+               percentile: 30,
+               trend: 'down',
+               relatedCategories: ['claims', 'tech']
+             }
+           ],
+           inspections: 53,
+           violations: 8,
+           crashes: 1,
+           outOfService: 0,
+           lastUpdated: '2025-02-28'
+         };
+       } else if (numSeed % 5 === 3) {
+         // Maintenance-focused issues carrier
+         carrierProfile = {
+           basics: [
+             { 
+               category: 'Unsafe Driving', 
+               score: 65, 
+               threshold: 65, 
+               percentile: 45,
+               trend: 'stable',
+               relatedCategories: ['hos', 'tech']
+             },
+             { 
+               category: 'Hours-of-Service Compliance', 
+               score: 60, 
+               threshold: 65, 
+               percentile: 40,
+               trend: 'stable',
+               relatedCategories: ['hos']
+             },
+             { 
+               category: 'Driver Fitness', 
+               score: 45, 
+               threshold: 80, 
+               percentile: 35,
+               trend: 'stable',
+               relatedCategories: ['dqf']
+             },
+             { 
+               category: 'Controlled Substances/Alcohol', 
+               score: 30, 
+               threshold: 80, 
+               percentile: 25,
+               trend: 'stable',
+               relatedCategories: ['drug']
+             },
+             { 
+               category: 'Vehicle Maintenance', 
+               score: 75, 
+               threshold: 80, 
+               percentile: 85,
+               trend: 'up',
+               relatedCategories: ['tech']
+             },
+             { 
+               category: 'Hazardous Materials Compliance', 
+               score: 50, 
+               threshold: 80, 
+               percentile: 30,
+               trend: 'stable',
+               relatedCategories: []
+             },
+             { 
+               category: 'Crash Indicator', 
+               score: 70, 
+               threshold: 65, 
+               percentile: 50,
+               trend: 'stable',
+               relatedCategories: ['claims', 'tech']
+             }
+           ],
+           inspections: 35,
+           violations: 22,
+           crashes: 2,
+           outOfService: 5,
+           lastUpdated: '2025-03-10'
+         };
+       } else {
+         // New carrier with limited history
+         carrierProfile = {
+           basics: [
+             { 
+               category: 'Unsafe Driving', 
+               score: 65, 
+               threshold: 65, 
+               percentile: 0,
+               trend: 'stable',
+               relatedCategories: ['hos', 'tech']
+             },
+             { 
+               category: 'Hours-of-Service Compliance', 
+               score: 60, 
+               threshold: 65, 
+               percentile: 45,
+               trend: 'up',
+               relatedCategories: ['hos']
+             },
+             { 
+               category: 'Driver Fitness', 
+               score: 45, 
+               threshold: 80, 
+               percentile: 0,
+               trend: 'stable',
+               relatedCategories: ['dqf']
+             },
+             { 
+               category: 'Controlled Substances/Alcohol', 
+               score: 30, 
+               threshold: 80, 
+               percentile: 0,
+               trend: 'stable',
+               relatedCategories: ['drug']
+             },
+             { 
+               category: 'Vehicle Maintenance', 
+               score: 75, 
+               threshold: 80, 
+               percentile: 50,
+               trend: 'up',
+               relatedCategories: ['tech']
+             },
+             { 
+               category: 'Hazardous Materials Compliance', 
+               score: 50, 
+               threshold: 80, 
+               percentile: 0,
+               trend: 'stable',
+               relatedCategories: []
+             },
+             { 
+               category: 'Crash Indicator', 
+               score: 70, 
+               threshold: 65, 
+               percentile: 0,
+               trend: 'stable',
+               relatedCategories: ['claims', 'tech']
+             }
+           ],
+           inspections: 12,
+           violations: 3,
+           crashes: 0,
+           outOfService: 1,
+           lastUpdated: '2025-03-20'
+         };
+       }
+       
+       setCsaData(carrierProfile);
+       generateCSAInsights(carrierProfile);
        setIsLoading(false);
      }, 1500);
    } catch (error) {
