@@ -43,7 +43,7 @@ import usePageTracking from './hooks/usePageTracking';
 
 // SharedLayout component ensures consistent header and navigation across all pages
 const SharedLayout = ({ children, title, description }) => (
-  <>
+  <div className="app-container">
     <ServiceSchema />
     <Helmet>
       <title>{title || "Safe Haul - Professional Transportation Claims & Safety Management"}</title>
@@ -66,11 +66,13 @@ const SharedLayout = ({ children, title, description }) => (
       <meta name="author" content="Safe Haul Claims & Safety Management" />
       <link rel="canonical" href={window.location.href} />
     </Helmet>
-    <TopBar />
-    <Header />
-    <Breadcrumbs />
-    {children}
-  </>
+    <div className="site-content">
+      <TopBar />
+      <Header />
+      <Breadcrumbs />
+      {children}
+    </div>
+  </div>
 );
 
 // HomePage component combines all the main sections of the landing page
@@ -98,9 +100,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="holiday-banner bg-[#2C3E50] text-white py-2 text-center font-semibold">
-          <span role="img" aria-label="snowflake">❄️</span> Happy Holidays from Safe Haul! Wishing you a safe and joyful season <span role="img" aria-label="snowflake">❄️</span>
-        </div>
         <AppContent />
       </div>
     </Router>
